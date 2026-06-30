@@ -1,6 +1,6 @@
 # codarise-ui
 
-Polarise design system as a [shadcn/ui](https://ui.shadcn.com) registry — distributed directly from this GitHub repo (no build/hosting needed for consumption). Built on the [`nova`](https://ui.shadcn.com/r/styles/nova/nova.json) preset (`style: radix-nova`).
+Polarise design system as a [shadcn/ui](https://ui.shadcn.com) registry — distributed directly from this GitHub repo (no build/hosting needed for consumption). Built on the [`new-york`](https://ui.shadcn.com/r/styles/new-york/new-york.json) preset.
 
 ## Usage
 
@@ -37,7 +37,7 @@ Refs are **not** inherited — pin each dependency explicitly if you need fixed 
 
 ## Available items
 
-52 items across 5 registries.
+61 items across 5 registries.
 
 ### UI primitives (39)
 
@@ -65,21 +65,37 @@ Polarise-specific UI built on top of the standard set.
 
 ### Theme (1)
 
-- `polarise-theme` — design-system extensions layered on the nova base: `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), a custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus `@utility scrollbar-none`/`scrollbar-thin`/`scrollbar-gutter-stable`/`wrap-break-word`/`shimmer` and autofill fixes.
+- `polarise-theme` — design-system extensions layered on the new-york base: `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), a custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus `@utility scrollbar-none`/`scrollbar-thin`/`scrollbar-gutter-stable`/`wrap-break-word`/`shimmer` and autofill fixes.
 
 ### Fonts (2)
 
 - `font-inter` — Inter variable font → `--font-sans`
 - `font-ibm-plex-mono` — IBM Plex Mono variable font → `--font-mono`
 
+### Blocks (9)
+
+Composed blocks built on top of the primitives — page layouts, state views, and chat patterns.
+
+- `featured-card` — gradient border strip with faded icon, headline, and CTA or custom action
+- `loading-state` — centered loading state with spinner, title, and description
+- `error-state` — centered error state with icon, description, and optional retry button or custom action
+- `chat-bubble` — chat bubble wrapper with role-to-variant mapping helpers (user, assistant, system, error)
+- `chat-marker` — chat marker with optional leading icon, built on the Marker primitive
+- `chat-message-row` — shared chat row shell aligning avatar, header, content, and footer
+- `page-layout` — page composition primitives: `PageLayout`, `PageHeader` (with back button), `PageSection`, `PageContent` — router-agnostic
+- `thinking-display` — collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button
+- `sidebar` — complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain `<a>` tags — swap for your router's Link in your app
+
 ## Development
 
-This repo is also a Vite playground for iterating on registry items.
+This repo is also a Vite showcase playground — `npm run dev` launches an automated component gallery with live previews, search, and copy-import/install buttons for every item.
 
 ```bash
 npm install
-npm run dev          # Vite playground (src/App.tsx imports from ../registry/ui/...)
+npm run dev          # Showcase playground (gen:manifest → vite)
 npm run typecheck    # tsc --noEmit
+npm run lint         # eslint
+npm run build        # gen:manifest → tsc -b → vite build
 npx shadcn@latest registry validate ./registry.json   # CI gate
 npx shadcn@latest build ./registry.json --output /tmp/build   # smoke build
 ```
@@ -92,7 +108,9 @@ registry/ui/registry.json        # 39 UI primitives (standard + fe-agentic origi
 registry/lib/registry.json       # utils (cn)
 registry/custom/registry.json    # 9 custom primitives
 registry/theme/registry.json     # polarise-theme + 2 fonts
-registry/blocks/registry.json    # composed blocks (empty)
+registry/blocks/registry.json   # 9 composed blocks
 ```
 
 CI runs `typecheck` + `registry validate` + `shadcn build` on every PR (`.github/workflows/registry-validate.yml`).
+
+The showcase manifest is auto-generated from the registry JSON files via `npm run gen:manifest` (runs automatically on `predev`/`prebuild`). Adding a component to any `registry.json` makes it appear in the showcase automatically.

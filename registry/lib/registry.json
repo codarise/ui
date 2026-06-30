@@ -8,6 +8,13 @@
       "description": "The cn utility — merges Tailwind classes with clsx and tailwind-merge.",
       "dependencies": ["clsx", "tailwind-merge"],
       "files": [{ "path": "utils.ts", "type": "registry:lib" }]
+    },
+    {
+      "name": "model-colors",
+      "type": "registry:lib",
+      "title": "Model Colors",
+      "description": "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
+      "files": [{ "path": "model-colors.ts", "type": "registry:lib" }]
     }
   ]
 }

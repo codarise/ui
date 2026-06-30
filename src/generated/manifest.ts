@@ -1018,8 +1018,7 @@ export const manifest: ManifestItem[] = [
       "Tabs",
       "TabsList",
       "TabsTrigger",
-      "TabsContent",
-      "tabsListVariants"
+      "TabsContent"
     ],
     "typeExports": [],
     "mainExport": "Tabs",
@@ -1275,6 +1274,26 @@ export const manifest: ManifestItem[] = [
     "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/text-shimmer"
   },
   {
+    "name": "model-colors",
+    "title": "Model Colors",
+    "description": "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
+    "type": "registry:lib",
+    "registry": "lib",
+    "files": [
+      "model-colors.ts"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "getModelColorByName"
+    ],
+    "typeExports": [],
+    "mainExport": "getModelColorByName",
+    "importPath": "@/lib/model-colors",
+    "importStatement": "import { getModelColorByName } from \"@/lib/model-colors\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-colors"
+  },
+  {
     "name": "utils",
     "title": "Utils",
     "description": "The cn utility — merges Tailwind classes with clsx and tailwind-merge.",
@@ -1346,7 +1365,343 @@ export const manifest: ManifestItem[] = [
     "importPath": null,
     "importStatement": null,
     "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/polarise-theme"
+  },
+  {
+    "name": "chat-bubble",
+    "title": "Chat Bubble",
+    "description": "A chat bubble wrapper with role-to-variant mapping helpers for user, assistant, system, and error messages.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-bubble.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/bubble"
+    ],
+    "valueExports": [
+      "bubbleVariantForRole",
+      "alignForRole",
+      "ChatBubble",
+      "ChatBubbleContent"
+    ],
+    "typeExports": [
+      "ChatBubbleRole",
+      "ChatBubbleVariant",
+      "ChatBubbleContentProps",
+      "ChatBubbleProps"
+    ],
+    "mainExport": "ChatBubble",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-bubble"
+  },
+  {
+    "name": "chat-marker",
+    "title": "Chat Marker",
+    "description": "A chat marker with optional leading icon, built on the Marker primitive.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-marker.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/marker"
+    ],
+    "valueExports": [
+      "ChatMarker"
+    ],
+    "typeExports": [
+      "ChatMarkerVariant",
+      "ChatMarkerProps"
+    ],
+    "mainExport": "ChatMarker",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-marker"
+  },
+  {
+    "name": "chat-message-row",
+    "title": "Chat Message Row",
+    "description": "A shared chat row shell that aligns avatar, header, content, and footer. Framework-agnostic — features map their message type to this.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-message-row.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/message"
+    ],
+    "valueExports": [
+      "ChatMessageRow"
+    ],
+    "typeExports": [
+      "ChatMessageRowProps"
+    ],
+    "mainExport": "ChatMessageRow",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-message-row"
+  },
+  {
+    "name": "error-state",
+    "title": "Error State",
+    "description": "A centered error state with icon, title, description, and optional retry button or custom action.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "error-state.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/icon-wrapper",
+      "felixhoebel/codarise-ui/button"
+    ],
+    "valueExports": [
+      "ErrorState"
+    ],
+    "typeExports": [],
+    "mainExport": "ErrorState",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/error-state"
+  },
+  {
+    "name": "featured-card",
+    "title": "Featured Card",
+    "description": "A featured strip with gradient border, faded icon, headline and optional CTA or custom action.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "featured-card.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/card"
+    ],
+    "valueExports": [
+      "FeaturedCard"
+    ],
+    "typeExports": [
+      "FeaturedCardProps"
+    ],
+    "mainExport": "FeaturedCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/featured-card"
+  },
+  {
+    "name": "loading-state",
+    "title": "Loading State",
+    "description": "A centered loading state with spinner, title, and optional description.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "loading-state.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/spinner"
+    ],
+    "valueExports": [
+      "LoadingState"
+    ],
+    "typeExports": [],
+    "mainExport": "LoadingState",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/loading-state"
+  },
+  {
+    "name": "model-card",
+    "title": "Model Card",
+    "description": "A model card with gradient background derived from the model name. Generic — pass badges, metadata, features, and footer as ReactNode. Color is auto-derived via model-colors util or can be overridden.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "model-card.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/card",
+      "felixhoebel/codarise-ui/model-colors"
+    ],
+    "valueExports": [
+      "ModelCard"
+    ],
+    "typeExports": [
+      "ModelCardProps"
+    ],
+    "mainExport": "ModelCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-card"
+  },
+  {
+    "name": "model-select",
+    "title": "Model Select",
+    "description": "A model selector with popover list, keyboard navigation, favorites (localStorage), and optional details panel. Generic — uses ModelOption type instead of a domain type. Color is auto-derived via model-colors. Includes trigger button, model list, and details panel with pricing/features/capabilities.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "model-select.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/badge",
+      "felixhoebel/codarise-ui/button",
+      "felixhoebel/codarise-ui/label",
+      "felixhoebel/codarise-ui/popover",
+      "felixhoebel/codarise-ui/tooltip",
+      "felixhoebel/codarise-ui/model-colors"
+    ],
+    "valueExports": [
+      "ModelSelect"
+    ],
+    "typeExports": [
+      "ModelOption",
+      "ModelSelectProps"
+    ],
+    "mainExport": "ModelSelect",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-select"
+  },
+  {
+    "name": "page-layout",
+    "title": "Page Layout",
+    "description": "Page composition primitives: PageLayout, PageHeader (with back button), PageSection, and PageContent. Router-agnostic.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "page-layout.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/button"
+    ],
+    "valueExports": [
+      "PageLayout",
+      "PageHeader",
+      "PageSection",
+      "PageContent"
+    ],
+    "typeExports": [],
+    "mainExport": "PageLayout",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/page-layout"
+  },
+  {
+    "name": "sidebar",
+    "title": "Sidebar",
+    "description": "Complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain <a> tags — swap for your router's Link. Wire up: pass groups + activeHref to SidebarNav, user + menuItems + onLogout to SidebarFooter.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "sidebar.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/avatar",
+      "felixhoebel/codarise-ui/badge",
+      "felixhoebel/codarise-ui/button",
+      "felixhoebel/codarise-ui/dropdown-menu",
+      "felixhoebel/codarise-ui/scroll-area",
+      "felixhoebel/codarise-ui/sheet",
+      "felixhoebel/codarise-ui/tooltip"
+    ],
+    "valueExports": [
+      "SidebarProvider",
+      "useSidebar",
+      "Sidebar",
+      "SidebarHeader",
+      "SidebarNav",
+      "SidebarFooter",
+      "SidebarMobile",
+      "SidebarToggle"
+    ],
+    "typeExports": [
+      "NavigationItem",
+      "NavigationGroup",
+      "SidebarUser",
+      "SidebarMenuItem",
+      "SidebarProviderProps",
+      "SidebarProps",
+      "SidebarHeaderProps",
+      "SidebarNavProps",
+      "SidebarFooterProps",
+      "SidebarMobileProps",
+      "SidebarToggleProps"
+    ],
+    "mainExport": "Sidebar",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sidebar"
+  },
+  {
+    "name": "thinking-display",
+    "title": "Thinking Display",
+    "description": "A collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "thinking-display.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/copy-button",
+      "felixhoebel/codarise-ui/text-shimmer"
+    ],
+    "valueExports": [
+      "ThinkingDisplay"
+    ],
+    "typeExports": [
+      "ThinkingDisplayProps"
+    ],
+    "mainExport": "ThinkingDisplay",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/thinking-display"
+  },
+  {
+    "name": "upload-dropzone",
+    "title": "Upload Dropzone",
+    "description": "Drag & drop file upload zone with click-to-select. Uses a drag counter to avoid flicker. Supports compact and prominent variants.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "upload-dropzone.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "felixhoebel/codarise-ui/icon-wrapper"
+    ],
+    "valueExports": [
+      "UploadDropzone"
+    ],
+    "typeExports": [
+      "UploadDropzoneProps"
+    ],
+    "mainExport": "UploadDropzone",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/upload-dropzone"
   }
 ]
 
-export const manifestCount: number = 52
+export const manifestCount: number = 65

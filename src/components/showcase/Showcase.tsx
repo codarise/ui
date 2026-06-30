@@ -9,7 +9,7 @@ import { useTheme } from "@/components/theme-provider"
 
 import { ShowcaseCard } from "./ShowcaseCard"
 
-const REGISTRY_FILTERS = ["all", "ui", "custom", "lib", "theme"] as const
+const REGISTRY_FILTERS = ["all", "ui", "custom", "blocks", "lib", "theme"] as const
 type RegistryFilter = (typeof REGISTRY_FILTERS)[number]
 
 export function Showcase() {
@@ -88,7 +88,7 @@ export function Showcase() {
             No components match &ldquo;{query}&rdquo;.
           </p>
         ) : (
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-2">
             {filtered.map((item) => (
               <ShowcaseCard key={item.name} item={item} />
             ))}

@@ -2,12 +2,16 @@ import * as React from "react"
 import {
   ChevronRight,
   CircleAlert,
+  Home,
+  Key,
+  LayoutGrid,
   Mail,
   Settings,
   Sparkles,
   Terminal,
   TriangleAlert,
   User,
+  Users,
 } from "lucide-react"
 
 import {
@@ -163,6 +167,31 @@ import { SearchInput } from "../../../registry/custom/search-input"
 import { SparkleSpinner } from "../../../registry/custom/sparklespinner"
 import { Stepper } from "../../../registry/custom/stepper"
 import { TextShimmer } from "../../../registry/custom/text-shimmer"
+
+import { ChatBubble, ChatBubbleContent } from "../../../registry/blocks/chat-bubble"
+import { ChatMarker } from "../../../registry/blocks/chat-marker"
+import { ChatMessageRow } from "../../../registry/blocks/chat-message-row"
+import { ErrorState } from "../../../registry/blocks/error-state"
+import { FeaturedCard } from "../../../registry/blocks/featured-card"
+import { ModelCard } from "../../../registry/blocks/model-card"
+import { ModelSelect, type ModelOption } from "../../../registry/blocks/model-select"
+import {
+  PageContent,
+  PageHeader,
+  PageLayout,
+  PageSection,
+} from "../../../registry/blocks/page-layout"
+import { LoadingState } from "../../../registry/blocks/loading-state"
+import { ThinkingDisplay } from "../../../registry/blocks/thinking-display"
+import { UploadDropzone } from "../../../registry/blocks/upload-dropzone"
+import {
+  Sidebar,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarNav,
+  SidebarProvider,
+  type NavigationGroup,
+} from "../../../registry/blocks/sidebar"
 
 function Row({ children }: { children: React.ReactNode }) {
   return <div className="flex flex-wrap items-center gap-3">{children}</div>
@@ -686,6 +715,303 @@ export const previewComponents: Record<string, React.ComponentType> = {
       className="max-w-xs"
     />
   ),
+  "featured-card": () => (
+    <FeaturedCard
+      heading="New feature available"
+      description="Check out the latest updates to your workspace."
+      icon={Sparkles}
+      iconClassName="size-20 text-primary"
+      ctaLink="#"
+      ctaText="Learn more"
+    />
+  ),
+  "loading-state": () => (
+    <LoadingState
+      title="Don't worry, we are loading!"
+      description="We are fetching your data"
+      className="min-h-0 py-4"
+    />
+  ),
+  "error-state": () => (
+    <ErrorState
+      title="Failed to load"
+      description="Something went wrong"
+      onRetry={() => {}}
+      className="min-h-0 py-4"
+    />
+  ),
+  "chat-bubble": () => (
+    <Row>
+      <ChatBubble variant="muted" align="end">
+        <ChatBubbleContent>Hello! How can I help?</ChatBubbleContent>
+      </ChatBubble>
+      <ChatBubble variant="ghost" align="start">
+        <ChatBubbleContent>I have a question about the API.</ChatBubbleContent>
+      </ChatBubble>
+    </Row>
+  ),
+  "chat-marker": () => (
+    <Row>
+      <ChatMarker icon={<Terminal className="size-3" />}>
+        Today
+      </ChatMarker>
+    </Row>
+  ),
+  "chat-message-row": () => (
+    <div className="w-full space-y-2">
+      <ChatMessageRow
+        align="end"
+        avatar={{ fallback: <User className="size-3" /> }}
+        header="You"
+        timestamp="just now"
+      >
+        <ChatBubble variant="muted" align="end">
+          <ChatBubbleContent>Hey there!</ChatBubbleContent>
+        </ChatBubble>
+      </ChatMessageRow>
+      <ChatMessageRow
+        align="start"
+        avatar={{ fallback: <Sparkles className="size-3" /> }}
+        header="Assistant"
+        timestamp="1m"
+      >
+        <ChatBubble variant="ghost" align="start">
+          <ChatBubbleContent>Hi! How can I help you today?</ChatBubbleContent>
+        </ChatBubble>
+      </ChatMessageRow>
+    </div>
+  ),
+  "page-layout": () => (
+    <div className="w-full rounded-lg border border-border p-3">
+      <PageLayout maxWidth="none" padding="sm" className="min-h-0">
+        <PageHeader title="Settings" description="Manage your preferences" />
+        <PageContent spacing="sm">
+          <PageSection title="Profile" description="Your account information">
+            <div className="rounded-md border border-border p-3 text-xs text-muted-foreground">
+              Profile settings go here
+            </div>
+          </PageSection>
+        </PageContent>
+      </PageLayout>
+    </div>
+  ),
+  "thinking-display": () => (
+    <div className="w-full space-y-4">
+      <ThinkingDisplay
+        content="Let me analyze the user's request. They want to build a chat interface with streaming responses. I should consider the message ordering, avatar alignment, and how to handle tool call interruptions."
+        isStreaming={true}
+        defaultOpen={true}
+        className="min-h-0"
+      />
+      <ThinkingDisplay
+        content="I considered the message ordering, avatar alignment, and how to handle tool call interruptions. The bubble variant should map by role and the transcript should auto-scroll."
+        isStreaming={false}
+        defaultOpen={true}
+        className="min-h-0"
+      />
+    </div>
+  ),
+  "model-card": () => (
+    <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+      <ModelCard
+        title="llama-3.1-405b"
+        description="Meta · text-generation"
+        badges={
+          <>
+            <Badge variant="outline" className="text-xs">MIT</Badge>
+            <Badge variant="secondary" className="text-xs">405B</Badge>
+          </>
+        }
+        metadata={
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Badge variant="secondary" className="gap-1">
+              <Sparkles className="size-4" />
+              Vision
+            </Badge>
+            <Badge variant="secondary" className="gap-1">
+              <Terminal className="size-4" />
+              Tool Calling
+            </Badge>
+          </div>
+        }
+        footer={
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Home className="size-3" />
+            <span>2 days ago</span>
+          </div>
+        }
+        onClick={() => {}}
+      />
+      <ModelCard
+        title="mistral-medium"
+        description="Mistral AI · text-generation"
+        color="#f97316"
+        badges={
+          <>
+            <Badge variant="outline" className="text-xs">Apache 2.0</Badge>
+            <Badge variant="secondary" className="text-xs">56B</Badge>
+            <Badge variant="secondary" className="text-xs">Free</Badge>
+          </>
+        }
+        action={
+          <Button variant="secondary" size="sm" className="shrink-0">
+            <Terminal className="mr-2 size-4" />
+            Test
+          </Button>
+        }
+        footer={
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Home className="size-3" />
+            <span>1 week ago</span>
+          </div>
+        }
+      />
+    </div>
+  ),
+  "upload-dropzone": () => (
+    <div className="w-full space-y-4">
+      <UploadDropzone
+        variant="prominent"
+        onFiles={() => {}}
+        accept="image/*"
+      />
+      <UploadDropzone
+        variant="compact"
+        onFiles={() => {}}
+        accept=".md"
+        multiple={false}
+        label="Drag & drop a .md file, or click to select"
+      />
+    </div>
+  ),
+  "model-select": () => {
+    const options: ModelOption[] = [
+      {
+        id: "llama-3.1-405b",
+        description: "Meta · text-generation",
+        license: "MIT",
+        parameterCount: 405_000_000_000,
+        capabilities: ["chat", "completion"],
+        features: [
+          { label: "Vision", icon: Sparkles },
+          { label: "Tool Calling", icon: Terminal },
+        ],
+        pricing: { inputPer1m: 2.5, outputPer1m: 3.0, currency: "EUR" },
+        externalUrl: "https://huggingface.co/meta-llama/llama-3.1-405b",
+        externalLabel: "HuggingFace",
+      },
+      {
+        id: "mistral-medium",
+        description: "Mistral AI · text-generation",
+        color: "#f97316",
+        license: "Apache 2.0",
+        parameterCount: 56_000_000_000,
+        capabilities: ["chat"],
+        features: [{ label: "Streaming", icon: Terminal }],
+        pricing: { inputPer1m: 0, outputPer1m: 0, currency: "EUR" },
+      },
+      {
+        id: "gemma3:latest",
+        description: "Google · text-generation",
+        parameterCount: 12_000_000_000,
+        capabilities: ["chat"],
+        features: [{ label: "Vision", icon: Sparkles }],
+      },
+    ]
+    return (
+      <div className="w-full space-y-4">
+        <ModelSelect
+          options={options}
+          value="llama-3.1-405b"
+          onValueChange={() => {}}
+          showLabel
+          size="md"
+        />
+        <ModelSelect
+          options={options}
+          value=""
+          onValueChange={() => {}}
+          size="sm"
+          allowClear
+          showDetails={false}
+        />
+      </div>
+    )
+  },
+  sidebar: () => {
+    const groups: NavigationGroup[] = [
+      {
+        title: "Project",
+        items: [
+          { name: "Dashboard", href: "/projects/1", icon: LayoutGrid },
+          { name: "Agents", href: "/projects/1/agents", icon: Sparkles, badge: "3" },
+          { name: "Members", href: "/projects/1/members", icon: Users },
+        ],
+      },
+      {
+        title: "Settings",
+        defaultClosed: true,
+        items: [
+          { name: "API Keys", href: "/projects/1/api-keys", icon: Key },
+          { name: "Integrations", href: "/projects/1/integrations", icon: Settings },
+        ],
+      },
+      {
+        title: "Global",
+        defaultClosed: true,
+        items: [
+          { name: "Overview", href: "/", icon: Home, exact: true },
+        ],
+      },
+    ]
+    return (
+      <div className="flex w-full gap-4">
+        <SidebarProvider defaultOpen>
+          <div className="relative h-80 w-64 overflow-hidden rounded-lg border border-border">
+            <Sidebar className="!relative !translate-x-0 w-full">
+              <SidebarHeader
+                logo={
+                  <span className="flex items-center gap-2 text-sm font-semibold">
+                    codarise<span className="text-muted-foreground">-ui</span>
+                  </span>
+                }
+              />
+              <ScrollArea className="min-h-0 flex-1">
+                <SidebarNav groups={groups} activeHref="/projects/1/agents" />
+              </ScrollArea>
+              <SidebarFooter
+                user={{
+                  name: "Felix Höbel",
+                  email: "felix@codarise.ai",
+                  initials: "FH",
+                  roleLabel: "Owner in Codarise",
+                }}
+                menuItems={[
+                  { label: "Profile", href: "/settings", icon: User },
+                  { label: "Billing", href: "/billing", icon: Mail },
+                ]}
+                onLogout={() => {}}
+              />
+            </Sidebar>
+          </div>
+        </SidebarProvider>
+        <SidebarProvider defaultOpen={false}>
+          <div className="relative h-80 w-16 overflow-hidden rounded-lg border border-border">
+            <Sidebar className="!relative !translate-x-0 w-full">
+              <SidebarHeader />
+              <ScrollArea className="min-h-0 flex-1">
+                <SidebarNav groups={groups} activeHref="/projects/1/agents" />
+              </ScrollArea>
+              <SidebarFooter
+                user={{ name: "Felix Höbel", initials: "FH" }}
+                onLogout={() => {}}
+              />
+            </Sidebar>
+          </div>
+        </SidebarProvider>
+      </div>
+    )
+  },
 }
 
 /** Names of items whose preview intentionally renders nothing visible
@@ -695,6 +1021,7 @@ export const noPreviewItems = new Set([
   "form",
   "chart",
   "utils",
+  "model-colors",
   "polarise-theme",
   "font-inter",
   "font-ibm-plex-mono",
