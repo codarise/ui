@@ -37,7 +37,7 @@ Refs are **not** inherited — pin each dependency explicitly if you need fixed 
 
 ## Available items
 
-61 items across 5 registries.
+65 items across 5 registries.
 
 ### UI primitives (39)
 
@@ -45,9 +45,10 @@ Standard shadcn primitives plus fe-agentic originals, registered with cross-depe
 
 `accordion` · `alert` · `alert-dialog` · `attachment` · `avatar` · `badge` · `bubble` · `button` · `calendar` · `card` · `chart` · `checkbox` · `collapsible` · `command` · `dialog` · `drawer` · `dropdown-menu` · `empty` · `form` · `input` · `input-group` · `item` · `label` · `message` · `popover` · `progress` · `scroll-area` · `select` · `separator` · `sheet` · `skeleton` · `slider` · `sonner` · `spinner` · `switch` · `table` · `tabs` · `textarea` · `tooltip`
 
-### Lib (1)
+### Lib (2)
 
 - `utils` — the `cn` class-merge helper (`clsx` + `tailwind-merge`). Standalone consumers can add it; projects bootstrapped via `shadcn init` already have it.
+- `model-colors` — consistent color assignment for AI models. Specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.
 
 ### Custom primitives (9)
 
@@ -72,9 +73,9 @@ Polarise-specific UI built on top of the standard set.
 - `font-inter` — Inter variable font → `--font-sans`
 - `font-ibm-plex-mono` — IBM Plex Mono variable font → `--font-mono`
 
-### Blocks (9)
+### Blocks (12)
 
-Composed blocks built on top of the primitives — page layouts, state views, and chat patterns.
+Composed blocks built on top of the primitives — page layouts, state views, chat patterns, and model-related UI.
 
 - `featured-card` — gradient border strip with faded icon, headline, and CTA or custom action
 - `loading-state` — centered loading state with spinner, title, and description
@@ -85,6 +86,9 @@ Composed blocks built on top of the primitives — page layouts, state views, an
 - `page-layout` — page composition primitives: `PageLayout`, `PageHeader` (with back button), `PageSection`, `PageContent` — router-agnostic
 - `thinking-display` — collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button
 - `sidebar` — complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain `<a>` tags — swap for your router's Link in your app
+- `model-card` — model card with gradient background derived from the model name. Generic — pass badges, metadata, features, and footer as ReactNode. Color auto-derived via `model-colors` or overridable per card
+- `model-select` — model selector with popover list, keyboard navigation, favorites (localStorage), and optional details panel showing pricing, capabilities, and features. Generic — uses `ModelOption` type instead of a domain type. Includes trigger button, model list, and details panel
+- `upload-dropzone` — drag & drop file upload zone with click-to-select. Uses a drag counter to avoid flicker. Supports `compact` and `prominent` variants
 
 ## Development
 
@@ -105,10 +109,10 @@ Registry layout (modular `include` files):
 ```
 registry.json                    # root, includes the files below
 registry/ui/registry.json        # 39 UI primitives (standard + fe-agentic originals)
-registry/lib/registry.json       # utils (cn)
+registry/lib/registry.json       # utils (cn) + model-colors
 registry/custom/registry.json    # 9 custom primitives
 registry/theme/registry.json     # polarise-theme + 2 fonts
-registry/blocks/registry.json   # 9 composed blocks
+registry/blocks/registry.json    # 12 composed blocks
 ```
 
 CI runs `typecheck` + `registry validate` + `shadcn build` on every PR (`.github/workflows/registry-validate.yml`).
