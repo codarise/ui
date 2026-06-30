@@ -18,12 +18,24 @@
       "files": [{ "path": "alert.tsx", "type": "registry:ui" }]
     },
     {
+      "name": "attachment",
+      "type": "registry:ui",
+      "title": "Attachment",
+      "description": "A file attachment component with media, content, and action slots, supporting upload states.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "registryDependencies": ["felixhoebel/codarise-ui/button"],
+      "files": [{ "path": "attachment.tsx", "type": "registry:ui" }]
+    },
+    {
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
-      "description": "A modal dialog that interrupts the user with important content and expects a response.",
+      "description": "A modal dialog that interrupts the user with important content and expects a response, with a loading action state.",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["codarise/codarise-ui/button"],
+      "registryDependencies": [
+        "felixhoebel/codarise-ui/button",
+        "felixhoebel/codarise-ui/spinner"
+      ],
       "files": [{ "path": "alert-dialog.tsx", "type": "registry:ui" }]
     },
     {
@@ -43,20 +55,40 @@
       "files": [{ "path": "badge.tsx", "type": "registry:ui" }]
     },
     {
+      "name": "bubble",
+      "type": "registry:ui",
+      "title": "Bubble",
+      "description": "A chat bubble component with multiple variants for conversation interfaces.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "files": [{ "path": "bubble.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "A loading spinner built on the Loader2 lucide icon.",
+      "dependencies": ["lucide-react"],
+      "files": [{ "path": "spinner.tsx", "type": "registry:ui" }]
+    },
+    {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
-      "description": "Displays a button or a component that looks like a button.",
+      "description": "Displays a button or a component that looks like a button, with a loading state and gradient default variant.",
       "dependencies": ["class-variance-authority", "radix-ui"],
-      "files": [{ "path": "button.tsx", "type": "registry:ui" }]
+      "registryDependencies": ["felixhoebel/codarise-ui/spinner"],
+      "files": [
+        { "path": "button.tsx", "type": "registry:ui" },
+        { "path": "button-variants.ts", "type": "registry:ui" }
+      ]
     },
     {
       "name": "calendar",
       "type": "registry:ui",
       "title": "Calendar",
-      "description": "A date field component that allows users to select a date from a calendar.",
+      "description": "A date field component that allows users to select a date from a calendar, with a custom buttonVariant prop.",
       "dependencies": ["react-day-picker", "lucide-react"],
-      "registryDependencies": ["codarise/codarise-ui/button"],
+      "registryDependencies": ["felixhoebel/codarise-ui/button"],
       "files": [{ "path": "calendar.tsx", "type": "registry:ui" }]
     },
     {
@@ -96,10 +128,7 @@
       "title": "Command",
       "description": "A command palette with search and keyboard navigation.",
       "dependencies": ["cmdk", "lucide-react"],
-      "registryDependencies": [
-        "codarise/codarise-ui/dialog",
-        "codarise/codarise-ui/input-group"
-      ],
+      "registryDependencies": ["felixhoebel/codarise-ui/dialog"],
       "files": [{ "path": "command.tsx", "type": "registry:ui" }]
     },
     {
@@ -108,7 +137,7 @@
       "title": "Dialog",
       "description": "A window overlaid on the primary window, interrupting the user with important content.",
       "dependencies": ["radix-ui", "lucide-react"],
-      "registryDependencies": ["codarise/codarise-ui/button"],
+      "registryDependencies": ["felixhoebel/codarise-ui/button"],
       "files": [{ "path": "dialog.tsx", "type": "registry:ui" }]
     },
     {
@@ -136,6 +165,15 @@
       "files": [{ "path": "empty.tsx", "type": "registry:ui" }]
     },
     {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "A form component built on react-hook-form with accessible field labels, descriptions, and error messages.",
+      "dependencies": ["radix-ui", "react-hook-form"],
+      "registryDependencies": ["felixhoebel/codarise-ui/label"],
+      "files": [{ "path": "form.tsx", "type": "registry:ui" }]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -149,11 +187,19 @@
       "description": "A group of input-related components with addons.",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
-        "codarise/codarise-ui/button",
-        "codarise/codarise-ui/input",
-        "codarise/codarise-ui/textarea"
+        "felixhoebel/codarise-ui/button",
+        "felixhoebel/codarise-ui/input",
+        "felixhoebel/codarise-ui/textarea"
       ],
       "files": [{ "path": "input-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "A generic list item with media, content, title, description, and action slots.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "files": [{ "path": "item.tsx", "type": "registry:ui" }]
     },
     {
       "name": "label",
@@ -162,6 +208,13 @@
       "description": "Renders an accessible label associated with controls.",
       "dependencies": ["radix-ui"],
       "files": [{ "path": "label.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "message",
+      "type": "registry:ui",
+      "title": "Message",
+      "description": "A chat message component with avatar, content, header, and footer slots.",
+      "files": [{ "path": "message.tsx", "type": "registry:ui" }]
     },
     {
       "name": "popover",
@@ -209,7 +262,7 @@
       "title": "Sheet",
       "description": "A panel that slides in from the side of the screen.",
       "dependencies": ["radix-ui", "lucide-react"],
-      "registryDependencies": ["codarise/codarise-ui/button"],
+      "registryDependencies": ["felixhoebel/codarise-ui/button"],
       "files": [{ "path": "sheet.tsx", "type": "registry:ui" }]
     },
     {
@@ -231,7 +284,7 @@
       "name": "sonner",
       "type": "registry:ui",
       "title": "Sonner",
-      "description": "A toast notification component.",
+      "description": "A toast notification component with theme-aware rich colors.",
       "dependencies": ["sonner", "next-themes", "lucide-react"],
       "files": [{ "path": "sonner.tsx", "type": "registry:ui" }]
     },

@@ -16,14 +16,6 @@
       "files": [{ "path": "kbd.tsx", "type": "registry:ui" }]
     },
     {
-      "name": "spinner",
-      "type": "registry:ui",
-      "title": "Spinner",
-      "description": "A loading spinner built on the Loader2 lucide icon.",
-      "dependencies": ["lucide-react"],
-      "files": [{ "path": "spinner.tsx", "type": "registry:ui" }]
-    },
-    {
       "name": "sparklespinner",
       "type": "registry:ui",
       "title": "Sparkle Spinner",
@@ -43,7 +35,7 @@
       "title": "Copy Button",
       "description": "A button that copies text to the clipboard with a transient success state.",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["codarise/codarise-ui/button"],
+      "registryDependencies": ["felixhoebel/codarise-ui/button"],
       "files": [{ "path": "copy-button.tsx", "type": "registry:ui" }]
     },
     {
@@ -75,7 +67,7 @@
       "title": "Search Input",
       "description": "An input with a leading search icon, controlled value/onChange.",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["codarise/codarise-ui/input"],
+      "registryDependencies": ["felixhoebel/codarise-ui/input"],
       "files": [{ "path": "search-input.tsx", "type": "registry:ui" }]
     }
   ]

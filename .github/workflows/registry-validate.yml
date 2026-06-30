@@ -1,0 +1,29 @@
+name: Registry Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Registry validate
+        run: npx shadcn@latest registry validate ./registry.json
+
+      - name: Registry build smoke test
+        run: npx shadcn@latest build ./registry.json --output /tmp/registry-build

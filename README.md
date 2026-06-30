@@ -37,25 +37,24 @@ Refs are **not** inherited — pin each dependency explicitly if you need fixed 
 
 ## Available items
 
-47 items across 5 registries.
+52 items across 5 registries.
 
-### UI primitives (33)
+### UI primitives (39)
 
-Standard shadcn primitives, registered with cross-dependencies and per-item npm `dependencies`.
+Standard shadcn primitives plus fe-agentic originals, registered with cross-dependencies and per-item npm `dependencies`.
 
-`accordion` · `alert` · `alert-dialog` · `avatar` · `badge` · `button` · `calendar` · `card` · `chart` · `checkbox` · `collapsible` · `command` · `dialog` · `drawer` · `dropdown-menu` · `empty` · `input` · `input-group` · `label` · `popover` · `progress` · `scroll-area` · `select` · `separator` · `sheet` · `skeleton` · `slider` · `sonner` · `switch` · `table` · `tabs` · `textarea` · `tooltip`
+`accordion` · `alert` · `alert-dialog` · `attachment` · `avatar` · `badge` · `bubble` · `button` · `calendar` · `card` · `chart` · `checkbox` · `collapsible` · `command` · `dialog` · `drawer` · `dropdown-menu` · `empty` · `form` · `input` · `input-group` · `item` · `label` · `message` · `popover` · `progress` · `scroll-area` · `select` · `separator` · `sheet` · `skeleton` · `slider` · `sonner` · `spinner` · `switch` · `table` · `tabs` · `textarea` · `tooltip`
 
 ### Lib (1)
 
 - `utils` — the `cn` class-merge helper (`clsx` + `tailwind-merge`). Standalone consumers can add it; projects bootstrapped via `shadcn init` already have it.
 
-### Custom primitives (10)
+### Custom primitives (9)
 
 Polarise-specific UI built on top of the standard set.
 
 - `glow-backdrop` — decorative backdrop with centered glow + gradient fades
 - `kbd` — keyboard key indicator for shortcuts
-- `spinner` — loader built on the lucide `Loader2` icon
 - `sparklespinner` — custom SVG spinner with twinkling dots on a deterministic loop
 - `text-shimmer` — animated shimmer over text, light/dark + color variants
 - `copy-button` — clipboard copy button with transient success state
@@ -89,9 +88,9 @@ Registry layout (modular `include` files):
 
 ```
 registry.json                    # root, includes the files below
-registry/ui/registry.json        # 33 standard primitives
+registry/ui/registry.json        # 39 UI primitives (standard + fe-agentic originals)
 registry/lib/registry.json       # utils (cn)
-registry/custom/registry.json    # 10 custom primitives
+registry/custom/registry.json    # 9 custom primitives
 registry/theme/registry.json     # polarise-theme + 2 fonts
 registry/blocks/registry.json    # composed blocks (empty)
 ```
