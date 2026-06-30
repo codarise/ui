@@ -7,19 +7,19 @@ Polarise design system as a [shadcn/ui](https://ui.shadcn.com) registry — dist
 Add any item by pointing the shadcn CLI at this repo:
 
 ```bash
-npx shadcn@latest add felixhoebel/codarise-ui/button
+npx shadcn@latest add codarise/ui/button
 ```
 
 Multiple items at once:
 
 ```bash
-npx shadcn@latest add felixhoebel/codarise-ui/button felixhoebel/codarise-ui/dialog felixhoebel/codarise-ui/polarise-theme
+npx shadcn@latest add codarise/ui/button codarise/ui/dialog codarise/ui/polarise-theme
 ```
 
 Browse all items from the CLI:
 
 ```bash
-npx shadcn@latest list felixhoebel/codarise-ui
+npx shadcn@latest list codarise/ui
 ```
 
 The CLI reads the source files directly from GitHub — no published bundle required. Same-repo `registryDependencies` resolve automatically (e.g. adding `dialog` pulls in `button`).
@@ -29,8 +29,8 @@ The CLI reads the source files directly from GitHub — no published bundle requ
 Pin to a tag, branch, or commit SHA for reproducible installs:
 
 ```bash
-npx shadcn@latest add felixhoebel/codarise-ui/button#v1.0.0
-npx shadcn@latest add felixhoebel/codarise-ui/button#<40-char-sha>
+npx shadcn@latest add codarise/ui/button#v1.0.0
+npx shadcn@latest add codarise/ui/button#<40-char-sha>
 ```
 
 Refs are **not** inherited — pin each dependency explicitly if you need fixed versions.

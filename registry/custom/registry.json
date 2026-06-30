@@ -35,7 +35,7 @@
       "title": "Copy Button",
       "description": "A button that copies text to the clipboard with a transient success state.",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["felixhoebel/codarise-ui/button"],
+      "registryDependencies": ["codarise/ui/button"],
       "files": [{ "path": "copy-button.tsx", "type": "registry:ui" }]
     },
     {
@@ -67,7 +67,7 @@
       "title": "Search Input",
       "description": "An input with a leading search icon, controlled value/onChange.",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["felixhoebel/codarise-ui/input"],
+      "registryDependencies": ["codarise/ui/input"],
       "files": [{ "path": "search-input.tsx", "type": "registry:ui" }]
     }
   ]
