@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "codarise",
+  "homepage": "https://github.com/codarise/codarise-ui",
+  "include": [
+    "registry/ui/registry.json",
+    "registry/blocks/registry.json",
+    "registry/lib/registry.json",
+    "registry/custom/registry.json",
+    "registry/theme/registry.json"
+  ]
+}

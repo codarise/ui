@@ -1,0 +1,106 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "polarise-theme",
+      "type": "registry:theme",
+      "title": "Polarise Theme",
+      "description": "Polarise design-system extensions on top of the nova base: success/warning semantic colors, AI brand colors, motion easing tokens, a custom shadow scale, and the scrollbar/scroll-fade/shimmer/wrap utilities.",
+      "cssVars": {
+        "light": {
+          "success": "oklch(0.63 0.17 149)",
+          "warning": "oklch(0.77 0.16 70)",
+          "ai-green": "#4eaf84",
+          "ai-teal": "#28a7b8",
+          "ease-out": "cubic-bezier(0.23, 1, 0.32, 1)",
+          "ease-in-out": "cubic-bezier(0.77, 0, 0.175, 1)",
+          "ease-drawer": "cubic-bezier(0.32, 0.72, 0, 1)",
+          "spacing": "0.22rem",
+          "shadow-2xs": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.05)",
+          "shadow-xs": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.05)",
+          "shadow-sm": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.1), 0px 1px 2px -7.5px hsl(0 0% 3.9216% / 0.1)",
+          "shadow": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.1), 0px 1px 2px -7.5px hsl(0 0% 3.9216% / 0.1)",
+          "shadow-md": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.1), 0px 2px 4px -7.5px hsl(0 0% 3.9216% / 0.1)",
+          "shadow-lg": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.1), 0px 4px 6px -7.5px hsl(0 0% 3.9216% / 0.1)",
+          "shadow-xl": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.1), 0px 8px 10px -7.5px hsl(0 0% 3.9216% / 0.1)",
+          "shadow-2xl": "0px 5px 10px -6.5px hsl(0 0% 3.9216% / 0.25)"
+        },
+        "dark": {
+          "success": "oklch(0.8 0.18 152)",
+          "warning": "oklch(0.88 0.15 92)",
+          "ai-green": "#4eaf84",
+          "ai-teal": "#28a7b8"
+        },
+        "theme": {
+          "color-success": "var(--success)",
+          "color-warning": "var(--warning)"
+        }
+      },
+      "css": {
+        "@utility scrollbar-none": {
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": { "display": "none" }
+        },
+        "@utility scrollbar-thin": {
+          "scrollbar-width": "thin",
+          "&::-webkit-scrollbar": { "width": "8px", "height": "8px" }
+        },
+        "@utility scrollbar-gutter-stable": {
+          "scrollbar-gutter": "stable"
+        },
+        "@utility wrap-break-word": {
+          "text-wrap": "wrap",
+          "overflow-wrap": "anywhere",
+          "word-break": "break-word"
+        },
+        "@utility shimmer": {
+          "background-image": "linear-gradient(to right, transparent 0%, color-mix(in oklch, currentColor 30%, transparent) 50%, transparent 100%)",
+          "background-size": "200% 100%",
+          "background-position": "-200% 0",
+          "animation": "shimmer 1.6s ease-in-out infinite",
+          "@keyframes shimmer": { "to": { "background-position": "200% 0" } }
+        },
+        "@layer base": {
+          "input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus, select:-webkit-autofill:active": {
+            "-webkit-text-fill-color": "var(--foreground) !important",
+            "-webkit-box-shadow": "0 0 0px 1000px var(--card) inset !important",
+            "box-shadow": "0 0 0px 1000px var(--background) inset !important"
+          },
+          ".dark input:-webkit-autofill, .dark input:-webkit-autofill:hover, .dark input:-webkit-autofill:focus, .dark input:-webkit-autofill:active, .dark textarea:-webkit-autofill, .dark textarea:-webkit-autofill:hover, .dark textarea:-webkit-autofill:focus, .dark textarea:-webkit-autofill:active, .dark select:-webkit-autofill, .dark select:-webkit-autofill:hover, .dark select:-webkit-autofill:focus, .dark select:-webkit-autofill:active": {
+            "-webkit-text-fill-color": "var(--foreground) !important",
+            "-webkit-box-shadow": "0 0 0px 1000px var(--input) inset !important",
+            "box-shadow": "0 0 0px 1000px var(--input) inset !important"
+          }
+        }
+      }
+    },
+    {
+      "name": "font-inter",
+      "type": "registry:font",
+      "title": "Inter Font",
+      "description": "The Inter variable font, mapped to --font-sans.",
+      "font": {
+        "family": "'Inter Variable', sans-serif",
+        "provider": "google",
+        "import": "Inter",
+        "variable": "--font-sans",
+        "subsets": ["latin"],
+        "dependency": "@fontsource-variable/inter"
+      }
+    },
+    {
+      "name": "font-ibm-plex-mono",
+      "type": "registry:font",
+      "title": "IBM Plex Mono Font",
+      "description": "The IBM Plex Mono variable font, mapped to --font-mono.",
+      "font": {
+        "family": "'IBM Plex Mono Variable', monospace",
+        "provider": "google",
+        "import": "IBM_Plex_Mono",
+        "variable": "--font-mono",
+        "subsets": ["latin"],
+        "dependency": "@fontsource-variable/ibm-plex-mono"
+      }
+    }
+  ]
+}

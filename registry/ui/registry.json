@@ -1,0 +1,277 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "A vertically stacked set of interactive sections that can be expanded or collapsed.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "files": [{ "path": "accordion.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Displays a callout for user attention.",
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "alert.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts the user with important content and expects a response.",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["codarise/codarise-ui/button"],
+      "files": [{ "path": "alert-dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "An image element with a fallback for representing the user.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "avatar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Displays a badge or a component that looks like a badge.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "files": [{ "path": "badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Displays a button or a component that looks like a button.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "files": [{ "path": "button.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A date field component that allows users to select a date from a calendar.",
+      "dependencies": ["react-day-picker", "lucide-react"],
+      "registryDependencies": ["codarise/codarise-ui/button"],
+      "files": [{ "path": "calendar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer sections.",
+      "files": [{ "path": "card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "A chart component built on top of Recharts.",
+      "dependencies": ["recharts"],
+      "files": [{ "path": "chart.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A control that allows the user to toggle between checked and not checked.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "files": [{ "path": "checkbox.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "An interactive component which expands/collapses a panel.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "collapsible.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "A command palette with search and keyboard navigation.",
+      "dependencies": ["cmdk", "lucide-react"],
+      "registryDependencies": [
+        "codarise/codarise-ui/dialog",
+        "codarise/codarise-ui/input-group"
+      ],
+      "files": [{ "path": "command.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A window overlaid on the primary window, interrupting the user with important content.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "registryDependencies": ["codarise/codarise-ui/button"],
+      "files": [{ "path": "dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A panel that slides in from the edge of the screen.",
+      "dependencies": ["vaul"],
+      "files": [{ "path": "drawer.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Displays a menu to the user with a list of options.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "files": [{ "path": "dropdown-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "A component for displaying empty states.",
+      "dependencies": ["class-variance-authority"],
+      "files": [{ "path": "empty.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Displays a form input field or a component that looks like an input field.",
+      "files": [{ "path": "input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "A group of input-related components with addons.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "codarise/codarise-ui/button",
+        "codarise/codarise-ui/input",
+        "codarise/codarise-ui/textarea"
+      ],
+      "files": [{ "path": "input-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "Renders an accessible label associated with controls.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "label.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Displays rich content in a portal, triggered by a button.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "popover.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Displays an indicator showing the completion progress of a task.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "progress.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Augments native scroll functionality for custom styling.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "scroll-area.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Displays a list of options for the user to pick from.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "files": [{ "path": "select.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A visual divider between content.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "separator.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "A panel that slides in from the side of the screen.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "registryDependencies": ["codarise/codarise-ui/button"],
+      "files": [{ "path": "sheet.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Used to display a loading state while awaiting content.",
+      "files": [{ "path": "skeleton.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "An input where the user selects a value from within a given range.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "slider.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "A toast notification component.",
+      "dependencies": ["sonner", "next-themes", "lucide-react"],
+      "files": [{ "path": "sonner.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A control that toggles between on and off states.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "switch.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "A responsive table component with styled rows and cells.",
+      "files": [{ "path": "table.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "A set of layered sections of content known as tab panels.",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "files": [{ "path": "tabs.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Displays a form textarea or a component that looks like a textarea.",
+      "files": [{ "path": "textarea.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A popup that displays information related to an element on hover or focus.",
+      "dependencies": ["radix-ui"],
+      "files": [{ "path": "tooltip.tsx", "type": "registry:ui" }]
+    }
+  ]
+}
