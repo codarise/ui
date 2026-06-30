@@ -1,3 +1,5 @@
+"use client"
+
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
@@ -16,11 +18,11 @@ const Toaster = ({ ...props }: ToasterProps) => {
           "--normal-text": "var(--foreground)",
           "--normal-border": "var(--border)",
           "--success-bg": "var(--popover)",
-          "--success-text": "var(--success)",
+          "--success-text": "var(--success-foreground)",
           "--success-border": "var(--border)",
           "--warning-bg": "var(--popover)",
           "--warning-text": "var(--warning)",
-          "--warning-border": "var(--border)",
+          "--warning-border": "var(--warning-border)",
           "--error-bg": "var(--popover)",
           "--error-text": "var(--destructive)",
           "--error-border": "var(--border)",

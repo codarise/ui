@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "gen:manifest": "node scripts/generate-manifest.mjs",
+    "predev": "npm run gen:manifest",
+    "prebuild": "npm run gen:manifest",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx}\"",

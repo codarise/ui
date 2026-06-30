@@ -26,6 +26,8 @@ function Button({
     return (
       <Comp
         data-slot="button"
+        data-variant={variant}
+        data-size={size}
         className={cn(buttonVariants({ variant, size, className }))}
         disabled={disabled || loading}
         {...props}
@@ -38,6 +40,8 @@ function Button({
   return (
     <Comp
       data-slot="button"
+      data-variant={variant}
+      data-size={size}
       className={cn(
         buttonVariants({ variant, size, className }),
         loading && "relative"

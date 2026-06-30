@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# shadcn CLI intermediate output (canonical source is registry/ui/)
+src/components/ui/
+
+# shadcn build output (not needed for GitHub-source-registry)
+public/r/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
