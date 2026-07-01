@@ -312,7 +312,7 @@
         "import": "IBM_Plex_Mono",
         "variable": "--font-mono",
         "subsets": ["latin"],
-        "dependency": "@fontsource-variable/ibm-plex-mono"
+        "dependency": "@fontsource/ibm-plex-mono"
       }
     }
   ]
