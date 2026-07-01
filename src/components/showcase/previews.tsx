@@ -2,6 +2,7 @@ import * as React from "react"
 import {
   ChevronRight,
   CircleAlert,
+  Database,
   Home,
   Key,
   LayoutGrid,
@@ -171,6 +172,7 @@ import { TextShimmer } from "../../../registry/custom/text-shimmer"
 import { ChatBubble, ChatBubbleContent } from "../../../registry/blocks/chat-bubble"
 import { ChatMarker } from "../../../registry/blocks/chat-marker"
 import { ChatMessageRow } from "../../../registry/blocks/chat-message-row"
+import { BentoCard } from "../../../registry/blocks/bento-card"
 import { ErrorState } from "../../../registry/blocks/error-state"
 import { FeaturedCard } from "../../../registry/blocks/featured-card"
 import { ModelCard } from "../../../registry/blocks/model-card"
@@ -725,6 +727,32 @@ export const previewComponents: Record<string, React.ComponentType> = {
       ctaText="Learn more"
     />
   ),
+  "bento-card": () => (
+    <div className="grid w-full max-w-md grid-cols-2 gap-4">
+      <BentoCard
+        title="API Keys"
+        description="Secure project access."
+        icon={Key}
+        gradient="golden-yellow"
+        onClick={() => {}}
+      />
+      <BentoCard
+        title="Knowledge Base"
+        description="Context for your AI."
+        icon={Database}
+        gradient="ocean-blue"
+        onClick={() => {}}
+      />
+      <BentoCard
+        title="Agents"
+        description="Automate workflows."
+        icon={Sparkles}
+        gradient="emerald-green"
+        featured
+        onClick={() => {}}
+      />
+    </div>
+  ),
   "loading-state": () => (
     <LoadingState
       title="Don't worry, we are loading!"
@@ -1022,6 +1050,7 @@ export const noPreviewItems = new Set([
   "chart",
   "utils",
   "model-colors",
+  "project-themes",
   "polarise-theme",
   "font-inter",
   "font-ibm-plex-mono",

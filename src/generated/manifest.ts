@@ -50,7 +50,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Accordion",
     "importPath": "@/components/ui/accordion",
     "importStatement": "import { Accordion } from \"@/components/ui/accordion\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/accordion"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/accordion"
   },
   {
     "name": "alert",
@@ -74,7 +74,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Alert",
     "importPath": "@/components/ui/alert",
     "importStatement": "import { Alert } from \"@/components/ui/alert\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/alert"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/alert"
   },
   {
     "name": "alert-dialog",
@@ -110,7 +110,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "AlertDialog",
     "importPath": "@/components/ui/alert-dialog",
     "importStatement": "import { AlertDialog } from \"@/components/ui/alert-dialog\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/alert-dialog"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/alert-dialog"
   },
   {
     "name": "attachment",
@@ -146,7 +146,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Attachment",
     "importPath": "@/components/ui/attachment",
     "importStatement": "import { Attachment } from \"@/components/ui/attachment\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/attachment"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/attachment"
   },
   {
     "name": "avatar",
@@ -173,7 +173,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Avatar",
     "importPath": "@/components/ui/avatar",
     "importStatement": "import { Avatar } from \"@/components/ui/avatar\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/avatar"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/avatar"
   },
   {
     "name": "badge",
@@ -197,7 +197,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Badge",
     "importPath": "@/components/ui/badge",
     "importStatement": "import { Badge } from \"@/components/ui/badge\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/badge"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/badge"
   },
   {
     "name": "bubble",
@@ -227,7 +227,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Bubble",
     "importPath": "@/components/ui/bubble",
     "importStatement": "import { Bubble } from \"@/components/ui/bubble\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/bubble"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/bubble"
   },
   {
     "name": "button",
@@ -254,7 +254,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Button",
     "importPath": "@/components/ui/button",
     "importStatement": "import { Button } from \"@/components/ui/button\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/button"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/button"
   },
   {
     "name": "calendar",
@@ -280,7 +280,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Calendar",
     "importPath": "@/components/ui/calendar",
     "importStatement": "import { Calendar } from \"@/components/ui/calendar\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/calendar"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/calendar"
   },
   {
     "name": "card",
@@ -306,7 +306,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Card",
     "importPath": "@/components/ui/card",
     "importStatement": "import { Card } from \"@/components/ui/card\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/card"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/card"
   },
   {
     "name": "chart",
@@ -335,7 +335,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ChartContainer",
     "importPath": "@/components/ui/chart",
     "importStatement": "import { ChartContainer } from \"@/components/ui/chart\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/chart"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chart"
   },
   {
     "name": "checkbox",
@@ -358,7 +358,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Checkbox",
     "importPath": "@/components/ui/checkbox",
     "importStatement": "import { Checkbox } from \"@/components/ui/checkbox\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/checkbox"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/checkbox"
   },
   {
     "name": "collapsible",
@@ -382,7 +382,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Collapsible",
     "importPath": "@/components/ui/collapsible",
     "importStatement": "import { Collapsible } from \"@/components/ui/collapsible\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/collapsible"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/collapsible"
   },
   {
     "name": "command",
@@ -415,7 +415,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Command",
     "importPath": "@/components/ui/command",
     "importStatement": "import { Command } from \"@/components/ui/command\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/command"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/command"
   },
   {
     "name": "dialog",
@@ -449,7 +449,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Dialog",
     "importPath": "@/components/ui/dialog",
     "importStatement": "import { Dialog } from \"@/components/ui/dialog\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/dialog"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/dialog"
   },
   {
     "name": "drawer",
@@ -480,7 +480,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Drawer",
     "importPath": "@/components/ui/drawer",
     "importStatement": "import { Drawer } from \"@/components/ui/drawer\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/drawer"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/drawer"
   },
   {
     "name": "dropdown-menu",
@@ -517,7 +517,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "DropdownMenu",
     "importPath": "@/components/ui/dropdown-menu",
     "importStatement": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/dropdown-menu"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/dropdown-menu"
   },
   {
     "name": "empty",
@@ -544,7 +544,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Empty",
     "importPath": "@/components/ui/empty",
     "importStatement": "import { Empty } from \"@/components/ui/empty\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/empty"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/empty"
   },
   {
     "name": "form",
@@ -575,7 +575,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Form",
     "importPath": "@/components/ui/form",
     "importStatement": "import { Form } from \"@/components/ui/form\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/form"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/form"
   },
   {
     "name": "input",
@@ -595,7 +595,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Input",
     "importPath": "@/components/ui/input",
     "importStatement": "import { Input } from \"@/components/ui/input\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/input"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/input"
   },
   {
     "name": "input-group",
@@ -626,7 +626,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "InputGroup",
     "importPath": "@/components/ui/input-group",
     "importStatement": "import { InputGroup } from \"@/components/ui/input-group\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/input-group"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/input-group"
   },
   {
     "name": "item",
@@ -655,7 +655,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Item",
     "importPath": "@/components/ui/item",
     "importStatement": "import { Item } from \"@/components/ui/item\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/item"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/item"
   },
   {
     "name": "label",
@@ -677,7 +677,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Label",
     "importPath": "@/components/ui/label",
     "importStatement": "import { Label } from \"@/components/ui/label\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/label"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/label"
   },
   {
     "name": "message",
@@ -702,7 +702,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Message",
     "importPath": "@/components/ui/message",
     "importStatement": "import { Message } from \"@/components/ui/message\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/message"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/message"
   },
   {
     "name": "popover",
@@ -730,7 +730,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Popover",
     "importPath": "@/components/ui/popover",
     "importStatement": "import { Popover } from \"@/components/ui/popover\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/popover"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/popover"
   },
   {
     "name": "progress",
@@ -752,7 +752,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Progress",
     "importPath": "@/components/ui/progress",
     "importStatement": "import { Progress } from \"@/components/ui/progress\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/progress"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/progress"
   },
   {
     "name": "scroll-area",
@@ -775,7 +775,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ScrollArea",
     "importPath": "@/components/ui/scroll-area",
     "importStatement": "import { ScrollArea } from \"@/components/ui/scroll-area\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/scroll-area"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/scroll-area"
   },
   {
     "name": "select",
@@ -807,7 +807,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Select",
     "importPath": "@/components/ui/select",
     "importStatement": "import { Select } from \"@/components/ui/select\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/select"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/select"
   },
   {
     "name": "separator",
@@ -829,7 +829,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Separator",
     "importPath": "@/components/ui/separator",
     "importStatement": "import { Separator } from \"@/components/ui/separator\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/separator"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/separator"
   },
   {
     "name": "sheet",
@@ -861,7 +861,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Sheet",
     "importPath": "@/components/ui/sheet",
     "importStatement": "import { Sheet } from \"@/components/ui/sheet\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/sheet"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sheet"
   },
   {
     "name": "skeleton",
@@ -881,7 +881,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Skeleton",
     "importPath": "@/components/ui/skeleton",
     "importStatement": "import { Skeleton } from \"@/components/ui/skeleton\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/skeleton"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/skeleton"
   },
   {
     "name": "slider",
@@ -903,7 +903,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Slider",
     "importPath": "@/components/ui/slider",
     "importStatement": "import { Slider } from \"@/components/ui/slider\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/slider"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/slider"
   },
   {
     "name": "sonner",
@@ -927,7 +927,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Toaster",
     "importPath": "@/components/ui/sonner",
     "importStatement": "import { Toaster } from \"@/components/ui/sonner\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/sonner"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sonner"
   },
   {
     "name": "spinner",
@@ -949,7 +949,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Spinner",
     "importPath": "@/components/ui/spinner",
     "importStatement": "import { Spinner } from \"@/components/ui/spinner\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/spinner"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/spinner"
   },
   {
     "name": "switch",
@@ -971,7 +971,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Switch",
     "importPath": "@/components/ui/switch",
     "importStatement": "import { Switch } from \"@/components/ui/switch\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/switch"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/switch"
   },
   {
     "name": "table",
@@ -998,7 +998,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Table",
     "importPath": "@/components/ui/table",
     "importStatement": "import { Table } from \"@/components/ui/table\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/table"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/table"
   },
   {
     "name": "tabs",
@@ -1024,7 +1024,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Tabs",
     "importPath": "@/components/ui/tabs",
     "importStatement": "import { Tabs } from \"@/components/ui/tabs\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/tabs"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/tabs"
   },
   {
     "name": "textarea",
@@ -1044,7 +1044,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Textarea",
     "importPath": "@/components/ui/textarea",
     "importStatement": "import { Textarea } from \"@/components/ui/textarea\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/textarea"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/textarea"
   },
   {
     "name": "tooltip",
@@ -1069,7 +1069,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Tooltip",
     "importPath": "@/components/ui/tooltip",
     "importStatement": "import { Tooltip } from \"@/components/ui/tooltip\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/tooltip"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/tooltip"
   },
   {
     "name": "copy-button",
@@ -1095,7 +1095,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "CopyButton",
     "importPath": "@/components/ui/copy-button",
     "importStatement": "import { CopyButton } from \"@/components/ui/copy-button\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/copy-button"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/copy-button"
   },
   {
     "name": "glow-backdrop",
@@ -1115,7 +1115,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "GlowBackdrop",
     "importPath": "@/components/ui/glow-backdrop",
     "importStatement": "import { GlowBackdrop } from \"@/components/ui/glow-backdrop\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/glow-backdrop"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/glow-backdrop"
   },
   {
     "name": "icon-wrapper",
@@ -1137,7 +1137,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "IconWrapper",
     "importPath": "@/components/ui/icon-wrapper",
     "importStatement": "import { IconWrapper } from \"@/components/ui/icon-wrapper\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/icon-wrapper"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/icon-wrapper"
   },
   {
     "name": "kbd",
@@ -1157,7 +1157,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Kbd",
     "importPath": "@/components/ui/kbd",
     "importStatement": "import { Kbd } from \"@/components/ui/kbd\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/kbd"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/kbd"
   },
   {
     "name": "marker",
@@ -1185,7 +1185,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Marker",
     "importPath": "@/components/ui/marker",
     "importStatement": "import { Marker } from \"@/components/ui/marker\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/marker"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/marker"
   },
   {
     "name": "search-input",
@@ -1211,7 +1211,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "SearchInput",
     "importPath": "@/components/ui/search-input",
     "importStatement": "import { SearchInput } from \"@/components/ui/search-input\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/search-input"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/search-input"
   },
   {
     "name": "sparklespinner",
@@ -1231,7 +1231,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "SparkleSpinner",
     "importPath": "@/components/ui/sparklespinner",
     "importStatement": "import { SparkleSpinner } from \"@/components/ui/sparklespinner\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/sparklespinner"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sparklespinner"
   },
   {
     "name": "stepper",
@@ -1251,7 +1251,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Stepper",
     "importPath": "@/components/ui/stepper",
     "importStatement": "import { Stepper } from \"@/components/ui/stepper\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/stepper"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/stepper"
   },
   {
     "name": "text-shimmer",
@@ -1271,7 +1271,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "TextShimmer",
     "importPath": "@/components/ui/text-shimmer",
     "importStatement": "import { TextShimmer } from \"@/components/ui/text-shimmer\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/text-shimmer"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/text-shimmer"
   },
   {
     "name": "model-colors",
@@ -1291,7 +1291,35 @@ export const manifest: ManifestItem[] = [
     "mainExport": "getModelColorByName",
     "importPath": "@/lib/model-colors",
     "importStatement": "import { getModelColorByName } from \"@/lib/model-colors\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/model-colors"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-colors"
+  },
+  {
+    "name": "project-themes",
+    "title": "Project Themes",
+    "description": "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
+    "type": "registry:lib",
+    "registry": "lib",
+    "files": [
+      "project-themes.ts"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "codarise/theme/polarise-theme"
+    ],
+    "valueExports": [
+      "getRandomTheme",
+      "getThemeById",
+      "themeToSettings",
+      "PROJECT_THEMES"
+    ],
+    "typeExports": [
+      "ProjectTheme",
+      "ProjectThemeSettings"
+    ],
+    "mainExport": "PROJECT_THEMES",
+    "importPath": "@/lib/project-themes",
+    "importStatement": "import { PROJECT_THEMES } from \"@/lib/project-themes\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/project-themes"
   },
   {
     "name": "utils",
@@ -1314,7 +1342,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "cn",
     "importPath": "@/lib/utils",
     "importStatement": "import { cn } from \"@/lib/utils\"",
-    "installCommand": "npx shadcn@latest add codarise/ui/utils"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/utils"
   },
   {
     "name": "font-ibm-plex-mono",
@@ -1330,7 +1358,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": null,
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/font-ibm-plex-mono"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/font-ibm-plex-mono"
   },
   {
     "name": "font-inter",
@@ -1346,7 +1374,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": null,
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/font-inter"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/font-inter"
   },
   {
     "name": "polarise-theme",
@@ -1364,7 +1392,34 @@ export const manifest: ManifestItem[] = [
     "mainExport": null,
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/polarise-theme"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/polarise-theme"
+  },
+  {
+    "name": "bento-card",
+    "title": "Bento Card",
+    "description": "A bento-style dashboard card with a gradient header (dither + animated blur blobs), icon or custom headerContent, title, description, badge, and optional body. Pass a gradient id from project-themes for the header color. Router-agnostic — use onClick for navigation (e.g. onClick={() => navigate({ to: href })}). Use the `featured` prop for a larger highlight variant.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "bento-card.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "codarise/ui/badge",
+      "codarise/ui/card",
+      "codarise/lib/project-themes"
+    ],
+    "valueExports": [
+      "BentoCard"
+    ],
+    "typeExports": [
+      "GradientVariant",
+      "BentoCardProps"
+    ],
+    "mainExport": "BentoCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/bento-card"
   },
   {
     "name": "chat-bubble",
@@ -1394,7 +1449,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ChatBubble",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/chat-bubble"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-bubble"
   },
   {
     "name": "chat-marker",
@@ -1419,7 +1474,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ChatMarker",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/chat-marker"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-marker"
   },
   {
     "name": "chat-message-row",
@@ -1443,7 +1498,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ChatMessageRow",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/chat-message-row"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-message-row"
   },
   {
     "name": "error-state",
@@ -1468,7 +1523,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ErrorState",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/error-state"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/error-state"
   },
   {
     "name": "featured-card",
@@ -1492,7 +1547,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "FeaturedCard",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/featured-card"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/featured-card"
   },
   {
     "name": "loading-state",
@@ -1514,7 +1569,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "LoadingState",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/loading-state"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/loading-state"
   },
   {
     "name": "model-card",
@@ -1541,7 +1596,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ModelCard",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/model-card"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-card"
   },
   {
     "name": "model-select",
@@ -1573,7 +1628,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ModelSelect",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/model-select"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-select"
   },
   {
     "name": "page-layout",
@@ -1600,7 +1655,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "PageLayout",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/page-layout"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/page-layout"
   },
   {
     "name": "sidebar",
@@ -1649,7 +1704,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "Sidebar",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/sidebar"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sidebar"
   },
   {
     "name": "thinking-display",
@@ -1674,7 +1729,7 @@ export const manifest: ManifestItem[] = [
     "mainExport": "ThinkingDisplay",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/thinking-display"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/thinking-display"
   },
   {
     "name": "upload-dropzone",
@@ -1700,8 +1755,8 @@ export const manifest: ManifestItem[] = [
     "mainExport": "UploadDropzone",
     "importPath": null,
     "importStatement": null,
-    "installCommand": "npx shadcn@latest add codarise/ui/upload-dropzone"
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/upload-dropzone"
   }
 ]
 
-export const manifestCount: number = 65
+export const manifestCount: number = 67

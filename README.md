@@ -37,7 +37,7 @@ Refs are **not** inherited — pin each dependency explicitly if you need fixed 
 
 ## Available items
 
-65 items across 5 registries.
+67 items across 5 registries.
 
 ### UI primitives (39)
 
@@ -45,10 +45,11 @@ Standard shadcn primitives plus fe-agentic originals, registered with cross-depe
 
 `accordion` · `alert` · `alert-dialog` · `attachment` · `avatar` · `badge` · `bubble` · `button` · `calendar` · `card` · `chart` · `checkbox` · `collapsible` · `command` · `dialog` · `drawer` · `dropdown-menu` · `empty` · `form` · `input` · `input-group` · `item` · `label` · `message` · `popover` · `progress` · `scroll-area` · `select` · `separator` · `sheet` · `skeleton` · `slider` · `sonner` · `spinner` · `switch` · `table` · `tabs` · `textarea` · `tooltip`
 
-### Lib (2)
+### Lib (3)
 
 - `utils` — the `cn` class-merge helper (`clsx` + `tailwind-merge`). Standalone consumers can add it; projects bootstrapped via `shadcn init` already have it.
 - `model-colors` — consistent color assignment for AI models. Specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.
+- `project-themes` — 40+ named gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes `getRandomTheme`, `getThemeById`, and `themeToSettings` helpers. The `drive-agent` theme uses the polarise-theme AI brand tokens.
 
 ### Custom primitives (9)
 
@@ -66,18 +67,19 @@ Polarise-specific UI built on top of the standard set.
 
 ### Theme (1)
 
-- `polarise-theme` — design-system extensions layered on the new-york base: `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), a custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus `@utility scrollbar-none`/`scrollbar-thin`/`scrollbar-gutter-stable`/`wrap-break-word`/`shimmer` and autofill fixes.
+- `polarise-theme` — design-system extensions layered on the new-york base: `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), a custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus `@utility scrollbar-none`/`scrollbar-thin`/`scrollbar-gutter-stable`/`wrap-break-word`/`shimmer`/`bg-dither` and autofill fixes.
 
 ### Fonts (2)
 
 - `font-inter` — Inter variable font → `--font-sans`
 - `font-ibm-plex-mono` — IBM Plex Mono variable font → `--font-mono`
 
-### Blocks (12)
+### Blocks (13)
 
 Composed blocks built on top of the primitives — page layouts, state views, chat patterns, and model-related UI.
 
 - `featured-card` — gradient border strip with faded icon, headline, and CTA or custom action
+- `bento-card` — bento-style dashboard card with gradient header (dither + animated blur blobs), icon or custom headerContent, title, badge, and body. Pass a `gradient` id from `project-themes`. Router-agnostic — use `onClick` for navigation
 - `loading-state` — centered loading state with spinner, title, and description
 - `error-state` — centered error state with icon, description, and optional retry button or custom action
 - `chat-bubble` — chat bubble wrapper with role-to-variant mapping helpers (user, assistant, system, error)
@@ -109,7 +111,7 @@ Registry layout (modular `include` files):
 ```
 registry.json                    # root, includes the files below
 registry/ui/registry.json        # 39 UI primitives (standard + fe-agentic originals)
-registry/lib/registry.json       # utils (cn) + model-colors
+registry/lib/registry.json       # utils (cn) + model-colors + project-themes
 registry/custom/registry.json    # 9 custom primitives
 registry/theme/registry.json     # polarise-theme + 2 fonts
 registry/blocks/registry.json    # 12 composed blocks

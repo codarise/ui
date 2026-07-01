@@ -88,6 +88,7 @@ Composed patterns in `registry/blocks/`. Prefer these over hand-rolling when the
 | Block | Use it for | Notes |
 | --- | --- | --- |
 | `featured-card` | Highlighted strip with gradient border, faded icon, headline + CTA | Hero/banner moments. Depends on `card`. |
+| `bento-card` | Bento-style dashboard card with gradient header, dither + animated blur blobs, icon/custom headerContent, title, badge, body | Pass a `gradient` id from `project-themes` for the header color. `featured` prop = larger highlight variant. Router-agnostic — pass `onClick` for navigation (e.g. `onClick={() => navigate({ to: href })}`). Lay out multiple in a `grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 auto-rows-min`. Depends on `badge`, `card`, `project-themes`. |
 | `loading-state` | Full-screen / centered loading with spinner + title + description | Use over `skeleton` for blocking loads. Depends on `spinner`. |
 | `error-state` | Centered error with icon, title, description, retry/custom action | Depends on `icon-wrapper`, `button`. |
 | `chat-bubble` | Role-aware chat bubble wrapper (user, assistant, system, error) | Depends on `bubble`. |
@@ -108,6 +109,7 @@ Composed patterns in `registry/blocks/`. Prefer these over hand-rolling when the
 | --- | --- | --- |
 | `utils` | `cn()` — merge Tailwind classes (`clsx` + `tailwind-merge`) | Already present in `shadcn init`'d projects. |
 | `model-colors` | Consistent color for AI models | Named colors for Llama/Mistral/Gemma, hash fallback for unknown. Returns hex or Tailwind class. Used by `model-card` + `model-select`. |
+| `project-themes` | 40+ named gradient themes for cards/badges/avatars | Each theme: `id`, `gradient` (Tailwind classes), `bgColorHex`, `icon`, `textColor`. Includes `getRandomTheme`, `getThemeById`, `themeToSettings` helpers. The `drive-agent` theme uses polarise-theme AI brand tokens (`--ai-teal` / `--ai-green`). Used by `bento-card`'s `gradient` prop. |
 
 ---
 
@@ -115,7 +117,7 @@ Composed patterns in `registry/blocks/`. Prefer these over hand-rolling when the
 
 | Item | Install when | Notes |
 | --- | --- | --- |
-| `polarise-theme` | Setting up the Polarise look on a fresh project | Adds `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus utilities: `scrollbar-none`, `scrollbar-thin`, `scrollbar-gutter-stable`, `wrap-break-word`, `shimmer`. Also colored charts, brand sidebar-primary, Inter + IBM Plex Mono fonts, and keyframes (`fadeIn`, `fadeInUp`, `fadeInWithBlur`, `border-rotate`, `text-shimmer-move`). |
+| `polarise-theme` | Setting up the Polarise look on a fresh project | Adds `--success`/`--warning` semantic colors, `--ai-green`/`--ai-teal` brand colors, motion easing tokens (`--ease-out`/`--ease-in-out`/`--ease-drawer`), custom shadow scale (`--shadow-2xs`…`--shadow-2xl`), `--spacing`, plus utilities: `scrollbar-none`, `scrollbar-thin`, `scrollbar-gutter-stable`, `wrap-break-word`, `shimmer`, `bg-dither` (PNG noise texture used by `bento-card` + `featured-card` headers). Also colored charts, brand sidebar-primary, Inter + IBM Plex Mono fonts, and keyframes (`fadeIn`, `fadeInUp`, `fadeInWithBlur`, `border-rotate`, `text-shimmer-move`). |
 
 **Install the theme first** — several components (e.g. anything using `success`/`warning`/AI brand colors, or the `shimmer` utility) assume these tokens exist.
 
@@ -136,6 +138,7 @@ Composed patterns in `registry/blocks/`. Prefer these over hand-rolling when the
 - **Empty / error data**: `empty` for no data, `error-state` for failure (with retry).
 - **Overlay**: confirm action → `alert-dialog`; focus task → `dialog`; mobile → `drawer`; side panel → `sheet`; rich floating → `popover`.
 - **Navigation**: app shell → `sidebar` + `page-layout`; steps → `stepper`; layered views → `tabs`.
+- **Dashboard grids**: `bento-card` (gradient header + dither + blur blobs) with a `project-themes` gradient id; compose in a responsive grid.
 - **Chat / AI**: message row → `chat-message-row`; bubble → `chat-bubble`; reasoning → `thinking-display`; model picker → `model-select`; model card → `model-card`.
 - **Forms**: `form` + `input`/`textarea`/`select`/`checkbox`/`switch`/`slider`/`calendar`; addons via `input-group`; search via `search-input`.
 - **Feedback**: transient → `sonner`; inline callout → `alert`; progress → `progress`; copy affordance → `copy-button`.

@@ -15,6 +15,14 @@
       "title": "Model Colors",
       "description": "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
       "files": [{ "path": "model-colors.ts", "type": "registry:lib" }]
+    },
+    {
+      "name": "project-themes",
+      "type": "registry:lib",
+      "title": "Project Themes",
+      "description": "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
+      "registryDependencies": ["codarise/theme/polarise-theme"],
+      "files": [{ "path": "project-themes.ts", "type": "registry:lib" }]
     }
   ]
 }

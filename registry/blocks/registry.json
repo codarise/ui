@@ -10,6 +10,18 @@
       "files": [{ "path": "featured-card.tsx", "type": "registry:block" }]
     },
     {
+      "name": "bento-card",
+      "type": "registry:block",
+      "title": "Bento Card",
+      "description": "A bento-style dashboard card with a gradient header (dither + animated blur blobs), icon or custom headerContent, title, description, badge, and optional body. Pass a gradient id from project-themes for the header color. Router-agnostic — use onClick for navigation (e.g. onClick={() => navigate({ to: href })}). Use the `featured` prop for a larger highlight variant.",
+      "registryDependencies": [
+        "codarise/ui/badge",
+        "codarise/ui/card",
+        "codarise/lib/project-themes"
+      ],
+      "files": [{ "path": "bento-card.tsx", "type": "registry:block" }]
+    },
+    {
       "name": "loading-state",
       "type": "registry:block",
       "title": "Loading State",
