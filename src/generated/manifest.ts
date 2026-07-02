@@ -27,54 +27,72 @@ export interface ManifestItem {
 
 export const manifest: ManifestItem[] = [
   {
-    name: "accordion",
-    title: "Accordion",
-    description:
-      "A vertically stacked set of interactive sections that can be expanded or collapsed.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["accordion.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "accordion",
+    "title": "Accordion",
+    "description": "A vertically stacked set of interactive sections that can be expanded or collapsed.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "accordion.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Accordion",
       "AccordionItem",
       "AccordionTrigger",
-      "AccordionContent",
+      "AccordionContent"
     ],
-    typeExports: [],
-    mainExport: "Accordion",
-    importPath: "@/components/ui/accordion",
-    importStatement: 'import { Accordion } from "@/components/ui/accordion"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/accordion",
+    "typeExports": [],
+    "mainExport": "Accordion",
+    "importPath": "@/components/ui/accordion",
+    "importStatement": "import { Accordion } from \"@/components/ui/accordion\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/accordion"
   },
   {
-    name: "alert",
-    title: "Alert",
-    description: "Displays a callout for user attention.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["alert.tsx"],
-    dependencies: ["class-variance-authority"],
-    registryDependencies: [],
-    valueExports: ["Alert", "AlertTitle", "AlertDescription"],
-    typeExports: [],
-    mainExport: "Alert",
-    importPath: "@/components/ui/alert",
-    importStatement: 'import { Alert } from "@/components/ui/alert"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/alert",
+    "name": "alert",
+    "title": "Alert",
+    "description": "Displays a callout for user attention.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "alert.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Alert",
+      "AlertTitle",
+      "AlertDescription"
+    ],
+    "typeExports": [],
+    "mainExport": "Alert",
+    "importPath": "@/components/ui/alert",
+    "importStatement": "import { Alert } from \"@/components/ui/alert\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/alert"
   },
   {
-    name: "alert-dialog",
-    title: "Alert Dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response, with a loading action state.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["alert-dialog.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: ["codarise/ui/button", "codarise/ui/spinner"],
-    valueExports: [
+    "name": "alert-dialog",
+    "title": "Alert Dialog",
+    "description": "A modal dialog that interrupts the user with important content and expects a response, with a loading action state.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "alert-dialog.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [
+      "button",
+      "spinner"
+    ],
+    "valueExports": [
       "AlertDialog",
       "AlertDialogAction",
       "AlertDialogCancel",
@@ -86,27 +104,31 @@ export const manifest: ManifestItem[] = [
       "AlertDialogOverlay",
       "AlertDialogPortal",
       "AlertDialogTitle",
-      "AlertDialogTrigger",
+      "AlertDialogTrigger"
     ],
-    typeExports: [],
-    mainExport: "AlertDialog",
-    importPath: "@/components/ui/alert-dialog",
-    importStatement:
-      'import { AlertDialog } from "@/components/ui/alert-dialog"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/alert-dialog",
+    "typeExports": [],
+    "mainExport": "AlertDialog",
+    "importPath": "@/components/ui/alert-dialog",
+    "importStatement": "import { AlertDialog } from \"@/components/ui/alert-dialog\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/alert-dialog"
   },
   {
-    name: "attachment",
-    title: "Attachment",
-    description:
-      "A file attachment component with media, content, and action slots, supporting upload states.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["attachment.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: [
+    "name": "attachment",
+    "title": "Attachment",
+    "description": "A file attachment component with media, content, and action slots, supporting upload states.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "attachment.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
       "Attachment",
       "AttachmentGroup",
       "AttachmentMedia",
@@ -116,201 +138,269 @@ export const manifest: ManifestItem[] = [
       "AttachmentActions",
       "AttachmentAction",
       "AttachmentTrigger",
-      "attachmentVariants",
+      "attachmentVariants"
     ],
-    typeExports: ["AttachmentProps"],
-    mainExport: "Attachment",
-    importPath: "@/components/ui/attachment",
-    importStatement: 'import { Attachment } from "@/components/ui/attachment"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/attachment",
+    "typeExports": [
+      "AttachmentProps"
+    ],
+    "mainExport": "Attachment",
+    "importPath": "@/components/ui/attachment",
+    "importStatement": "import { Attachment } from \"@/components/ui/attachment\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/attachment"
   },
   {
-    name: "avatar",
-    title: "Avatar",
-    description: "An image element with a fallback for representing the user.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["avatar.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "avatar",
+    "title": "Avatar",
+    "description": "An image element with a fallback for representing the user.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "avatar.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Avatar",
       "AvatarImage",
       "AvatarFallback",
       "AvatarBadge",
       "AvatarGroup",
-      "AvatarGroupCount",
+      "AvatarGroupCount"
     ],
-    typeExports: [],
-    mainExport: "Avatar",
-    importPath: "@/components/ui/avatar",
-    importStatement: 'import { Avatar } from "@/components/ui/avatar"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/avatar",
+    "typeExports": [],
+    "mainExport": "Avatar",
+    "importPath": "@/components/ui/avatar",
+    "importStatement": "import { Avatar } from \"@/components/ui/avatar\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/avatar"
   },
   {
-    name: "badge",
-    title: "Badge",
-    description: "Displays a badge or a component that looks like a badge.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["badge.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Badge", "badgeVariants"],
-    typeExports: [],
-    mainExport: "Badge",
-    importPath: "@/components/ui/badge",
-    importStatement: 'import { Badge } from "@/components/ui/badge"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/badge",
+    "name": "badge",
+    "title": "Badge",
+    "description": "Displays a badge or a component that looks like a badge.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "badge.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Badge",
+      "badgeVariants"
+    ],
+    "typeExports": [],
+    "mainExport": "Badge",
+    "importPath": "@/components/ui/badge",
+    "importStatement": "import { Badge } from \"@/components/ui/badge\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/badge"
   },
   {
-    name: "bubble",
-    title: "Bubble",
-    description:
-      "A chat bubble component with multiple variants for conversation interfaces.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["bubble.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "bubble",
+    "title": "Bubble",
+    "description": "A chat bubble component with multiple variants for conversation interfaces.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "bubble.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "BubbleGroup",
       "Bubble",
       "BubbleContent",
       "BubbleReactions",
-      "bubbleVariants",
+      "bubbleVariants"
     ],
-    typeExports: ["BubbleProps", "BubbleContentProps"],
-    mainExport: "Bubble",
-    importPath: "@/components/ui/bubble",
-    importStatement: 'import { Bubble } from "@/components/ui/bubble"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/bubble",
+    "typeExports": [
+      "BubbleProps",
+      "BubbleContentProps"
+    ],
+    "mainExport": "Bubble",
+    "importPath": "@/components/ui/bubble",
+    "importStatement": "import { Bubble } from \"@/components/ui/bubble\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/bubble"
   },
   {
-    name: "button",
-    title: "Button",
-    description:
-      "Displays a button or a component that looks like a button, with a loading state and gradient default variant.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["button.tsx", "button-variants.ts"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: ["codarise/ui/spinner"],
-    valueExports: ["Button", "buttonVariants"],
-    typeExports: [],
-    mainExport: "Button",
-    importPath: "@/components/ui/button",
-    importStatement: 'import { Button } from "@/components/ui/button"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/button",
+    "name": "button",
+    "title": "Button",
+    "description": "Displays a button or a component that looks like a button, with a loading state and gradient default variant.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "button.tsx",
+      "button-variants.ts"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [
+      "spinner"
+    ],
+    "valueExports": [
+      "Button",
+      "buttonVariants"
+    ],
+    "typeExports": [],
+    "mainExport": "Button",
+    "importPath": "@/components/ui/button",
+    "importStatement": "import { Button } from \"@/components/ui/button\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/button"
   },
   {
-    name: "calendar",
-    title: "Calendar",
-    description:
-      "A date field component that allows users to select a date from a calendar, with a custom buttonVariant prop.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["calendar.tsx"],
-    dependencies: ["react-day-picker", "lucide-react"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: ["Calendar", "CalendarDayButton"],
-    typeExports: [],
-    mainExport: "Calendar",
-    importPath: "@/components/ui/calendar",
-    importStatement: 'import { Calendar } from "@/components/ui/calendar"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/calendar",
+    "name": "calendar",
+    "title": "Calendar",
+    "description": "A date field component that allows users to select a date from a calendar, with a custom buttonVariant prop.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "calendar.tsx"
+    ],
+    "dependencies": [
+      "react-day-picker",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
+      "Calendar",
+      "CalendarDayButton"
+    ],
+    "typeExports": [],
+    "mainExport": "Calendar",
+    "importPath": "@/components/ui/calendar",
+    "importStatement": "import { Calendar } from \"@/components/ui/calendar\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/calendar"
   },
   {
-    name: "card",
-    title: "Card",
-    description: "Displays a card with header, content, and footer sections.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["card.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: [
+    "name": "card",
+    "title": "Card",
+    "description": "Displays a card with header, content, and footer sections.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "card.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
       "Card",
       "CardHeader",
       "CardFooter",
       "CardTitle",
       "CardAction",
       "CardDescription",
-      "CardContent",
+      "CardContent"
     ],
-    typeExports: [],
-    mainExport: "Card",
-    importPath: "@/components/ui/card",
-    importStatement: 'import { Card } from "@/components/ui/card"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/card",
+    "typeExports": [],
+    "mainExport": "Card",
+    "importPath": "@/components/ui/card",
+    "importStatement": "import { Card } from \"@/components/ui/card\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/card"
   },
   {
-    name: "chart",
-    title: "Chart",
-    description: "A chart component built on top of Recharts.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["chart.tsx"],
-    dependencies: ["recharts"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "chart",
+    "title": "Chart",
+    "description": "A chart component built on top of Recharts.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "chart.tsx"
+    ],
+    "dependencies": [
+      "recharts"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "ChartContainer",
       "ChartTooltip",
       "ChartTooltipContent",
       "ChartLegend",
       "ChartLegendContent",
-      "ChartStyle",
+      "ChartStyle"
     ],
-    typeExports: ["ChartConfig"],
-    mainExport: "ChartContainer",
-    importPath: "@/components/ui/chart",
-    importStatement: 'import { ChartContainer } from "@/components/ui/chart"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/chart",
+    "typeExports": [
+      "ChartConfig"
+    ],
+    "mainExport": "ChartContainer",
+    "importPath": "@/components/ui/chart",
+    "importStatement": "import { ChartContainer } from \"@/components/ui/chart\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chart"
   },
   {
-    name: "checkbox",
-    title: "Checkbox",
-    description:
-      "A control that allows the user to toggle between checked and not checked.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["checkbox.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: [],
-    valueExports: ["Checkbox"],
-    typeExports: [],
-    mainExport: "Checkbox",
-    importPath: "@/components/ui/checkbox",
-    importStatement: 'import { Checkbox } from "@/components/ui/checkbox"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/checkbox",
+    "name": "checkbox",
+    "title": "Checkbox",
+    "description": "A control that allows the user to toggle between checked and not checked.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "checkbox.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Checkbox"
+    ],
+    "typeExports": [],
+    "mainExport": "Checkbox",
+    "importPath": "@/components/ui/checkbox",
+    "importStatement": "import { Checkbox } from \"@/components/ui/checkbox\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/checkbox"
   },
   {
-    name: "collapsible",
-    title: "Collapsible",
-    description: "An interactive component which expands/collapses a panel.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["collapsible.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Collapsible", "CollapsibleTrigger", "CollapsibleContent"],
-    typeExports: [],
-    mainExport: "Collapsible",
-    importPath: "@/components/ui/collapsible",
-    importStatement:
-      'import { Collapsible } from "@/components/ui/collapsible"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/collapsible",
+    "name": "collapsible",
+    "title": "Collapsible",
+    "description": "An interactive component which expands/collapses a panel.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "collapsible.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Collapsible",
+      "CollapsibleTrigger",
+      "CollapsibleContent"
+    ],
+    "typeExports": [],
+    "mainExport": "Collapsible",
+    "importPath": "@/components/ui/collapsible",
+    "importStatement": "import { Collapsible } from \"@/components/ui/collapsible\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/collapsible"
   },
   {
-    name: "command",
-    title: "Command",
-    description: "A command palette with search and keyboard navigation.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["command.tsx"],
-    dependencies: ["cmdk", "lucide-react"],
-    registryDependencies: ["codarise/ui/dialog"],
-    valueExports: [
+    "name": "command",
+    "title": "Command",
+    "description": "A command palette with search and keyboard navigation.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "command.tsx"
+    ],
+    "dependencies": [
+      "cmdk",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "dialog"
+    ],
+    "valueExports": [
       "Command",
       "CommandDialog",
       "CommandInput",
@@ -319,25 +409,31 @@ export const manifest: ManifestItem[] = [
       "CommandGroup",
       "CommandItem",
       "CommandShortcut",
-      "CommandSeparator",
+      "CommandSeparator"
     ],
-    typeExports: [],
-    mainExport: "Command",
-    importPath: "@/components/ui/command",
-    importStatement: 'import { Command } from "@/components/ui/command"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/command",
+    "typeExports": [],
+    "mainExport": "Command",
+    "importPath": "@/components/ui/command",
+    "importStatement": "import { Command } from \"@/components/ui/command\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/command"
   },
   {
-    name: "dialog",
-    title: "Dialog",
-    description:
-      "A window overlaid on the primary window, interrupting the user with important content.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["dialog.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: [
+    "name": "dialog",
+    "title": "Dialog",
+    "description": "A window overlaid on the primary window, interrupting the user with important content.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "dialog.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
       "Dialog",
       "DialogClose",
       "DialogContent",
@@ -347,24 +443,28 @@ export const manifest: ManifestItem[] = [
       "DialogOverlay",
       "DialogPortal",
       "DialogTitle",
-      "DialogTrigger",
+      "DialogTrigger"
     ],
-    typeExports: [],
-    mainExport: "Dialog",
-    importPath: "@/components/ui/dialog",
-    importStatement: 'import { Dialog } from "@/components/ui/dialog"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/dialog",
+    "typeExports": [],
+    "mainExport": "Dialog",
+    "importPath": "@/components/ui/dialog",
+    "importStatement": "import { Dialog } from \"@/components/ui/dialog\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/dialog"
   },
   {
-    name: "drawer",
-    title: "Drawer",
-    description: "A panel that slides in from the edge of the screen.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["drawer.tsx"],
-    dependencies: ["vaul"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "drawer",
+    "title": "Drawer",
+    "description": "A panel that slides in from the edge of the screen.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "drawer.tsx"
+    ],
+    "dependencies": [
+      "vaul"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Drawer",
       "DrawerPortal",
       "DrawerOverlay",
@@ -374,24 +474,29 @@ export const manifest: ManifestItem[] = [
       "DrawerHeader",
       "DrawerFooter",
       "DrawerTitle",
-      "DrawerDescription",
+      "DrawerDescription"
     ],
-    typeExports: [],
-    mainExport: "Drawer",
-    importPath: "@/components/ui/drawer",
-    importStatement: 'import { Drawer } from "@/components/ui/drawer"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/drawer",
+    "typeExports": [],
+    "mainExport": "Drawer",
+    "importPath": "@/components/ui/drawer",
+    "importStatement": "import { Drawer } from \"@/components/ui/drawer\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/drawer"
   },
   {
-    name: "dropdown-menu",
-    title: "Dropdown Menu",
-    description: "Displays a menu to the user with a list of options.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["dropdown-menu.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "dropdown-menu",
+    "title": "Dropdown Menu",
+    "description": "Displays a menu to the user with a list of options.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "dropdown-menu.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "DropdownMenu",
       "DropdownMenuPortal",
       "DropdownMenuTrigger",
@@ -406,240 +511,287 @@ export const manifest: ManifestItem[] = [
       "DropdownMenuShortcut",
       "DropdownMenuSub",
       "DropdownMenuSubTrigger",
-      "DropdownMenuSubContent",
+      "DropdownMenuSubContent"
     ],
-    typeExports: [],
-    mainExport: "DropdownMenu",
-    importPath: "@/components/ui/dropdown-menu",
-    importStatement:
-      'import { DropdownMenu } from "@/components/ui/dropdown-menu"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/dropdown-menu",
+    "typeExports": [],
+    "mainExport": "DropdownMenu",
+    "importPath": "@/components/ui/dropdown-menu",
+    "importStatement": "import { DropdownMenu } from \"@/components/ui/dropdown-menu\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/dropdown-menu"
   },
   {
-    name: "empty",
-    title: "Empty",
-    description: "A component for displaying empty states.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["empty.tsx"],
-    dependencies: ["class-variance-authority"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "empty",
+    "title": "Empty",
+    "description": "A component for displaying empty states.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "empty.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Empty",
       "EmptyHeader",
       "EmptyTitle",
       "EmptyDescription",
       "EmptyContent",
-      "EmptyMedia",
+      "EmptyMedia"
     ],
-    typeExports: [],
-    mainExport: "Empty",
-    importPath: "@/components/ui/empty",
-    importStatement: 'import { Empty } from "@/components/ui/empty"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/empty",
+    "typeExports": [],
+    "mainExport": "Empty",
+    "importPath": "@/components/ui/empty",
+    "importStatement": "import { Empty } from \"@/components/ui/empty\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/empty"
   },
   {
-    name: "form",
-    title: "Form",
-    description:
-      "A form component built on react-hook-form with accessible field labels, descriptions, and error messages.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["form.tsx"],
-    dependencies: ["radix-ui", "react-hook-form"],
-    registryDependencies: ["codarise/ui/label"],
-    valueExports: [
+    "name": "form",
+    "title": "Form",
+    "description": "A form component built on react-hook-form with accessible field labels, descriptions, and error messages.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "form.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "react-hook-form"
+    ],
+    "registryDependencies": [
+      "label"
+    ],
+    "valueExports": [
       "Form",
       "FormItem",
       "FormLabel",
       "FormControl",
       "FormDescription",
       "FormMessage",
-      "FormField",
+      "FormField"
     ],
-    typeExports: [],
-    mainExport: "Form",
-    importPath: "@/components/ui/form",
-    importStatement: 'import { Form } from "@/components/ui/form"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/form",
+    "typeExports": [],
+    "mainExport": "Form",
+    "importPath": "@/components/ui/form",
+    "importStatement": "import { Form } from \"@/components/ui/form\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/form"
   },
   {
-    name: "input",
-    title: "Input",
-    description:
-      "Displays a form input field or a component that looks like an input field.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["input.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["Input"],
-    typeExports: [],
-    mainExport: "Input",
-    importPath: "@/components/ui/input",
-    importStatement: 'import { Input } from "@/components/ui/input"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/input",
+    "name": "input",
+    "title": "Input",
+    "description": "Displays a form input field or a component that looks like an input field.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "input.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "Input"
+    ],
+    "typeExports": [],
+    "mainExport": "Input",
+    "importPath": "@/components/ui/input",
+    "importStatement": "import { Input } from \"@/components/ui/input\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/input"
   },
   {
-    name: "input-group",
-    title: "Input Group",
-    description: "A group of input-related components with addons.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["input-group.tsx"],
-    dependencies: ["class-variance-authority"],
-    registryDependencies: [
-      "codarise/ui/button",
-      "codarise/ui/input",
-      "codarise/ui/textarea",
+    "name": "input-group",
+    "title": "Input Group",
+    "description": "A group of input-related components with addons.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "input-group.tsx"
     ],
-    valueExports: [
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [
+      "button",
+      "input",
+      "textarea"
+    ],
+    "valueExports": [
       "InputGroup",
       "InputGroupAddon",
       "InputGroupButton",
       "InputGroupText",
       "InputGroupInput",
-      "InputGroupTextarea",
+      "InputGroupTextarea"
     ],
-    typeExports: [],
-    mainExport: "InputGroup",
-    importPath: "@/components/ui/input-group",
-    importStatement: 'import { InputGroup } from "@/components/ui/input-group"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/input-group",
+    "typeExports": [],
+    "mainExport": "InputGroup",
+    "importPath": "@/components/ui/input-group",
+    "importStatement": "import { InputGroup } from \"@/components/ui/input-group\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/input-group"
   },
   {
-    name: "item",
-    title: "Item",
-    description:
-      "A generic list item with media, content, title, description, and action slots.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["item.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "item",
+    "title": "Item",
+    "description": "A generic list item with media, content, title, description, and action slots.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "item.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Item",
       "ItemMedia",
       "ItemContent",
       "ItemActions",
       "ItemGroup",
       "ItemTitle",
-      "ItemDescription",
+      "ItemDescription"
     ],
-    typeExports: [],
-    mainExport: "Item",
-    importPath: "@/components/ui/item",
-    importStatement: 'import { Item } from "@/components/ui/item"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/item",
+    "typeExports": [],
+    "mainExport": "Item",
+    "importPath": "@/components/ui/item",
+    "importStatement": "import { Item } from \"@/components/ui/item\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/item"
   },
   {
-    name: "label",
-    title: "Label",
-    description: "Renders an accessible label associated with controls.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["label.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Label"],
-    typeExports: [],
-    mainExport: "Label",
-    importPath: "@/components/ui/label",
-    importStatement: 'import { Label } from "@/components/ui/label"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/label",
+    "name": "label",
+    "title": "Label",
+    "description": "Renders an accessible label associated with controls.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "label.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Label"
+    ],
+    "typeExports": [],
+    "mainExport": "Label",
+    "importPath": "@/components/ui/label",
+    "importStatement": "import { Label } from \"@/components/ui/label\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/label"
   },
   {
-    name: "message",
-    title: "Message",
-    description:
-      "A chat message component with avatar, content, header, and footer slots.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["message.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: [
+    "name": "message",
+    "title": "Message",
+    "description": "A chat message component with avatar, content, header, and footer slots.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "message.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
       "MessageGroup",
       "Message",
       "MessageAvatar",
       "MessageContent",
       "MessageFooter",
-      "MessageHeader",
+      "MessageHeader"
     ],
-    typeExports: [],
-    mainExport: "Message",
-    importPath: "@/components/ui/message",
-    importStatement: 'import { Message } from "@/components/ui/message"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/message",
+    "typeExports": [],
+    "mainExport": "Message",
+    "importPath": "@/components/ui/message",
+    "importStatement": "import { Message } from \"@/components/ui/message\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/message"
   },
   {
-    name: "popover",
-    title: "Popover",
-    description: "Displays rich content in a portal, triggered by a button.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["popover.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "popover",
+    "title": "Popover",
+    "description": "Displays rich content in a portal, triggered by a button.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "popover.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Popover",
       "PopoverTrigger",
       "PopoverContent",
       "PopoverAnchor",
       "PopoverHeader",
       "PopoverTitle",
-      "PopoverDescription",
+      "PopoverDescription"
     ],
-    typeExports: [],
-    mainExport: "Popover",
-    importPath: "@/components/ui/popover",
-    importStatement: 'import { Popover } from "@/components/ui/popover"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/popover",
+    "typeExports": [],
+    "mainExport": "Popover",
+    "importPath": "@/components/ui/popover",
+    "importStatement": "import { Popover } from \"@/components/ui/popover\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/popover"
   },
   {
-    name: "progress",
-    title: "Progress",
-    description:
-      "Displays an indicator showing the completion progress of a task.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["progress.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Progress"],
-    typeExports: [],
-    mainExport: "Progress",
-    importPath: "@/components/ui/progress",
-    importStatement: 'import { Progress } from "@/components/ui/progress"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/progress",
+    "name": "progress",
+    "title": "Progress",
+    "description": "Displays an indicator showing the completion progress of a task.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "progress.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Progress"
+    ],
+    "typeExports": [],
+    "mainExport": "Progress",
+    "importPath": "@/components/ui/progress",
+    "importStatement": "import { Progress } from \"@/components/ui/progress\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/progress"
   },
   {
-    name: "scroll-area",
-    title: "Scroll Area",
-    description: "Augments native scroll functionality for custom styling.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["scroll-area.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["ScrollArea", "ScrollBar"],
-    typeExports: [],
-    mainExport: "ScrollArea",
-    importPath: "@/components/ui/scroll-area",
-    importStatement: 'import { ScrollArea } from "@/components/ui/scroll-area"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/scroll-area",
+    "name": "scroll-area",
+    "title": "Scroll Area",
+    "description": "Augments native scroll functionality for custom styling.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "scroll-area.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "ScrollArea",
+      "ScrollBar"
+    ],
+    "typeExports": [],
+    "mainExport": "ScrollArea",
+    "importPath": "@/components/ui/scroll-area",
+    "importStatement": "import { ScrollArea } from \"@/components/ui/scroll-area\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/scroll-area"
   },
   {
-    name: "select",
-    title: "Select",
-    description: "Displays a list of options for the user to pick from.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["select.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "select",
+    "title": "Select",
+    "description": "Displays a list of options for the user to pick from.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "select.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Select",
       "SelectContent",
       "SelectGroup",
@@ -649,40 +801,53 @@ export const manifest: ManifestItem[] = [
       "SelectScrollUpButton",
       "SelectSeparator",
       "SelectTrigger",
-      "SelectValue",
+      "SelectValue"
     ],
-    typeExports: [],
-    mainExport: "Select",
-    importPath: "@/components/ui/select",
-    importStatement: 'import { Select } from "@/components/ui/select"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/select",
+    "typeExports": [],
+    "mainExport": "Select",
+    "importPath": "@/components/ui/select",
+    "importStatement": "import { Select } from \"@/components/ui/select\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/select"
   },
   {
-    name: "separator",
-    title: "Separator",
-    description: "A visual divider between content.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["separator.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Separator"],
-    typeExports: [],
-    mainExport: "Separator",
-    importPath: "@/components/ui/separator",
-    importStatement: 'import { Separator } from "@/components/ui/separator"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/separator",
+    "name": "separator",
+    "title": "Separator",
+    "description": "A visual divider between content.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "separator.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Separator"
+    ],
+    "typeExports": [],
+    "mainExport": "Separator",
+    "importPath": "@/components/ui/separator",
+    "importStatement": "import { Separator } from \"@/components/ui/separator\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/separator"
   },
   {
-    name: "sheet",
-    title: "Sheet",
-    description: "A panel that slides in from the side of the screen.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["sheet.tsx"],
-    dependencies: ["radix-ui", "lucide-react"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: [
+    "name": "sheet",
+    "title": "Sheet",
+    "description": "A panel that slides in from the side of the screen.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "sheet.tsx"
+    ],
+    "dependencies": [
+      "radix-ui",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
       "Sheet",
       "SheetTrigger",
       "SheetClose",
@@ -690,105 +855,136 @@ export const manifest: ManifestItem[] = [
       "SheetHeader",
       "SheetFooter",
       "SheetTitle",
-      "SheetDescription",
+      "SheetDescription"
     ],
-    typeExports: [],
-    mainExport: "Sheet",
-    importPath: "@/components/ui/sheet",
-    importStatement: 'import { Sheet } from "@/components/ui/sheet"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/sheet",
+    "typeExports": [],
+    "mainExport": "Sheet",
+    "importPath": "@/components/ui/sheet",
+    "importStatement": "import { Sheet } from \"@/components/ui/sheet\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sheet"
   },
   {
-    name: "skeleton",
-    title: "Skeleton",
-    description: "Used to display a loading state while awaiting content.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["skeleton.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["Skeleton"],
-    typeExports: [],
-    mainExport: "Skeleton",
-    importPath: "@/components/ui/skeleton",
-    importStatement: 'import { Skeleton } from "@/components/ui/skeleton"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/skeleton",
+    "name": "skeleton",
+    "title": "Skeleton",
+    "description": "Used to display a loading state while awaiting content.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "skeleton.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "Skeleton"
+    ],
+    "typeExports": [],
+    "mainExport": "Skeleton",
+    "importPath": "@/components/ui/skeleton",
+    "importStatement": "import { Skeleton } from \"@/components/ui/skeleton\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/skeleton"
   },
   {
-    name: "slider",
-    title: "Slider",
-    description:
-      "An input where the user selects a value from within a given range.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["slider.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Slider"],
-    typeExports: [],
-    mainExport: "Slider",
-    importPath: "@/components/ui/slider",
-    importStatement: 'import { Slider } from "@/components/ui/slider"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/slider",
+    "name": "slider",
+    "title": "Slider",
+    "description": "An input where the user selects a value from within a given range.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "slider.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Slider"
+    ],
+    "typeExports": [],
+    "mainExport": "Slider",
+    "importPath": "@/components/ui/slider",
+    "importStatement": "import { Slider } from \"@/components/ui/slider\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/slider"
   },
   {
-    name: "sonner",
-    title: "Sonner",
-    description: "A toast notification component with theme-aware rich colors.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["sonner.tsx"],
-    dependencies: ["sonner", "next-themes", "lucide-react"],
-    registryDependencies: [],
-    valueExports: ["Toaster"],
-    typeExports: [],
-    mainExport: "Toaster",
-    importPath: "@/components/ui/sonner",
-    importStatement: 'import { Toaster } from "@/components/ui/sonner"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/sonner",
+    "name": "sonner",
+    "title": "Sonner",
+    "description": "A toast notification component with theme-aware rich colors.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "sonner.tsx"
+    ],
+    "dependencies": [
+      "sonner",
+      "next-themes",
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Toaster"
+    ],
+    "typeExports": [],
+    "mainExport": "Toaster",
+    "importPath": "@/components/ui/sonner",
+    "importStatement": "import { Toaster } from \"@/components/ui/sonner\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sonner"
   },
   {
-    name: "spinner",
-    title: "Spinner",
-    description: "A loading spinner built on the Loader2 lucide icon.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["spinner.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: [],
-    valueExports: ["Spinner"],
-    typeExports: [],
-    mainExport: "Spinner",
-    importPath: "@/components/ui/spinner",
-    importStatement: 'import { Spinner } from "@/components/ui/spinner"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/spinner",
+    "name": "spinner",
+    "title": "Spinner",
+    "description": "A loading spinner built on the Loader2 lucide icon.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "spinner.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Spinner"
+    ],
+    "typeExports": [],
+    "mainExport": "Spinner",
+    "importPath": "@/components/ui/spinner",
+    "importStatement": "import { Spinner } from \"@/components/ui/spinner\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/spinner"
   },
   {
-    name: "switch",
-    title: "Switch",
-    description: "A control that toggles between on and off states.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["switch.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Switch"],
-    typeExports: [],
-    mainExport: "Switch",
-    importPath: "@/components/ui/switch",
-    importStatement: 'import { Switch } from "@/components/ui/switch"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/switch",
+    "name": "switch",
+    "title": "Switch",
+    "description": "A control that toggles between on and off states.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "switch.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Switch"
+    ],
+    "typeExports": [],
+    "mainExport": "Switch",
+    "importPath": "@/components/ui/switch",
+    "importStatement": "import { Switch } from \"@/components/ui/switch\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/switch"
   },
   {
-    name: "table",
-    title: "Table",
-    description: "A responsive table component with styled rows and cells.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["table.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: [
+    "name": "table",
+    "title": "Table",
+    "description": "A responsive table component with styled rows and cells.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "table.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
       "Table",
       "TableHeader",
       "TableBody",
@@ -796,500 +992,619 @@ export const manifest: ManifestItem[] = [
       "TableHead",
       "TableRow",
       "TableCell",
-      "TableCaption",
+      "TableCaption"
     ],
-    typeExports: [],
-    mainExport: "Table",
-    importPath: "@/components/ui/table",
-    importStatement: 'import { Table } from "@/components/ui/table"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/table",
+    "typeExports": [],
+    "mainExport": "Table",
+    "importPath": "@/components/ui/table",
+    "importStatement": "import { Table } from \"@/components/ui/table\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/table"
   },
   {
-    name: "tabs",
-    title: "Tabs",
-    description: "A set of layered sections of content known as tab panels.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["tabs.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Tabs", "TabsList", "TabsTrigger", "TabsContent"],
-    typeExports: [],
-    mainExport: "Tabs",
-    importPath: "@/components/ui/tabs",
-    importStatement: 'import { Tabs } from "@/components/ui/tabs"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/tabs",
+    "name": "tabs",
+    "title": "Tabs",
+    "description": "A set of layered sections of content known as tab panels.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "tabs.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Tabs",
+      "TabsList",
+      "TabsTrigger",
+      "TabsContent"
+    ],
+    "typeExports": [],
+    "mainExport": "Tabs",
+    "importPath": "@/components/ui/tabs",
+    "importStatement": "import { Tabs } from \"@/components/ui/tabs\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/tabs"
   },
   {
-    name: "textarea",
-    title: "Textarea",
-    description:
-      "Displays a form textarea or a component that looks like a textarea.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["textarea.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["Textarea"],
-    typeExports: [],
-    mainExport: "Textarea",
-    importPath: "@/components/ui/textarea",
-    importStatement: 'import { Textarea } from "@/components/ui/textarea"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/textarea",
+    "name": "textarea",
+    "title": "Textarea",
+    "description": "Displays a form textarea or a component that looks like a textarea.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "textarea.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "Textarea"
+    ],
+    "typeExports": [],
+    "mainExport": "Textarea",
+    "importPath": "@/components/ui/textarea",
+    "importStatement": "import { Textarea } from \"@/components/ui/textarea\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/textarea"
   },
   {
-    name: "tooltip",
-    title: "Tooltip",
-    description:
-      "A popup that displays information related to an element on hover or focus.",
-    type: "registry:ui",
-    registry: "ui",
-    files: ["tooltip.tsx"],
-    dependencies: ["radix-ui"],
-    registryDependencies: [],
-    valueExports: [
+    "name": "tooltip",
+    "title": "Tooltip",
+    "description": "A popup that displays information related to an element on hover or focus.",
+    "type": "registry:ui",
+    "registry": "ui",
+    "files": [
+      "tooltip.tsx"
+    ],
+    "dependencies": [
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
       "Tooltip",
       "TooltipTrigger",
       "TooltipContent",
-      "TooltipProvider",
+      "TooltipProvider"
     ],
-    typeExports: [],
-    mainExport: "Tooltip",
-    importPath: "@/components/ui/tooltip",
-    importStatement: 'import { Tooltip } from "@/components/ui/tooltip"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/tooltip",
+    "typeExports": [],
+    "mainExport": "Tooltip",
+    "importPath": "@/components/ui/tooltip",
+    "importStatement": "import { Tooltip } from \"@/components/ui/tooltip\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/tooltip"
   },
   {
-    name: "copy-button",
-    title: "Copy Button",
-    description:
-      "A button that copies text to the clipboard with a transient success state.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["copy-button.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: ["CopyButton"],
-    typeExports: ["CopyButtonProps"],
-    mainExport: "CopyButton",
-    importPath: "@/components/ui/copy-button",
-    importStatement: 'import { CopyButton } from "@/components/ui/copy-button"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/copy-button",
+    "name": "copy-button",
+    "title": "Copy Button",
+    "description": "A button that copies text to the clipboard with a transient success state.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "copy-button.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
+      "CopyButton"
+    ],
+    "typeExports": [
+      "CopyButtonProps"
+    ],
+    "mainExport": "CopyButton",
+    "importPath": "@/components/ui/copy-button",
+    "importStatement": "import { CopyButton } from \"@/components/ui/copy-button\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/copy-button"
   },
   {
-    name: "glow-backdrop",
-    title: "Glow Backdrop",
-    description:
-      "A decorative backdrop with an optional centered glow and gradient fades.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["glow-backdrop.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["GlowBackdrop"],
-    typeExports: [],
-    mainExport: "GlowBackdrop",
-    importPath: "@/components/ui/glow-backdrop",
-    importStatement:
-      'import { GlowBackdrop } from "@/components/ui/glow-backdrop"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/glow-backdrop",
+    "name": "glow-backdrop",
+    "title": "Glow Backdrop",
+    "description": "A decorative backdrop with an optional centered glow and gradient fades.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "glow-backdrop.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "GlowBackdrop"
+    ],
+    "typeExports": [],
+    "mainExport": "GlowBackdrop",
+    "importPath": "@/components/ui/glow-backdrop",
+    "importStatement": "import { GlowBackdrop } from \"@/components/ui/glow-backdrop\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/glow-backdrop"
   },
   {
-    name: "icon-wrapper",
-    title: "Icon Wrapper",
-    description:
-      "A decorative wrapper for icons with a gradient background variant.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["icon-wrapper.tsx"],
-    dependencies: ["class-variance-authority"],
-    registryDependencies: [],
-    valueExports: ["IconWrapper"],
-    typeExports: [],
-    mainExport: "IconWrapper",
-    importPath: "@/components/ui/icon-wrapper",
-    importStatement:
-      'import { IconWrapper } from "@/components/ui/icon-wrapper"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/icon-wrapper",
+    "name": "icon-wrapper",
+    "title": "Icon Wrapper",
+    "description": "A decorative wrapper for icons with a gradient background variant.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "icon-wrapper.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "IconWrapper"
+    ],
+    "typeExports": [],
+    "mainExport": "IconWrapper",
+    "importPath": "@/components/ui/icon-wrapper",
+    "importStatement": "import { IconWrapper } from \"@/components/ui/icon-wrapper\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/icon-wrapper"
   },
   {
-    name: "kbd",
-    title: "Kbd",
-    description: "A keyboard key indicator component for displaying shortcuts.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["kbd.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["Kbd"],
-    typeExports: [],
-    mainExport: "Kbd",
-    importPath: "@/components/ui/kbd",
-    importStatement: 'import { Kbd } from "@/components/ui/kbd"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/kbd",
+    "name": "kbd",
+    "title": "Kbd",
+    "description": "A keyboard key indicator component for displaying shortcuts.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "kbd.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "Kbd"
+    ],
+    "typeExports": [],
+    "mainExport": "Kbd",
+    "importPath": "@/components/ui/kbd",
+    "importStatement": "import { Kbd } from \"@/components/ui/kbd\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/kbd"
   },
   {
-    name: "marker",
-    title: "Marker",
-    description:
-      "A marker component for timeline-like layouts, with separator and border variants.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["marker.tsx"],
-    dependencies: ["class-variance-authority", "radix-ui"],
-    registryDependencies: [],
-    valueExports: ["Marker", "MarkerIcon", "MarkerContent", "markerVariants"],
-    typeExports: ["MarkerProps"],
-    mainExport: "Marker",
-    importPath: "@/components/ui/marker",
-    importStatement: 'import { Marker } from "@/components/ui/marker"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/marker",
+    "name": "marker",
+    "title": "Marker",
+    "description": "A marker component for timeline-like layouts, with separator and border variants.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "marker.tsx"
+    ],
+    "dependencies": [
+      "class-variance-authority",
+      "radix-ui"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "Marker",
+      "MarkerIcon",
+      "MarkerContent",
+      "markerVariants"
+    ],
+    "typeExports": [
+      "MarkerProps"
+    ],
+    "mainExport": "Marker",
+    "importPath": "@/components/ui/marker",
+    "importStatement": "import { Marker } from \"@/components/ui/marker\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/marker"
   },
   {
-    name: "search-input",
-    title: "Search Input",
-    description:
-      "An input with a leading search icon, controlled value/onChange.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["search-input.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/input"],
-    valueExports: ["SearchInput"],
-    typeExports: ["SearchInputProps"],
-    mainExport: "SearchInput",
-    importPath: "@/components/ui/search-input",
-    importStatement:
-      'import { SearchInput } from "@/components/ui/search-input"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/search-input",
+    "name": "search-input",
+    "title": "Search Input",
+    "description": "An input with a leading search icon, controlled value/onChange.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "search-input.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "input"
+    ],
+    "valueExports": [
+      "SearchInput"
+    ],
+    "typeExports": [
+      "SearchInputProps"
+    ],
+    "mainExport": "SearchInput",
+    "importPath": "@/components/ui/search-input",
+    "importStatement": "import { SearchInput } from \"@/components/ui/search-input\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/search-input"
   },
   {
-    name: "sparklespinner",
-    title: "Sparkle Spinner",
-    description:
-      "A custom SVG loading spinner with twinkling dots on a deterministic loop.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["sparklespinner.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["SparkleSpinner"],
-    typeExports: [],
-    mainExport: "SparkleSpinner",
-    importPath: "@/components/ui/sparklespinner",
-    importStatement:
-      'import { SparkleSpinner } from "@/components/ui/sparklespinner"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/sparklespinner",
+    "name": "sparklespinner",
+    "title": "Sparkle Spinner",
+    "description": "A custom SVG loading spinner with twinkling dots on a deterministic loop.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "sparklespinner.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "SparkleSpinner"
+    ],
+    "typeExports": [],
+    "mainExport": "SparkleSpinner",
+    "importPath": "@/components/ui/sparklespinner",
+    "importStatement": "import { SparkleSpinner } from \"@/components/ui/sparklespinner\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sparklespinner"
   },
   {
-    name: "stepper",
-    title: "Stepper",
-    description: "A compact horizontal step progress indicator.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["stepper.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["Stepper"],
-    typeExports: [],
-    mainExport: "Stepper",
-    importPath: "@/components/ui/stepper",
-    importStatement: 'import { Stepper } from "@/components/ui/stepper"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/stepper",
+    "name": "stepper",
+    "title": "Stepper",
+    "description": "A compact horizontal step progress indicator.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "stepper.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "Stepper"
+    ],
+    "typeExports": [],
+    "mainExport": "Stepper",
+    "importPath": "@/components/ui/stepper",
+    "importStatement": "import { Stepper } from \"@/components/ui/stepper\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/stepper"
   },
   {
-    name: "text-shimmer",
-    title: "Text Shimmer",
-    description:
-      "An animated shimmer effect over text, with light/dark mode and color variants.",
-    type: "registry:ui",
-    registry: "custom",
-    files: ["text-shimmer.tsx"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["TextShimmer"],
-    typeExports: [],
-    mainExport: "TextShimmer",
-    importPath: "@/components/ui/text-shimmer",
-    importStatement:
-      'import { TextShimmer } from "@/components/ui/text-shimmer"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/text-shimmer",
+    "name": "text-shimmer",
+    "title": "Text Shimmer",
+    "description": "An animated shimmer effect over text, with light/dark mode and color variants.",
+    "type": "registry:ui",
+    "registry": "custom",
+    "files": [
+      "text-shimmer.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "TextShimmer"
+    ],
+    "typeExports": [],
+    "mainExport": "TextShimmer",
+    "importPath": "@/components/ui/text-shimmer",
+    "importStatement": "import { TextShimmer } from \"@/components/ui/text-shimmer\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/text-shimmer"
   },
   {
-    name: "model-colors",
-    title: "Model Colors",
-    description:
-      "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
-    type: "registry:lib",
-    registry: "lib",
-    files: ["model-colors.ts"],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: ["getModelColorByName"],
-    typeExports: [],
-    mainExport: "getModelColorByName",
-    importPath: "@/lib/model-colors",
-    importStatement: 'import { getModelColorByName } from "@/lib/model-colors"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/model-colors",
+    "name": "model-colors",
+    "title": "Model Colors",
+    "description": "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
+    "type": "registry:lib",
+    "registry": "lib",
+    "files": [
+      "model-colors.ts"
+    ],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [
+      "getModelColorByName"
+    ],
+    "typeExports": [],
+    "mainExport": "getModelColorByName",
+    "importPath": "@/lib/model-colors",
+    "importStatement": "import { getModelColorByName } from \"@/lib/model-colors\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-colors"
   },
   {
-    name: "project-themes",
-    title: "Project Themes",
-    description:
-      "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
-    type: "registry:lib",
-    registry: "lib",
-    files: ["project-themes.ts"],
-    dependencies: [],
-    registryDependencies: ["codarise/theme/polarise-theme"],
-    valueExports: [
+    "name": "project-themes",
+    "title": "Project Themes",
+    "description": "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
+    "type": "registry:lib",
+    "registry": "lib",
+    "files": [
+      "project-themes.ts"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "polarise-theme"
+    ],
+    "valueExports": [
       "getRandomTheme",
       "getThemeById",
       "themeToSettings",
-      "PROJECT_THEMES",
+      "PROJECT_THEMES"
     ],
-    typeExports: ["ProjectTheme", "ProjectThemeSettings"],
-    mainExport: "PROJECT_THEMES",
-    importPath: "@/lib/project-themes",
-    importStatement: 'import { PROJECT_THEMES } from "@/lib/project-themes"',
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/project-themes",
-  },
-  {
-    name: "utils",
-    title: "Utils",
-    description:
-      "The cn utility — merges Tailwind classes with clsx and tailwind-merge.",
-    type: "registry:lib",
-    registry: "lib",
-    files: ["utils.ts"],
-    dependencies: ["clsx", "tailwind-merge"],
-    registryDependencies: [],
-    valueExports: ["cn"],
-    typeExports: [],
-    mainExport: "cn",
-    importPath: "@/lib/utils",
-    importStatement: 'import { cn } from "@/lib/utils"',
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/utils",
-  },
-  {
-    name: "font-ibm-plex-mono",
-    title: "IBM Plex Mono Font",
-    description: "The IBM Plex Mono font, mapped to --font-mono.",
-    type: "registry:font",
-    registry: "theme",
-    files: [],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: [],
-    typeExports: [],
-    mainExport: null,
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/font-ibm-plex-mono",
-  },
-  {
-    name: "font-inter",
-    title: "Inter Font",
-    description: "The Inter variable font, mapped to --font-sans.",
-    type: "registry:font",
-    registry: "theme",
-    files: [],
-    dependencies: [],
-    registryDependencies: [],
-    valueExports: [],
-    typeExports: [],
-    mainExport: null,
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/font-inter",
-  },
-  {
-    name: "polarise-theme",
-    title: "Polarise Theme",
-    description:
-      "The complete Polarise design-system theme: colored charts, brand sidebar-primary, success/warning semantic colors, AI brand colors, Inter + IBM Plex Mono fonts, motion easing tokens, a custom shadow scale, scrollbar/scroll-fade/shimmer/wrap utilities, and animation keyframes.",
-    type: "registry:theme",
-    registry: "theme",
-    files: [],
-    dependencies: ["@tailwindcss/typography"],
-    registryDependencies: [],
-    valueExports: [],
-    typeExports: [],
-    mainExport: null,
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/polarise-theme",
-  },
-  {
-    name: "bento-card",
-    title: "Bento Card",
-    description:
-      "A bento-style dashboard card with a gradient header (dither + animated blur blobs), icon or custom headerContent, title, description, badge, and optional body. Pass a gradient id from project-themes for the header color. Router-agnostic — use onClick for navigation (e.g. onClick={() => navigate({ to: href })}). Use the `featured` prop for a larger highlight variant.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["bento-card.tsx"],
-    dependencies: [],
-    registryDependencies: [
-      "codarise/ui/badge",
-      "codarise/ui/card",
-      "codarise/lib/project-themes",
+    "typeExports": [
+      "ProjectTheme",
+      "ProjectThemeSettings"
     ],
-    valueExports: ["BentoCard"],
-    typeExports: ["GradientVariant", "BentoCardProps"],
-    mainExport: "BentoCard",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/bento-card",
+    "mainExport": "PROJECT_THEMES",
+    "importPath": "@/lib/project-themes",
+    "importStatement": "import { PROJECT_THEMES } from \"@/lib/project-themes\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/project-themes"
   },
   {
-    name: "chat-bubble",
-    title: "Chat Bubble",
-    description:
-      "A chat bubble wrapper with role-to-variant mapping helpers for user, assistant, system, and error messages.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["chat-bubble.tsx"],
-    dependencies: [],
-    registryDependencies: ["codarise/ui/bubble"],
-    valueExports: [
+    "name": "utils",
+    "title": "Utils",
+    "description": "The cn utility — merges Tailwind classes with clsx and tailwind-merge.",
+    "type": "registry:lib",
+    "registry": "lib",
+    "files": [
+      "utils.ts"
+    ],
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "registryDependencies": [],
+    "valueExports": [
+      "cn"
+    ],
+    "typeExports": [],
+    "mainExport": "cn",
+    "importPath": "@/lib/utils",
+    "importStatement": "import { cn } from \"@/lib/utils\"",
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/utils"
+  },
+  {
+    "name": "font-ibm-plex-mono",
+    "title": "IBM Plex Mono Font",
+    "description": "The IBM Plex Mono font, mapped to --font-mono.",
+    "type": "registry:font",
+    "registry": "theme",
+    "files": [],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [],
+    "typeExports": [],
+    "mainExport": null,
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/font-ibm-plex-mono"
+  },
+  {
+    "name": "font-inter",
+    "title": "Inter Font",
+    "description": "The Inter variable font, mapped to --font-sans.",
+    "type": "registry:font",
+    "registry": "theme",
+    "files": [],
+    "dependencies": [],
+    "registryDependencies": [],
+    "valueExports": [],
+    "typeExports": [],
+    "mainExport": null,
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/font-inter"
+  },
+  {
+    "name": "polarise-theme",
+    "title": "Polarise Theme",
+    "description": "The complete Polarise design-system theme: colored charts, brand sidebar-primary, success/warning semantic colors, AI brand colors, Inter + IBM Plex Mono fonts, motion easing tokens, a custom shadow scale, scrollbar/scroll-fade/shimmer/wrap utilities, and animation keyframes.",
+    "type": "registry:theme",
+    "registry": "theme",
+    "files": [],
+    "dependencies": [
+      "@tailwindcss/typography"
+    ],
+    "registryDependencies": [],
+    "valueExports": [],
+    "typeExports": [],
+    "mainExport": null,
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/polarise-theme"
+  },
+  {
+    "name": "bento-card",
+    "title": "Bento Card",
+    "description": "A bento-style dashboard card with a gradient header (dither + animated blur blobs), icon or custom headerContent, title, description, badge, and optional body. Pass a gradient id from project-themes for the header color. Router-agnostic — use onClick for navigation (e.g. onClick={() => navigate({ to: href })}). Use the `featured` prop for a larger highlight variant.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "bento-card.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "badge",
+      "card",
+      "project-themes"
+    ],
+    "valueExports": [
+      "BentoCard"
+    ],
+    "typeExports": [
+      "GradientVariant",
+      "BentoCardProps"
+    ],
+    "mainExport": "BentoCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/bento-card"
+  },
+  {
+    "name": "chat-bubble",
+    "title": "Chat Bubble",
+    "description": "A chat bubble wrapper with role-to-variant mapping helpers for user, assistant, system, and error messages.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-bubble.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "bubble"
+    ],
+    "valueExports": [
       "bubbleVariantForRole",
       "alignForRole",
       "ChatBubble",
-      "ChatBubbleContent",
+      "ChatBubbleContent"
     ],
-    typeExports: [
+    "typeExports": [
       "ChatBubbleRole",
       "ChatBubbleVariant",
       "ChatBubbleContentProps",
-      "ChatBubbleProps",
+      "ChatBubbleProps"
     ],
-    mainExport: "ChatBubble",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/chat-bubble",
+    "mainExport": "ChatBubble",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-bubble"
   },
   {
-    name: "chat-marker",
-    title: "Chat Marker",
-    description:
-      "A chat marker with optional leading icon, built on the Marker primitive.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["chat-marker.tsx"],
-    dependencies: [],
-    registryDependencies: ["codarise/ui/marker"],
-    valueExports: ["ChatMarker"],
-    typeExports: ["ChatMarkerVariant", "ChatMarkerProps"],
-    mainExport: "ChatMarker",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/chat-marker",
+    "name": "chat-marker",
+    "title": "Chat Marker",
+    "description": "A chat marker with optional leading icon, built on the Marker primitive.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-marker.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "marker"
+    ],
+    "valueExports": [
+      "ChatMarker"
+    ],
+    "typeExports": [
+      "ChatMarkerVariant",
+      "ChatMarkerProps"
+    ],
+    "mainExport": "ChatMarker",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-marker"
   },
   {
-    name: "chat-message-row",
-    title: "Chat Message Row",
-    description:
-      "A shared chat row shell that aligns avatar, header, content, and footer. Framework-agnostic — features map their message type to this.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["chat-message-row.tsx"],
-    dependencies: [],
-    registryDependencies: ["codarise/ui/message"],
-    valueExports: ["ChatMessageRow"],
-    typeExports: ["ChatMessageRowProps"],
-    mainExport: "ChatMessageRow",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/chat-message-row",
+    "name": "chat-message-row",
+    "title": "Chat Message Row",
+    "description": "A shared chat row shell that aligns avatar, header, content, and footer. Framework-agnostic — features map their message type to this.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "chat-message-row.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "message"
+    ],
+    "valueExports": [
+      "ChatMessageRow"
+    ],
+    "typeExports": [
+      "ChatMessageRowProps"
+    ],
+    "mainExport": "ChatMessageRow",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/chat-message-row"
   },
   {
-    name: "error-state",
-    title: "Error State",
-    description:
-      "A centered error state with icon, title, description, and optional retry button or custom action.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["error-state.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/icon-wrapper", "codarise/ui/button"],
-    valueExports: ["ErrorState"],
-    typeExports: [],
-    mainExport: "ErrorState",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/error-state",
+    "name": "error-state",
+    "title": "Error State",
+    "description": "A centered error state with icon, title, description, and optional retry button or custom action.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "error-state.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "icon-wrapper",
+      "button"
+    ],
+    "valueExports": [
+      "ErrorState"
+    ],
+    "typeExports": [],
+    "mainExport": "ErrorState",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/error-state"
   },
   {
-    name: "featured-card",
-    title: "Featured Card",
-    description:
-      "A featured strip with gradient border, faded icon, headline and optional CTA or custom action.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["featured-card.tsx"],
-    dependencies: [],
-    registryDependencies: ["codarise/ui/card"],
-    valueExports: ["FeaturedCard"],
-    typeExports: ["FeaturedCardProps"],
-    mainExport: "FeaturedCard",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/featured-card",
+    "name": "featured-card",
+    "title": "Featured Card",
+    "description": "A featured strip with gradient border, faded icon, headline and optional CTA or custom action.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "featured-card.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "card"
+    ],
+    "valueExports": [
+      "FeaturedCard"
+    ],
+    "typeExports": [
+      "FeaturedCardProps"
+    ],
+    "mainExport": "FeaturedCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/featured-card"
   },
   {
-    name: "loading-state",
-    title: "Loading State",
-    description:
-      "A centered loading state with spinner, title, and optional description.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["loading-state.tsx"],
-    dependencies: [],
-    registryDependencies: ["codarise/ui/spinner"],
-    valueExports: ["LoadingState"],
-    typeExports: [],
-    mainExport: "LoadingState",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/loading-state",
+    "name": "loading-state",
+    "title": "Loading State",
+    "description": "A centered loading state with spinner, title, and optional description.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "loading-state.tsx"
+    ],
+    "dependencies": [],
+    "registryDependencies": [
+      "spinner"
+    ],
+    "valueExports": [
+      "LoadingState"
+    ],
+    "typeExports": [],
+    "mainExport": "LoadingState",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/loading-state"
   },
   {
-    name: "model-card",
-    title: "Model Card",
-    description:
-      "A model card with gradient background derived from the model name. Generic — pass badges, metadata, features, and footer as ReactNode. Color is auto-derived via model-colors util or can be overridden.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["model-card.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/card", "codarise/ui/model-colors"],
-    valueExports: ["ModelCard"],
-    typeExports: ["ModelCardProps"],
-    mainExport: "ModelCard",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/model-card",
+    "name": "model-card",
+    "title": "Model Card",
+    "description": "A model card with gradient background derived from the model name. Generic — pass badges, metadata, features, and footer as ReactNode. Color is auto-derived via model-colors util or can be overridden.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "model-card.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "card",
+      "model-colors"
+    ],
+    "valueExports": [
+      "ModelCard"
+    ],
+    "typeExports": [
+      "ModelCardProps"
+    ],
+    "mainExport": "ModelCard",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-card"
   },
   {
-    name: "model-select",
-    title: "Model Select",
-    description:
-      "A model selector with popover list, keyboard navigation, favorites (localStorage), and optional details panel. Generic — uses ModelOption type instead of a domain type. Color is auto-derived via model-colors. Includes trigger button, model list, and details panel with pricing/features/capabilities.",
-    type: "registry:block",
-    registry: "blocks",
-    files: [
+    "name": "model-select",
+    "title": "Model Select",
+    "description": "A model selector with popover list, keyboard navigation, favorites (localStorage), and optional details panel. Generic — uses ModelOption type instead of a domain type. Color is auto-derived via model-colors. Includes trigger button, model list, and details panel with pricing/features/capabilities.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
       "model-select.tsx",
       "model-select/types.ts",
       "model-select/helpers.ts",
@@ -1297,18 +1612,20 @@ export const manifest: ManifestItem[] = [
       "model-select/use-model-selector.ts",
       "model-select/trigger.tsx",
       "model-select/model-list.tsx",
-      "model-select/details-panel.tsx",
+      "model-select/details-panel.tsx"
     ],
-    dependencies: ["lucide-react"],
-    registryDependencies: [
-      "codarise/ui/badge",
-      "codarise/ui/button",
-      "codarise/ui/label",
-      "codarise/ui/popover",
-      "codarise/ui/tooltip",
-      "codarise/ui/model-colors",
+    "dependencies": [
+      "lucide-react"
     ],
-    valueExports: [
+    "registryDependencies": [
+      "badge",
+      "button",
+      "label",
+      "popover",
+      "tooltip",
+      "model-colors"
+    ],
+    "valueExports": [
       "ModelSelect",
       "formatParameterCount",
       "formatCurrency",
@@ -1322,56 +1639,68 @@ export const manifest: ManifestItem[] = [
       "SelectTriggerChevron",
       "ModelSelectTrigger",
       "ModelList",
-      "ModelDetailsPanel",
+      "ModelDetailsPanel"
     ],
-    typeExports: [
+    "typeExports": [
       "ModelOption",
       "ModelSelectProps",
       "UseFavoriteModelsReturn",
-      "UseModelSelectorStateReturn",
+      "UseModelSelectorStateReturn"
     ],
-    mainExport: "ModelSelect",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/model-select",
+    "mainExport": "ModelSelect",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/model-select"
   },
   {
-    name: "page-layout",
-    title: "Page Layout",
-    description:
-      "Page composition primitives: PageLayout, PageHeader (with back button), PageSection, and PageContent. Router-agnostic.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["page-layout.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/button"],
-    valueExports: ["PageLayout", "PageHeader", "PageSection", "PageContent"],
-    typeExports: [],
-    mainExport: "PageLayout",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/page-layout",
+    "name": "page-layout",
+    "title": "Page Layout",
+    "description": "Page composition primitives: PageLayout, PageHeader (with back button), PageSection, and PageContent. Router-agnostic.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "page-layout.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "valueExports": [
+      "PageLayout",
+      "PageHeader",
+      "PageSection",
+      "PageContent"
+    ],
+    "typeExports": [],
+    "mainExport": "PageLayout",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/page-layout"
   },
   {
-    name: "sidebar",
-    title: "Sidebar",
-    description:
-      "Complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain <a> tags — swap for your router's Link. Wire up: pass groups + activeHref to SidebarNav, user + menuItems + onLogout to SidebarFooter.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["sidebar.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: [
-      "codarise/ui/avatar",
-      "codarise/ui/badge",
-      "codarise/ui/button",
-      "codarise/ui/dropdown-menu",
-      "codarise/ui/scroll-area",
-      "codarise/ui/sheet",
-      "codarise/ui/tooltip",
+    "name": "sidebar",
+    "title": "Sidebar",
+    "description": "Complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain <a> tags — swap for your router's Link. Wire up: pass groups + activeHref to SidebarNav, user + menuItems + onLogout to SidebarFooter.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "sidebar.tsx"
     ],
-    valueExports: [
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "avatar",
+      "badge",
+      "button",
+      "dropdown-menu",
+      "scroll-area",
+      "sheet",
+      "tooltip"
+    ],
+    "valueExports": [
       "SidebarProvider",
       "useSidebar",
       "Sidebar",
@@ -1379,9 +1708,9 @@ export const manifest: ManifestItem[] = [
       "SidebarNav",
       "SidebarFooter",
       "SidebarMobile",
-      "SidebarToggle",
+      "SidebarToggle"
     ],
-    typeExports: [
+    "typeExports": [
       "NavigationItem",
       "NavigationGroup",
       "SidebarUser",
@@ -1392,52 +1721,64 @@ export const manifest: ManifestItem[] = [
       "SidebarNavProps",
       "SidebarFooterProps",
       "SidebarMobileProps",
-      "SidebarToggleProps",
+      "SidebarToggleProps"
     ],
-    mainExport: "Sidebar",
-    importPath: null,
-    importStatement: null,
-    installCommand: "npx shadcn@latest add felixhoebel/codarise-ui/sidebar",
+    "mainExport": "Sidebar",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/sidebar"
   },
   {
-    name: "thinking-display",
-    title: "Thinking Display",
-    description:
-      "A collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["thinking-display.tsx"],
-    dependencies: [],
-    registryDependencies: [
-      "codarise/ui/copy-button",
-      "codarise/ui/text-shimmer",
+    "name": "thinking-display",
+    "title": "Thinking Display",
+    "description": "A collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "thinking-display.tsx"
     ],
-    valueExports: ["ThinkingDisplay"],
-    typeExports: ["ThinkingDisplayProps"],
-    mainExport: "ThinkingDisplay",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/thinking-display",
+    "dependencies": [],
+    "registryDependencies": [
+      "copy-button",
+      "text-shimmer"
+    ],
+    "valueExports": [
+      "ThinkingDisplay"
+    ],
+    "typeExports": [
+      "ThinkingDisplayProps"
+    ],
+    "mainExport": "ThinkingDisplay",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/thinking-display"
   },
   {
-    name: "upload-dropzone",
-    title: "Upload Dropzone",
-    description:
-      "Drag & drop file upload zone with click-to-select. Uses a drag counter to avoid flicker. Supports compact and prominent variants.",
-    type: "registry:block",
-    registry: "blocks",
-    files: ["upload-dropzone.tsx"],
-    dependencies: ["lucide-react"],
-    registryDependencies: ["codarise/ui/icon-wrapper"],
-    valueExports: ["UploadDropzone"],
-    typeExports: ["UploadDropzoneProps"],
-    mainExport: "UploadDropzone",
-    importPath: null,
-    importStatement: null,
-    installCommand:
-      "npx shadcn@latest add felixhoebel/codarise-ui/upload-dropzone",
-  },
+    "name": "upload-dropzone",
+    "title": "Upload Dropzone",
+    "description": "Drag & drop file upload zone with click-to-select. Uses a drag counter to avoid flicker. Supports compact and prominent variants.",
+    "type": "registry:block",
+    "registry": "blocks",
+    "files": [
+      "upload-dropzone.tsx"
+    ],
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "icon-wrapper"
+    ],
+    "valueExports": [
+      "UploadDropzone"
+    ],
+    "typeExports": [
+      "UploadDropzoneProps"
+    ],
+    "mainExport": "UploadDropzone",
+    "importPath": null,
+    "importStatement": null,
+    "installCommand": "npx shadcn@latest add felixhoebel/codarise-ui/upload-dropzone"
+  }
 ]
 
 export const manifestCount: number = 67
