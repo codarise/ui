@@ -1,7 +1,7 @@
 import type { ElementType, ReactNode } from "react"
 
-import { CardDescription, CardTitle } from "../ui/card"
-import { cn } from "../lib/utils"
+import { CardDescription, CardTitle } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
 
 interface FeaturedCardShared {
   heading: string

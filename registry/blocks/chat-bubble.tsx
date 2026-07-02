@@ -1,5 +1,5 @@
-import type { BubbleProps } from "../ui/bubble"
-import { Bubble, BubbleContent, type BubbleContentProps } from "../ui/bubble"
+import type { BubbleProps } from "@/components/ui/bubble"
+import { Bubble, BubbleContent, type BubbleContentProps } from "@/components/ui/bubble"
 
 export type ChatBubbleRole = "user" | "assistant" | "system" | "error"
 

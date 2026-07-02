@@ -1,4 +1,4 @@
-import { getModelColorByName } from "../../lib/model-colors"
+import { getModelColorByName } from "@/lib/model-colors"
 import type { ModelOption } from "./types"
 
 export function formatParameterCount(count?: number | null): string {

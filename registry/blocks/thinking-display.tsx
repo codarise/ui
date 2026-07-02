@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 
-import { CopyButton } from "../custom/copy-button"
-import { TextShimmer } from "../custom/text-shimmer"
-import { cn } from "../lib/utils"
+import { CopyButton } from "@/components/ui/copy-button"
+import { TextShimmer } from "@/components/ui/text-shimmer"
+import { cn } from "@/lib/utils"
 
 export interface ThinkingDisplayProps {
   /** One or more thinking blocks (joined with a blank line). */

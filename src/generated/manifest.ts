@@ -89,8 +89,8 @@ export const manifest: ManifestItem[] = [
       "radix-ui"
     ],
     "registryDependencies": [
-      "button",
-      "spinner"
+      "codarise/ui/button",
+      "codarise/ui/spinner"
     ],
     "valueExports": [
       "AlertDialog",
@@ -126,7 +126,7 @@ export const manifest: ManifestItem[] = [
       "radix-ui"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "Attachment",
@@ -244,7 +244,7 @@ export const manifest: ManifestItem[] = [
       "radix-ui"
     ],
     "registryDependencies": [
-      "spinner"
+      "codarise/ui/spinner"
     ],
     "valueExports": [
       "Button",
@@ -270,7 +270,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "Calendar",
@@ -398,7 +398,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "dialog"
+      "codarise/ui/dialog"
     ],
     "valueExports": [
       "Command",
@@ -431,7 +431,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "Dialog",
@@ -560,7 +560,7 @@ export const manifest: ManifestItem[] = [
       "react-hook-form"
     ],
     "registryDependencies": [
-      "label"
+      "codarise/ui/label"
     ],
     "valueExports": [
       "Form",
@@ -610,9 +610,9 @@ export const manifest: ManifestItem[] = [
       "class-variance-authority"
     ],
     "registryDependencies": [
-      "button",
-      "input",
-      "textarea"
+      "codarise/ui/button",
+      "codarise/ui/input",
+      "codarise/ui/textarea"
     ],
     "valueExports": [
       "InputGroup",
@@ -845,7 +845,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "Sheet",
@@ -1084,7 +1084,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "CopyButton"
@@ -1200,7 +1200,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "input"
+      "codarise/ui/input"
     ],
     "valueExports": [
       "SearchInput"
@@ -1304,7 +1304,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "polarise-theme"
+      "codarise/ui/polarise-theme"
     ],
     "valueExports": [
       "getRandomTheme",
@@ -1405,9 +1405,9 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "badge",
-      "card",
-      "project-themes"
+      "codarise/ui/badge",
+      "codarise/ui/card",
+      "codarise/ui/project-themes"
     ],
     "valueExports": [
       "BentoCard"
@@ -1432,7 +1432,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "bubble"
+      "codarise/ui/bubble"
     ],
     "valueExports": [
       "bubbleVariantForRole",
@@ -1462,7 +1462,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "marker"
+      "codarise/ui/marker"
     ],
     "valueExports": [
       "ChatMarker"
@@ -1487,7 +1487,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "message"
+      "codarise/ui/message"
     ],
     "valueExports": [
       "ChatMessageRow"
@@ -1513,8 +1513,8 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "icon-wrapper",
-      "button"
+      "codarise/ui/icon-wrapper",
+      "codarise/ui/button"
     ],
     "valueExports": [
       "ErrorState"
@@ -1536,7 +1536,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "card"
+      "codarise/ui/card"
     ],
     "valueExports": [
       "FeaturedCard"
@@ -1560,7 +1560,7 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "spinner"
+      "codarise/ui/spinner"
     ],
     "valueExports": [
       "LoadingState"
@@ -1584,8 +1584,8 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "card",
-      "model-colors"
+      "codarise/ui/card",
+      "codarise/ui/model-colors"
     ],
     "valueExports": [
       "ModelCard"
@@ -1618,12 +1618,12 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "badge",
-      "button",
-      "label",
-      "popover",
-      "tooltip",
-      "model-colors"
+      "codarise/ui/badge",
+      "codarise/ui/button",
+      "codarise/ui/label",
+      "codarise/ui/popover",
+      "codarise/ui/tooltip",
+      "codarise/ui/model-colors"
     ],
     "valueExports": [
       "ModelSelect",
@@ -1665,7 +1665,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "button"
+      "codarise/ui/button"
     ],
     "valueExports": [
       "PageLayout",
@@ -1692,13 +1692,13 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "avatar",
-      "badge",
-      "button",
-      "dropdown-menu",
-      "scroll-area",
-      "sheet",
-      "tooltip"
+      "codarise/ui/avatar",
+      "codarise/ui/badge",
+      "codarise/ui/button",
+      "codarise/ui/dropdown-menu",
+      "codarise/ui/scroll-area",
+      "codarise/ui/sheet",
+      "codarise/ui/tooltip"
     ],
     "valueExports": [
       "SidebarProvider",
@@ -1739,8 +1739,8 @@ export const manifest: ManifestItem[] = [
     ],
     "dependencies": [],
     "registryDependencies": [
-      "copy-button",
-      "text-shimmer"
+      "codarise/ui/copy-button",
+      "codarise/ui/text-shimmer"
     ],
     "valueExports": [
       "ThinkingDisplay"
@@ -1766,7 +1766,7 @@ export const manifest: ManifestItem[] = [
       "lucide-react"
     ],
     "registryDependencies": [
-      "icon-wrapper"
+      "codarise/ui/icon-wrapper"
     ],
     "valueExports": [
       "UploadDropzone"

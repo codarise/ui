@@ -15,9 +15,9 @@ import {
   type ReactNode,
 } from "react"
 
-import { Avatar, AvatarFallback } from "../ui/avatar"
-import { Badge } from "../ui/badge"
-import { Button } from "../ui/button"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,10 +25,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu"
-import { Sheet, SheetContent, SheetDescription, SheetTitle } from "../ui/sheet"
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
-import { cn } from "../lib/utils"
+} from "@/components/ui/dropdown-menu"
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { cn } from "@/lib/utils"
 
 /* ------------------------------------------------------------------ */
 /* Types                                                               */

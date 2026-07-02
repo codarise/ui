@@ -5,7 +5,7 @@ import {
   MarkerContent,
   MarkerIcon,
   type MarkerProps,
-} from "../custom/marker"
+} from "@/components/ui/marker"
 
 export type ChatMarkerVariant = "default" | "separator" | "border"
 
