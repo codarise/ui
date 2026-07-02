@@ -14,8 +14,8 @@ import { fileURLToPath } from "node:url"
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, "..")
 
-const REGISTRY_OWNER = "felixhoebel"
-const REGISTRY_REPO = "codarise-ui"
+const REGISTRY_OWNER = "codarise"
+const REGISTRY_REPO = "ui"
 
 /** @param {string} kebab e.g. "alert-dialog" */
 function toPascalCase(kebab) {
