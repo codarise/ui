@@ -25,10 +25,10 @@ function CodeRow({
 }) {
   return (
     <div className="group/code flex items-center gap-2">
-      <span className="text-muted-foreground w-12 shrink-0 text-[0.65rem] font-medium uppercase tracking-wide">
+      <span className="w-12 shrink-0 text-[0.65rem] font-medium tracking-wide text-muted-foreground uppercase">
         {label}
       </span>
-      <code className="scrollbar-thin min-w-0 flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">
+      <code className="scrollbar-thin min-w-0 flex-1 overflow-x-auto font-mono text-xs whitespace-nowrap">
         {value}
       </code>
       <CopyButton
@@ -64,7 +64,7 @@ function PreviewArea({ item }: { item: ManifestItem }) {
 
   const hasNoPreview = noPreviewItems.has(item.name)
   return (
-    <div className="text-muted-foreground flex min-h-32 flex-col items-center justify-center gap-1 p-6 text-center">
+    <div className="flex min-h-32 flex-col items-center justify-center gap-1 p-6 text-center text-muted-foreground">
       <Package className="size-5 opacity-40" />
       <p className="text-xs">
         {hasNoPreview
@@ -97,7 +97,7 @@ export function ShowcaseCard({ item }: { item: ManifestItem }) {
 
       <PreviewArea item={item} />
 
-      <CardContent className="bg-card/50 flex flex-col gap-2 border-t p-3">
+      <CardContent className="flex flex-col gap-2 border-t bg-card/50 p-3">
         {item.importStatement && (
           <CodeRow
             label="import"

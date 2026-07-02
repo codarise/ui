@@ -1,9 +1,15 @@
-import type { ElementType, ReactNode } from 'react'
-import { BrainCircuit, ChevronRight } from 'lucide-react'
+import type { ElementType, ReactNode } from "react"
+import { BrainCircuit, ChevronRight } from "lucide-react"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
-import { getModelColorByName } from '../lib/model-colors'
-import { cn } from '../lib/utils'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card"
+import { getModelColorByName } from "../lib/model-colors"
+import { cn } from "../lib/utils"
 
 export interface ModelCardProps {
   /** Model name — used as title and for hash-based color derivation if no `color` is given */
@@ -47,13 +53,13 @@ export function ModelCard({
   onClick,
   className,
 }: ModelCardProps) {
-  const modelColor = color ?? getModelColorByName(title, 'hex')
+  const modelColor = color ?? getModelColorByName(title, "hex")
   const interactive = !!onClick
 
   return (
     <Card
       interactive={interactive}
-      className={cn('gap-0 overflow-hidden p-0', className)}
+      className={cn("gap-0 overflow-hidden p-0", className)}
       onClick={onClick}
     >
       <div
@@ -63,7 +69,7 @@ export function ModelCard({
         }}
       >
         <div
-          className="pointer-events-none absolute -right-16 -top-20 size-48 rounded-full opacity-0 blur-3xl transition-opacity duration-200 ease-out pointer-fine:group-hover:opacity-100"
+          className="pointer-events-none absolute -top-20 -right-16 size-48 rounded-full opacity-0 blur-3xl transition-opacity duration-200 ease-out pointer-fine:group-hover:opacity-100"
           style={{
             background: `${modelColor}24`,
           }}
@@ -89,7 +95,7 @@ export function ModelCard({
                     {title}
                   </CardTitle>
                   {interactive && (
-                    <ChevronRight className="size-4 shrink-0 text-muted-foreground opacity-0 transition-[opacity,transform,color] duration-150 ease-out pointer-fine:group-hover:translate-x-0.5 pointer-fine:group-hover:opacity-100 pointer-fine:group-hover:text-primary" />
+                    <ChevronRight className="size-4 shrink-0 text-muted-foreground opacity-0 transition-[opacity,transform,color] duration-150 ease-out pointer-fine:group-hover:translate-x-0.5 pointer-fine:group-hover:text-primary pointer-fine:group-hover:opacity-100" />
                   )}
                 </div>
                 {description && (

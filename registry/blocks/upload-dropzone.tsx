@@ -1,8 +1,8 @@
-import { Upload } from 'lucide-react'
-import { useCallback, useRef, useState } from 'react'
+import { Upload } from "lucide-react"
+import { useCallback, useRef, useState } from "react"
 
-import { IconWrapper } from '../custom/icon-wrapper'
-import { cn } from '../lib/utils'
+import { IconWrapper } from "../custom/icon-wrapper"
+import { cn } from "../lib/utils"
 
 export interface UploadDropzoneProps {
   /** Called with the selected/dropped files */
@@ -12,7 +12,7 @@ export interface UploadDropzoneProps {
   /** Allow multiple files (default: true) */
   multiple?: boolean
   /** Visual variant — 'prominent' is larger with centered layout */
-  variant?: 'compact' | 'prominent'
+  variant?: "compact" | "prominent"
   /** Icon component, defaults to Upload */
   icon?: React.ElementType<{ className?: string }>
   /** Custom label text */
@@ -31,10 +31,10 @@ export function UploadDropzone({
   onFiles,
   accept,
   multiple = true,
-  variant = 'compact',
+  variant = "compact",
   icon: Icon = Upload,
-  label = 'Drop files here or click to upload',
-  activeLabel = 'Drop files here to upload',
+  label = "Drop files here or click to upload",
+  activeLabel = "Drop files here to upload",
   className,
 }: UploadDropzoneProps) {
   const [isDragOver, setIsDragOver] = useState(false)
@@ -76,7 +76,7 @@ export function UploadDropzone({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const files = e.target.files ? Array.from(e.target.files) : []
       if (files.length > 0) onFiles(files)
-      if (fileInputRef.current) fileInputRef.current.value = ''
+      if (fileInputRef.current) fileInputRef.current.value = ""
     },
     [onFiles]
   )
@@ -85,14 +85,14 @@ export function UploadDropzone({
     fileInputRef.current?.click()
   }, [])
 
-  if (variant === 'prominent') {
+  if (variant === "prominent") {
     return (
       <div
         className={cn(
-          'flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-10 transition-colors',
+          "flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-10 transition-colors",
           isDragOver
-            ? 'border-primary bg-primary/5'
-            : 'border-muted-foreground/25 hover:border-primary/50',
+            ? "border-primary bg-primary/5"
+            : "border-muted-foreground/25 hover:border-primary/50",
           className
         )}
         onClick={handleClick}
@@ -104,8 +104,8 @@ export function UploadDropzone({
         <IconWrapper
           icon={Icon}
           className={cn(
-            'mb-3 h-10 w-10',
-            isDragOver ? 'text-primary' : 'text-muted-foreground'
+            "mb-3 h-10 w-10",
+            isDragOver ? "text-primary" : "text-muted-foreground"
           )}
         />
         <p className="text-base font-medium">
@@ -126,10 +126,10 @@ export function UploadDropzone({
   return (
     <div
       className={cn(
-        'flex cursor-pointer items-center gap-3 rounded-lg border-2 border-dashed p-5 transition-colors',
+        "flex cursor-pointer items-center gap-3 rounded-lg border-2 border-dashed p-5 transition-colors",
         isDragOver
-          ? 'border-primary bg-primary/5'
-          : 'border-muted-foreground/25 hover:border-primary/50',
+          ? "border-primary bg-primary/5"
+          : "border-muted-foreground/25 hover:border-primary/50",
         className
       )}
       onClick={handleClick}
@@ -140,8 +140,8 @@ export function UploadDropzone({
     >
       <Icon
         className={cn(
-          'size-5 shrink-0',
-          isDragOver ? 'text-primary' : 'text-muted-foreground'
+          "size-5 shrink-0",
+          isDragOver ? "text-primary" : "text-muted-foreground"
         )}
       />
       <p className="flex-1 text-sm text-muted-foreground">

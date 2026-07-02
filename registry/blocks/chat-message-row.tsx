@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react'
-import { memo } from 'react'
+import type { ReactNode } from "react"
+import { memo } from "react"
 
 import {
   Message,
@@ -7,10 +7,10 @@ import {
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from '../ui/message'
+} from "../ui/message"
 
 export interface ChatMessageRowProps {
-  align?: 'start' | 'end'
+  align?: "start" | "end"
   /** Optional avatar {src, fallback} rendered via MessageAvatar. */
   avatar?: { src?: string; fallback?: ReactNode }
   header?: ReactNode
@@ -29,7 +29,7 @@ export interface ChatMessageRowProps {
  * Features map their message type to this — no shared message model required.
  */
 function ChatMessageRowComponent({
-  align = 'start',
+  align = "start",
   avatar,
   header,
   timestamp,

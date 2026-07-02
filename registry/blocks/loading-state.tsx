@@ -1,5 +1,5 @@
-import { Spinner } from '../ui/spinner'
-import { cn } from '../lib/utils'
+import { Spinner } from "../ui/spinner"
+import { cn } from "../lib/utils"
 
 interface LoadingStateProps {
   title?: string
@@ -7,19 +7,25 @@ interface LoadingStateProps {
   className?: string
 }
 
-export function LoadingState({ title, description, className }: LoadingStateProps) {
+export function LoadingState({
+  title,
+  description,
+  className,
+}: LoadingStateProps) {
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center min-h-[400px] p-8 text-center',
+        "flex min-h-[400px] flex-col items-center justify-center p-8 text-center fade-in",
         className
       )}
     >
       <div className="max-w-md space-y-6">
-        <div className="flex flex-col items-center justify-center gap-2">
-          <Spinner />
-          <div className="space-y-2">
-            <h2 className="text-sm font-semibold text-foreground">{title}</h2>
+        <div className="flex flex-col items-center justify-center gap-3">
+          <Spinner className="size-6 text-muted-foreground" />
+          <div className="space-y-1.5">
+            {title && (
+              <h2 className="text-sm font-semibold text-foreground">{title}</h2>
+            )}
             {description && (
               <p className="text-sm text-muted-foreground">{description}</p>
             )}
