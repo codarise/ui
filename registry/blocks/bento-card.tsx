@@ -1,19 +1,19 @@
 import * as React from "react"
 
-import { Badge } from "../ui/badge"
+import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card"
+} from "@/components/ui/card"
 import {
   PROJECT_THEMES,
   getThemeById,
   type ProjectTheme,
-} from "../lib/project-themes"
-import { cn } from "../lib/utils"
+} from "@/lib/project-themes"
+import { cn } from "@/lib/utils"
 
 export type GradientVariant = (typeof PROJECT_THEMES)[number]["id"]
 

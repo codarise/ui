@@ -6,23 +6,43 @@
       "type": "registry:lib",
       "title": "Utils",
       "description": "The cn utility — merges Tailwind classes with clsx and tailwind-merge.",
-      "dependencies": ["clsx", "tailwind-merge"],
-      "files": [{ "path": "utils.ts", "type": "registry:lib" }]
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "utils.ts",
+          "type": "registry:lib"
+        }
+      ]
     },
     {
       "name": "model-colors",
       "type": "registry:lib",
       "title": "Model Colors",
       "description": "Consistent color assignment for AI models — specific colors for known models (Llama, Mistral, Gemma) and hash-based fallback for unknown ones. Returns hex or Tailwind class.",
-      "files": [{ "path": "model-colors.ts", "type": "registry:lib" }]
+      "files": [
+        {
+          "path": "model-colors.ts",
+          "type": "registry:lib"
+        }
+      ]
     },
     {
       "name": "project-themes",
       "type": "registry:lib",
       "title": "Project Themes",
       "description": "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
-      "registryDependencies": ["polarise-theme"],
-      "files": [{ "path": "project-themes.ts", "type": "registry:lib" }]
+      "registryDependencies": [
+        "codarise/ui/polarise-theme"
+      ],
+      "files": [
+        {
+          "path": "project-themes.ts",
+          "type": "registry:lib"
+        }
+      ]
     }
   ]
 }

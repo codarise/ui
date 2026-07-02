@@ -6,7 +6,11 @@
   ],
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/lib/utils": ["./registry/lib/utils"],
+      "@/lib/model-colors": ["./registry/lib/model-colors"],
+      "@/lib/project-themes": ["./registry/lib/project-themes"],
+      "@/components/ui/*": ["./registry/ui/*", "./registry/custom/*"]
     }
   }
 }

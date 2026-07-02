@@ -7,9 +7,9 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card"
-import { getModelColorByName } from "../lib/model-colors"
-import { cn } from "../lib/utils"
+} from "@/components/ui/card"
+import { getModelColorByName } from "@/lib/model-colors"
+import { cn } from "@/lib/utils"
 
 export interface ModelCardProps {
   /** Model name — used as title and for hash-based color derivation if no `color` is given */

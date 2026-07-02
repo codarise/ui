@@ -1,8 +1,8 @@
 import { Upload } from "lucide-react"
 import { useCallback, useRef, useState } from "react"
 
-import { IconWrapper } from "../custom/icon-wrapper"
-import { cn } from "../lib/utils"
+import { IconWrapper } from "@/components/ui/icon-wrapper"
+import { cn } from "@/lib/utils"
 
 export interface UploadDropzoneProps {
   /** Called with the selected/dropped files */

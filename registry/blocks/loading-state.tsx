@@ -1,5 +1,5 @@
-import { Spinner } from "../ui/spinner"
-import { cn } from "../lib/utils"
+import { Spinner } from "@/components/ui/spinner"
+import { cn } from "@/lib/utils"
 
 interface LoadingStateProps {
   title?: string

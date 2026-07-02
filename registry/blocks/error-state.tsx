@@ -1,9 +1,9 @@
 import { AlertCircle } from "lucide-react"
 import type { ReactNode } from "react"
 
-import { IconWrapper } from "../custom/icon-wrapper"
-import { Button } from "../ui/button"
-import { cn } from "../lib/utils"
+import { IconWrapper } from "@/components/ui/icon-wrapper"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 interface ErrorStateProps {
   title?: string

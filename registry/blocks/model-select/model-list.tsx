@@ -1,6 +1,6 @@
 import { BrainCircuit, Star } from "lucide-react"
 
-import { cn } from "../../lib/utils"
+import { cn } from "@/lib/utils"
 import { getModelColor, getModelLabel } from "./helpers"
 import type { ModelOption } from "./types"
 

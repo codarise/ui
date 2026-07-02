@@ -9,9 +9,9 @@ import {
 } from "lucide-react"
 import type { ElementType, ReactNode } from "react"
 
-import { cn } from "../../lib/utils"
-import { Badge } from "../../ui/badge"
-import { Button } from "../../ui/button"
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 import {
   formatCurrency,

@@ -6,8 +6,15 @@
       "type": "registry:block",
       "title": "Featured Card",
       "description": "A featured strip with gradient border, faded icon, headline and optional CTA or custom action.",
-      "registryDependencies": ["card"],
-      "files": [{ "path": "featured-card.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/card"
+      ],
+      "files": [
+        {
+          "path": "featured-card.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "bento-card",
@@ -15,64 +22,113 @@
       "title": "Bento Card",
       "description": "A bento-style dashboard card with a gradient header (dither + animated blur blobs), icon or custom headerContent, title, description, badge, and optional body. Pass a gradient id from project-themes for the header color. Router-agnostic — use onClick for navigation (e.g. onClick={() => navigate({ to: href })}). Use the `featured` prop for a larger highlight variant.",
       "registryDependencies": [
-        "badge",
-        "card",
-        "project-themes"
+        "codarise/ui/badge",
+        "codarise/ui/card",
+        "codarise/ui/project-themes"
       ],
-      "files": [{ "path": "bento-card.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "bento-card.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "loading-state",
       "type": "registry:block",
       "title": "Loading State",
       "description": "A centered loading state with spinner, title, and optional description.",
-      "registryDependencies": ["spinner"],
-      "files": [{ "path": "loading-state.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/spinner"
+      ],
+      "files": [
+        {
+          "path": "loading-state.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "error-state",
       "type": "registry:block",
       "title": "Error State",
       "description": "A centered error state with icon, title, description, and optional retry button or custom action.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [
-        "icon-wrapper",
-        "button"
+      "dependencies": [
+        "lucide-react"
       ],
-      "files": [{ "path": "error-state.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/icon-wrapper",
+        "codarise/ui/button"
+      ],
+      "files": [
+        {
+          "path": "error-state.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "chat-bubble",
       "type": "registry:block",
       "title": "Chat Bubble",
       "description": "A chat bubble wrapper with role-to-variant mapping helpers for user, assistant, system, and error messages.",
-      "registryDependencies": ["bubble"],
-      "files": [{ "path": "chat-bubble.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/bubble"
+      ],
+      "files": [
+        {
+          "path": "chat-bubble.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "chat-marker",
       "type": "registry:block",
       "title": "Chat Marker",
       "description": "A chat marker with optional leading icon, built on the Marker primitive.",
-      "registryDependencies": ["marker"],
-      "files": [{ "path": "chat-marker.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/marker"
+      ],
+      "files": [
+        {
+          "path": "chat-marker.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "chat-message-row",
       "type": "registry:block",
       "title": "Chat Message Row",
       "description": "A shared chat row shell that aligns avatar, header, content, and footer. Framework-agnostic — features map their message type to this.",
-      "registryDependencies": ["message"],
-      "files": [{ "path": "chat-message-row.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/message"
+      ],
+      "files": [
+        {
+          "path": "chat-message-row.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "page-layout",
       "type": "registry:block",
       "title": "Page Layout",
       "description": "Page composition primitives: PageLayout, PageHeader (with back button), PageSection, and PageContent. Router-agnostic.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["button"],
-      "files": [{ "path": "page-layout.tsx", "type": "registry:block" }]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "codarise/ui/button"
+      ],
+      "files": [
+        {
+          "path": "page-layout.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "thinking-display",
@@ -80,46 +136,92 @@
       "title": "Thinking Display",
       "description": "A collapsible thinking/reasoning panel with streaming-aware auto-open/collapse, shimmer label, scroll fade, and copy button.",
       "registryDependencies": [
-        "copy-button",
-        "text-shimmer"
+        "codarise/ui/copy-button",
+        "codarise/ui/text-shimmer"
       ],
-      "files": [{ "path": "thinking-display.tsx", "type": "registry:block" }]
+      "files": [
+        {
+          "path": "thinking-display.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "model-card",
       "type": "registry:block",
       "title": "Model Card",
       "description": "A model card with gradient background derived from the model name. Generic — pass badges, metadata, features, and footer as ReactNode. Color is auto-derived via model-colors util or can be overridden.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [
-        "card",
-        "model-colors"
+      "dependencies": [
+        "lucide-react"
       ],
-      "files": [{ "path": "model-card.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/card",
+        "codarise/ui/model-colors"
+      ],
+      "files": [
+        {
+          "path": "model-card.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "model-select",
       "type": "registry:block",
       "title": "Model Select",
       "description": "A model selector with popover list, keyboard navigation, favorites (localStorage), and optional details panel. Generic — uses ModelOption type instead of a domain type. Color is auto-derived via model-colors. Includes trigger button, model list, and details panel with pricing/features/capabilities.",
-      "dependencies": ["lucide-react"],
+      "dependencies": [
+        "lucide-react"
+      ],
       "registryDependencies": [
-        "badge",
-        "button",
-        "label",
-        "popover",
-        "tooltip",
-        "model-colors"
+        "codarise/ui/badge",
+        "codarise/ui/button",
+        "codarise/ui/label",
+        "codarise/ui/popover",
+        "codarise/ui/tooltip",
+        "codarise/ui/model-colors"
       ],
       "files": [
-        { "path": "model-select.tsx", "type": "registry:block" },
-        { "path": "model-select/types.ts", "type": "registry:block" },
-        { "path": "model-select/helpers.ts", "type": "registry:block" },
-        { "path": "model-select/use-favorites.ts", "type": "registry:block" },
-        { "path": "model-select/use-model-selector.ts", "type": "registry:block" },
-        { "path": "model-select/trigger.tsx", "type": "registry:block" },
-        { "path": "model-select/model-list.tsx", "type": "registry:block" },
-        { "path": "model-select/details-panel.tsx", "type": "registry:block" }
+        {
+          "path": "model-select.tsx",
+          "type": "registry:block",
+          "target": "components/model-select.tsx"
+        },
+        {
+          "path": "model-select/types.ts",
+          "type": "registry:block",
+          "target": "components/model-select/types.ts"
+        },
+        {
+          "path": "model-select/helpers.ts",
+          "type": "registry:block",
+          "target": "components/model-select/helpers.ts"
+        },
+        {
+          "path": "model-select/use-favorites.ts",
+          "type": "registry:block",
+          "target": "components/model-select/use-favorites.ts"
+        },
+        {
+          "path": "model-select/use-model-selector.ts",
+          "type": "registry:block",
+          "target": "components/model-select/use-model-selector.ts"
+        },
+        {
+          "path": "model-select/trigger.tsx",
+          "type": "registry:block",
+          "target": "components/model-select/trigger.tsx"
+        },
+        {
+          "path": "model-select/model-list.tsx",
+          "type": "registry:block",
+          "target": "components/model-select/model-list.tsx"
+        },
+        {
+          "path": "model-select/details-panel.tsx",
+          "type": "registry:block",
+          "target": "components/model-select/details-panel.tsx"
+        }
       ]
     },
     {
@@ -127,26 +229,42 @@
       "type": "registry:block",
       "title": "Upload Dropzone",
       "description": "Drag & drop file upload zone with click-to-select. Uses a drag counter to avoid flicker. Supports compact and prominent variants.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["icon-wrapper"],
-      "files": [{ "path": "upload-dropzone.tsx", "type": "registry:block" }]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "codarise/ui/icon-wrapper"
+      ],
+      "files": [
+        {
+          "path": "upload-dropzone.tsx",
+          "type": "registry:block"
+        }
+      ]
     },
     {
       "name": "sidebar",
       "type": "registry:block",
       "title": "Sidebar",
       "description": "Complete sidebar system: provider with localStorage + breakpoint tracking, collapsible shell, header (logo slots), nav (groups + items with active state), footer (user menu dropdown), mobile sheet, and toggle button. Uses plain <a> tags — swap for your router's Link. Wire up: pass groups + activeHref to SidebarNav, user + menuItems + onLogout to SidebarFooter.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "button",
-        "dropdown-menu",
-        "scroll-area",
-        "sheet",
-        "tooltip"
+      "dependencies": [
+        "lucide-react"
       ],
-      "files": [{ "path": "sidebar.tsx", "type": "registry:block" }]
+      "registryDependencies": [
+        "codarise/ui/avatar",
+        "codarise/ui/badge",
+        "codarise/ui/button",
+        "codarise/ui/dropdown-menu",
+        "codarise/ui/scroll-area",
+        "codarise/ui/sheet",
+        "codarise/ui/tooltip"
+      ],
+      "files": [
+        {
+          "path": "sidebar.tsx",
+          "type": "registry:block"
+        }
+      ]
     }
   ]
 }

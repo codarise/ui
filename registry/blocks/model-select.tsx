@@ -1,6 +1,6 @@
-import { Label } from "../ui/label"
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
-import { cn } from "../lib/utils"
+import { Label } from "@/components/ui/label"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { cn } from "@/lib/utils"
 
 import type { ModelOption, ModelSelectProps } from "./model-select/types"
 import { useFavoriteModels } from "./model-select/use-favorites"

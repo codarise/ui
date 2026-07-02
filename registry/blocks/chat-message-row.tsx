@@ -7,7 +7,7 @@ import {
   MessageContent,
   MessageFooter,
   MessageHeader,
-} from "../ui/message"
+} from "@/components/ui/message"
 
 export interface ChatMessageRowProps {
   align?: "start" | "end"

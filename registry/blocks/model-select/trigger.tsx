@@ -1,9 +1,9 @@
 import * as React from "react"
 import { BrainCircuit, ChevronDown, Star } from "lucide-react"
 
-import { Button } from "../../ui/button"
-import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip"
-import { cn } from "../../lib/utils"
+import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { cn } from "@/lib/utils"
 import { getModelColor, getModelLabel } from "./helpers"
 import type { ModelOption } from "./types"
 
