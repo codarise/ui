@@ -22,6 +22,7 @@ function registryResolver() {
   }
   return {
     name: "registry-resolver",
+    enforce: "pre",
     resolveId(source: string) {
       if (source.startsWith("@/lib/")) {
         const name = source.slice("@/lib/".length)
