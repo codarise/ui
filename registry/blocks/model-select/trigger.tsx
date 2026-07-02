@@ -1,3 +1,4 @@
+import * as React from "react"
 import { BrainCircuit, ChevronDown, Star } from "lucide-react"
 
 import { Button } from "../../ui/button"
@@ -136,7 +137,7 @@ export function ClearOptionContent({
   return (
     <div
       className={cn(
-        "flex min-w-0 flex-1 items-center",
+        "flex min-w-0 items-center",
         isLarge ? "gap-3" : "gap-2"
       )}
     >
@@ -166,14 +167,14 @@ export function SelectTriggerChevron({ isLarge }: { isLarge: boolean }) {
   return (
     <ChevronDown
       className={cn(
-        "shrink-0 justify-end opacity-50 transition-transform duration-200",
+        "shrink-0 opacity-50 transition-transform duration-200",
         isLarge ? "size-5" : "size-4"
       )}
     />
   )
 }
 
-interface ModelSelectTriggerProps {
+interface ModelSelectTriggerProps extends React.ComponentProps<"button"> {
   value: string
   placeholder: string
   selectedModelData: ModelOption | undefined
@@ -197,46 +198,50 @@ export function ModelSelectTrigger({
   disabled,
   isFavorite,
   toggleFavorite,
+  ...props
 }: ModelSelectTriggerProps) {
   return (
     <Button
+      {...props}
       id="model-select"
       variant="ghost"
       role="combobox"
+      asChild
       disabled={disabled}
       className={cn(
-        "justify-between gap-1 transition-colors",
         isSmall && "h-8 max-w-48 gap-1 px-2 text-xs",
-        !isSmall && !isLarge && "h-12 w-66 gap-2 px-3",
+        !isSmall && !isLarge && "h-12 w-full max-w-64 gap-2 px-3",
         isLarge &&
           "h-18 w-full gap-3 border border-border bg-background px-4 hover:bg-accent/30",
         !value && "text-muted-foreground"
       )}
     >
-      {selectedModelData && (
-        <FavoriteStarButton
-          modelId={value}
-          isFavorite={isFavorite}
-          toggleFavorite={toggleFavorite}
-          isLarge={isLarge}
-        />
-      )}
-      {selectedModelData ? (
-        <SelectedModelContent
-          option={selectedModelData}
-          isSmall={isSmall}
-          isLarge={isLarge}
-        />
-      ) : allowClear && !value ? (
-        <ClearOptionContent
-          clearLabel={clearLabel}
-          isSmall={isSmall}
-          isLarge={isLarge}
-        />
-      ) : (
-        <span className="min-w-0 flex-1 truncate text-left">{placeholder}</span>
-      )}
-      <SelectTriggerChevron isLarge={isLarge} />
+      <div className="flex w-full items-center justify-between gap-1">
+        {selectedModelData && (
+          <FavoriteStarButton
+            modelId={value}
+            isFavorite={isFavorite}
+            toggleFavorite={toggleFavorite}
+            isLarge={isLarge}
+          />
+        )}
+        {selectedModelData ? (
+          <SelectedModelContent
+            option={selectedModelData}
+            isSmall={isSmall}
+            isLarge={isLarge}
+          />
+        ) : allowClear && !value ? (
+          <ClearOptionContent
+            clearLabel={clearLabel}
+            isSmall={isSmall}
+            isLarge={isLarge}
+          />
+        ) : (
+          <span className="min-w-0 flex-1 truncate text-left">{placeholder}</span>
+        )}
+        <SelectTriggerChevron isLarge={isLarge} />
+      </div>
     </Button>
   )
 }

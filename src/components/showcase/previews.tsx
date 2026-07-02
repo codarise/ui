@@ -964,19 +964,29 @@ export const previewComponents: Record<string, React.ComponentType> = {
       },
     ]
     return (
-      <div className="w-full space-y-4">
+      <div className="flex w-full flex-col items-center gap-3">
         <ModelSelect
           options={options}
           value="llama-3.1-405b"
           onValueChange={() => {}}
-          showLabel
-          size="md"
+          size="sm"
+          showDetails={false}
+          className="max-w-56"
         />
         <ModelSelect
           options={options}
           value=""
           onValueChange={() => {}}
           size="sm"
+          allowClear
+          showDetails={false}
+          className="max-w-56"
+        />
+                <ModelSelect
+          options={options}
+          value=""
+          onValueChange={() => {}}
+          size="lg"
           allowClear
           showDetails={false}
         />

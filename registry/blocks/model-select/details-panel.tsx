@@ -1,5 +1,4 @@
 import {
-  BrainCircuit,
   Cpu,
   Database,
   Euro,
@@ -10,9 +9,10 @@ import {
 } from "lucide-react"
 import type { ElementType, ReactNode } from "react"
 
+import { cn } from "../../lib/utils"
 import { Badge } from "../../ui/badge"
 import { Button } from "../../ui/button"
-import { cn } from "../../lib/utils"
+
 import {
   formatCurrency,
   formatParameterCount,
@@ -35,116 +35,123 @@ export function ModelDetailsPanel({
   className,
 }: ModelDetailsPanelProps) {
   const modelColor = getModelColor(option)
-  const Icon = option.icon ?? BrainCircuit
   const pricing = option.pricing
   const hasPricing =
     pricing &&
     (pricing.inputPer1m !== undefined || pricing.outputPer1m !== undefined)
 
   return (
-    <div className={cn("flex h-full flex-col", className)}>
-      <ModelDetailsHeader
-        option={option}
-        modelColor={modelColor}
-        icon={Icon}
-        isFavorite={isFavorite}
-        onToggleFavorite={onToggleFavorite}
-      />
-
-      <div className="flex-1 space-y-5 overflow-y-auto p-4">
-        <div className="grid gap-4 text-sm">
-          {option.parameterCount !== undefined && (
-            <DetailRow icon={Database} label="Parameters">
-              {formatParameterCount(option.parameterCount)}
-            </DetailRow>
-          )}
-
-          {option.license && (
-            <DetailRow icon={Tag} label="License">
-              <Badge variant="outline">{option.license}</Badge>
-            </DetailRow>
-          )}
-
-          {option.capabilities && option.capabilities.length > 0 && (
-            <CapabilitiesSection capabilities={option.capabilities} />
-          )}
-
-          {hasPricing && <PricingSection pricing={pricing} />}
-
-          {option.features && option.features.length > 0 && (
-            <FeaturesSection features={option.features} />
-          )}
-
-          {option.externalUrl && (
-            <ExternalLinkSection
-              url={option.externalUrl}
-              label={option.externalLabel}
-            />
-          )}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-interface ModelDetailsHeaderProps {
-  option: ModelOption
-  modelColor: string
-  icon: ElementType<{ className?: string }>
-  isFavorite?: boolean
-  onToggleFavorite?: (modelId: string) => void
-}
-
-function ModelDetailsHeader({
-  option,
-  modelColor,
-  icon: Icon,
-  isFavorite,
-  onToggleFavorite,
-}: ModelDetailsHeaderProps) {
-  return (
-    <div
-      className="sticky top-0 z-10 flex items-start gap-3 border-b bg-background/95 p-4 backdrop-blur-sm"
-      style={{
-        backgroundImage: `linear-gradient(135deg, ${modelColor}15 0%, transparent 100%)`,
-      }}
-    >
+    <div className={cn("flex flex-col", className)}>
+      {/* Header: just name + star, colored accent line */}
       <div
-        className="flex size-10 flex-shrink-0 items-center justify-center rounded-lg shadow-sm"
-        style={{
-          background: `linear-gradient(135deg, ${modelColor}33 0%, ${modelColor}10 100%)`,
-          color: modelColor,
-        }}
+        className="flex items-center justify-between gap-2 border-b px-3 py-2.5"
+        style={{ borderTopColor: modelColor, borderTopWidth: 2, borderTopStyle: "solid" }}
       >
-        <Icon className="size-5" />
-      </div>
-      <div className="min-w-0 flex-1 pt-0.5">
-        <div className="flex items-center gap-2">
-          <h4 className="truncate text-sm font-semibold" title={option.id}>
+        <div className="min-w-0 flex-1">
+          <h4 className="truncate text-sm font-semibold leading-tight" title={option.id}>
             {getModelLabel(option)}
           </h4>
-          {onToggleFavorite && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => onToggleFavorite(option.id)}
-              className="size-7 shrink-0 rounded transition-colors hover:bg-muted/80"
-            >
-              <Star
-                className={cn(
-                  "size-4 transition-colors duration-150",
-                  isFavorite
-                    ? "fill-amber-400 text-amber-400"
-                    : "text-muted-foreground hover:text-amber-400/70"
-                )}
-              />
-            </Button>
+          {option.description && (
+            <p className="mt-0.5 truncate text-xs text-muted-foreground">
+              {option.description}
+            </p>
           )}
         </div>
-        {option.description && (
-          <p className="mt-0.5 text-xs font-medium text-muted-foreground">
-            {option.description}
-          </p>
+        {onToggleFavorite && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => onToggleFavorite(option.id)}
+            className="size-6 shrink-0 rounded"
+          >
+            <Star
+              className={cn(
+                "size-3.5",
+                isFavorite
+                  ? "fill-amber-400 text-amber-400"
+                  : "text-muted-foreground"
+              )}
+            />
+          </Button>
+        )}
+      </div>
+
+      {/* Body */}
+      <div className="space-y-3 p-3">
+        {option.parameterCount !== undefined && (
+          <DetailRow icon={Database} label="Parameters">
+            {formatParameterCount(option.parameterCount)}
+          </DetailRow>
+        )}
+
+        {option.license && (
+          <DetailRow icon={Tag} label="License">
+            <Badge variant="outline" className="text-xs">{option.license}</Badge>
+          </DetailRow>
+        )}
+
+        {option.capabilities && option.capabilities.length > 0 && (
+          <DetailRow icon={Cpu} label="Specs">
+            <div className="flex flex-wrap gap-1">
+              {option.capabilities.map((cap, i) => (
+                <Badge key={i} variant="secondary" className="text-xs">
+                  {cap}
+                </Badge>
+              ))}
+            </div>
+          </DetailRow>
+        )}
+
+        {hasPricing && (
+          <DetailRow icon={Euro} label="Pricing">
+            {pricing!.inputPer1m === 0 && pricing!.outputPer1m === 0 ? (
+              <Badge variant="secondary">Free</Badge>
+            ) : (
+              <div className="flex flex-col gap-0.5">
+                {pricing!.inputPer1m !== undefined && (
+                  <span className="text-xs text-muted-foreground">
+                    {formatCurrency(pricing!.inputPer1m, pricing!.currency)}/1M in
+                  </span>
+                )}
+                {pricing!.outputPer1m !== undefined && (
+                  <span className="text-xs text-muted-foreground">
+                    {formatCurrency(pricing!.outputPer1m, pricing!.currency)}/1M out
+                  </span>
+                )}
+              </div>
+            )}
+          </DetailRow>
+        )}
+
+        {option.features && option.features.length > 0 && (
+          <DetailRow icon={Wrench} label="Features">
+            <div className="flex flex-wrap gap-1">
+              {option.features.map((feat, i) => {
+                const FeatIcon = feat.icon
+                return (
+                  <Badge key={i} variant="outline" className="gap-1 px-1.5 text-xs">
+                    {FeatIcon && <FeatIcon className="size-3" />}
+                    {feat.label}
+                  </Badge>
+                )
+              })}
+            </div>
+          </DetailRow>
+        )}
+
+        {option.externalUrl && (
+          <a
+            href={option.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 pt-1 text-xs text-primary/70 transition-colors hover:text-primary hover:underline"
+            title={option.externalUrl}
+          >
+            <ExternalLink className="size-3 shrink-0" />
+            <span className="truncate">
+              {option.externalLabel ?? option.externalUrl.replace(/^https?:\/\//, "")}
+            </span>
+          </a>
         )}
       </div>
     </div>
@@ -160,97 +167,13 @@ interface DetailRowProps {
 function DetailRow({ icon: Icon, label, children }: DetailRowProps) {
   return (
     <div className="flex items-start gap-2">
-      <Icon className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-      <div>
-        <p className="text-xs font-medium text-muted-foreground">{label}</p>
-        <div className="mt-0.5">{children}</div>
+      <Icon className="mt-0.5 size-3.5 shrink-0 text-muted-foreground" />
+      <div className="min-w-0 flex flex-col gap-0.5">
+        <span className="mr-1.5 text-xs font-medium text-muted-foreground">
+          {label}
+        </span>
+        <span className="text-xs">{children}</span>
       </div>
-    </div>
-  )
-}
-
-function CapabilitiesSection({ capabilities }: { capabilities: string[] }) {
-  return (
-    <DetailRow icon={Cpu} label="Capabilities">
-      <div className="flex flex-wrap gap-1.5">
-        {capabilities.map((cap, i) => (
-          <Badge key={i} variant="secondary" className="text-xs">
-            {cap}
-          </Badge>
-        ))}
-      </div>
-    </DetailRow>
-  )
-}
-
-function PricingSection({
-  pricing,
-}: {
-  pricing: NonNullable<ModelOption["pricing"]>
-}) {
-  const isFree = pricing.inputPer1m === 0 && pricing.outputPer1m === 0
-
-  return (
-    <DetailRow icon={Euro} label="Pricing">
-      {isFree ? (
-        <Badge variant="secondary">Free</Badge>
-      ) : (
-        <div className="flex flex-col gap-0.5">
-          {pricing.inputPer1m !== undefined && (
-            <p className="text-xs">
-              Input: {formatCurrency(pricing.inputPer1m, pricing.currency)}/1M
-              tokens
-            </p>
-          )}
-          {pricing.outputPer1m !== undefined && (
-            <p className="text-xs">
-              Output: {formatCurrency(pricing.outputPer1m, pricing.currency)}/1M
-              tokens
-            </p>
-          )}
-        </div>
-      )}
-    </DetailRow>
-  )
-}
-
-function FeaturesSection({
-  features,
-}: {
-  features: NonNullable<ModelOption["features"]>
-}) {
-  return (
-    <DetailRow icon={Wrench} label="Features">
-      <div className="flex flex-wrap gap-1.5">
-        {features.map((feat, i) => {
-          const FeatIcon = feat.icon
-          return (
-            <Badge key={i} variant="outline" className="gap-1 px-1.5 text-xs">
-              {FeatIcon && <FeatIcon className="size-3" />}
-              {feat.label}
-            </Badge>
-          )
-        })}
-      </div>
-    </DetailRow>
-  )
-}
-
-function ExternalLinkSection({ url, label }: { url: string; label?: string }) {
-  return (
-    <div className="border-t pt-3">
-      <p className="mb-1 text-xs font-medium text-muted-foreground">
-        {label ?? "External"}
-      </p>
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 text-xs text-primary transition-colors hover:text-primary/80 hover:underline"
-      >
-        {url.replace(/^https?:\/\//, "")}
-        <ExternalLink className="size-3" />
-      </a>
     </div>
   )
 }

@@ -77,11 +77,14 @@ export function ModelSelect({
               />
             </PopoverTrigger>
             <PopoverContent
-              className="w-[var(--radix-popover-trigger-width)] min-w-96 overflow-hidden p-0 md:min-w-158"
+              className={cn(
+                "w-[var(--radix-popover-trigger-width)] overflow-hidden p-0",
+                showDetails ? "min-w-80 md:min-w-96" : "min-w-72"
+              )}
               align="start"
               onOpenAutoFocus={(e) => e.preventDefault()}
             >
-              <div className="flex">
+              <div className="flex items-stretch">
                 <ModelList
                   options={state.sortedModels}
                   value={value}
@@ -99,7 +102,7 @@ export function ModelSelect({
                 />
                 {showDetails && (
                   <div
-                    className="m-1 w-1/2 shrink-0 overflow-x-hidden rounded-md border-l bg-muted/30"
+                    className="w-1/2 shrink-0 border-l bg-muted/30"
                     onMouseEnter={state.handleDetailsMouseEnter}
                     onMouseLeave={state.handleDetailsMouseLeave}
                   >

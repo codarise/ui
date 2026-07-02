@@ -38,7 +38,7 @@ export function ModelList({
   return (
     <div
       ref={listRef}
-      className="min-w-0 flex-1 overflow-y-auto py-1"
+      className="min-w-0 flex-1 self-stretch overflow-y-auto py-1"
       onKeyDown={onKeyDown}
       role="listbox"
     >
@@ -91,11 +91,14 @@ function ClearOption({
       aria-selected={selected}
       tabIndex={focused ? 0 : -1}
       className={cn(
-        "mx-1 flex cursor-pointer items-center gap-3 rounded-md px-3 py-2 transition-all duration-150",
+        "mx-1 flex cursor-pointer items-center gap-3 rounded-md px-2.5 py-1.5 transition-all duration-150",
         selected ? "bg-accent text-accent-foreground" : "hover:bg-muted/60",
         focused && "bg-accent/40 ring-2 ring-ring/40"
       )}
-      onClick={onSelect}
+      onClick={(e) => {
+        e.stopPropagation()
+        onSelect()
+      }}
       onMouseEnter={onMouseEnter}
     >
       <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground transition-colors">
@@ -137,12 +140,15 @@ function ModelListItem({
       aria-selected={selected}
       tabIndex={focused ? 0 : -1}
       className={cn(
-        "mx-1 flex cursor-pointer items-center gap-3 rounded-md px-3 py-2 transition-all duration-150",
+        "mx-1 flex cursor-pointer items-center gap-3 rounded-md px-2.5 py-1.5 transition-all duration-150",
         selected ? "bg-accent text-accent-foreground" : "hover:bg-muted/60",
         hovered && !selected && "bg-muted/40",
         focused && "bg-accent/40 ring-2 ring-ring/40"
       )}
-      onClick={onSelect}
+      onClick={(e) => {
+        e.stopPropagation()
+        onSelect()
+      }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={onMouseEnter}
