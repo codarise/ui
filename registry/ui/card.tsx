@@ -15,9 +15,9 @@ function Card({
       className={cn(
         "flex flex-col gap-6 rounded-xl border bg-card py-6 text-card-foreground shadow-sm",
         interactive && [
-          "group relative overflow-hidden cursor-pointer !justify-start",
+          "group relative cursor-pointer !justify-start overflow-hidden",
           "transition-[box-shadow,border-color] duration-200 ease-out",
-          "pointer-fine:hover:shadow-lg pointer-fine:hover:shadow-primary/5 pointer-fine:hover:border-primary/15",
+          "pointer-fine:hover:border-primary/15 pointer-fine:hover:shadow-lg pointer-fine:hover:shadow-primary/5",
         ],
         className
       )}

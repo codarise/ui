@@ -1,9 +1,9 @@
-import { AlertCircle } from 'lucide-react'
-import type { ReactNode } from 'react'
+import { AlertCircle } from "lucide-react"
+import type { ReactNode } from "react"
 
-import { IconWrapper } from '../custom/icon-wrapper'
-import { Button } from '../ui/button'
-import { cn } from '../lib/utils'
+import { IconWrapper } from "../custom/icon-wrapper"
+import { Button } from "../ui/button"
+import { cn } from "../lib/utils"
 
 interface ErrorStateProps {
   title?: string
@@ -17,7 +17,7 @@ interface ErrorStateProps {
 }
 
 export function ErrorState({
-  title = 'Something went wrong',
+  title = "Something went wrong",
   description,
   error,
   onRetry,
@@ -27,7 +27,7 @@ export function ErrorState({
   const resolvedDescription =
     description ??
     error?.message ??
-    'An unexpected error occurred. Please try again.'
+    "An unexpected error occurred. Please try again."
 
   const resolvedAction =
     action ??
@@ -40,22 +40,25 @@ export function ErrorState({
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center min-h-[400px] p-8 text-center',
+        "flex min-h-[400px] flex-col items-center justify-center p-8 text-center fade-in",
         className
       )}
     >
-      <div className="max-w-md space-y-2 flex flex-col items-center justify-center">
-        <IconWrapper icon={AlertCircle} iconClassName="text-destructive" />
-        <h2 className="font-medium text-sm text-foreground text-center">
+      <div className="flex max-w-md flex-col items-center justify-center space-y-3">
+        <IconWrapper
+          icon={AlertCircle}
+          iconClassName="text-destructive size-5"
+        />
+        <h2 className="text-center text-sm font-medium text-foreground">
           {title}
         </h2>
         {resolvedDescription && (
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-center text-sm text-muted-foreground">
             {resolvedDescription}
           </p>
         )}
         {resolvedAction && (
-          <div className="pt-2 flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4 pt-3">
             {resolvedAction}
           </div>
         )}

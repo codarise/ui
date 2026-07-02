@@ -1,7 +1,7 @@
-import type { ElementType, ReactNode } from 'react'
+import type { ElementType, ReactNode } from "react"
 
-import { CardDescription, CardTitle } from '../ui/card'
-import { cn } from '../lib/utils'
+import { CardDescription, CardTitle } from "../ui/card"
+import { cn } from "../lib/utils"
 
 interface FeaturedCardShared {
   heading: string
@@ -26,21 +26,20 @@ export function FeaturedCard(props: FeaturedCardProps) {
   return (
     <section
       className={cn(
-        'relative flex w-full items-center justify-center overflow-hidden rounded-lg border border-border bg-muted/25 bg-gradient-to-l from-[var(--ai-teal)] to-[var(--ai-green)] p-px text-card-foreground shadow-sm'
+        "relative flex w-full items-center justify-center overflow-hidden rounded-lg border border-border bg-muted/25 bg-gradient-to-l from-[var(--ai-teal)] to-[var(--ai-green)] p-px text-card-foreground shadow-sm"
       )}
     >
       <div
         className={cn(
-          'relative z-[1] flex h-full w-full flex-col items-center gap-5 rounded-[0.5rem] bg-gradient-to-t from-card to-background p-5'
+          "relative z-[1] flex h-full w-full flex-col items-center gap-5 rounded-[0.5rem] bg-gradient-to-t from-card to-background p-5"
         )}
       >
-        {' '}
-        <div className="absolute inset-0 opacity-[0.15] mix-blend-overlay pointer-events-none bg-dither" />
+        <div className="pointer-events-none absolute inset-0 bg-dither opacity-[0.15] mix-blend-overlay" />
         <div
           className="pointer-events-none absolute inset-0 z-0 flex items-start justify-start overflow-hidden"
           aria-hidden="true"
         >
-          <Icon className={cn(iconClassName) + ' opacity-10 drop-shadow-md'} />
+          <Icon className={cn(iconClassName) + " opacity-10 drop-shadow-md"} />
         </div>
         <div className="relative z-[1] flex w-full flex-wrap items-center justify-between gap-5">
           <div>

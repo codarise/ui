@@ -26,17 +26,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetTitle,
-} from "../ui/sheet"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "../ui/tooltip"
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "../ui/sheet"
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 import { cn } from "../lib/utils"
 
 /* ------------------------------------------------------------------ */
@@ -149,9 +140,7 @@ export function SidebarProvider({
   }
 
   return (
-    <SidebarContext.Provider value={value}>
-      {children}
-    </SidebarContext.Provider>
+    <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
   )
 }
 
@@ -175,7 +164,7 @@ export function Sidebar({ children, className }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-0 z-40 h-full bg-sidebar",
+        "fixed top-0 left-0 z-40 h-full bg-sidebar",
         "transition-all duration-300 ease-in-out",
         "lg:relative lg:translate-x-0",
         isOpen
@@ -211,7 +200,7 @@ export function SidebarHeader({
     <div className="pt-px">
       <div
         className={cn(
-          "flex h-12 items-center justify-between fade-in relative",
+          "relative flex h-12 items-center justify-between fade-in",
           isOpen ? "px-5" : "px-4.5",
           className
         )}
@@ -223,7 +212,7 @@ export function SidebarHeader({
               variant="ghost"
               size="sm"
               onClick={toggle}
-              className="size-8 hidden sm:block"
+              className="hidden size-8 sm:block"
               aria-label="Collapse sidebar"
             >
               <Layout className="size-4 text-muted-foreground" />
@@ -236,12 +225,12 @@ export function SidebarHeader({
                 type="button"
                 onClick={toggle}
                 aria-label="Open sidebar"
-                className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ring-1 ring-border rounded-full"
+                className="rounded-full ring-1 ring-border focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none"
               >
                 {collapsedLogo ?? (
                   <Badge
                     variant="outline"
-                    className="text-xs text-brand-gradient rounded-full cursor-pointer size-8 flex items-center justify-center"
+                    className="text-brand-gradient flex size-8 cursor-pointer items-center justify-center rounded-full text-xs"
                   >
                     D
                   </Badge>
@@ -339,9 +328,9 @@ function SidebarGroup({
           type="button"
           onClick={toggleExpanded}
           className={cn(
-            "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 w-full justify-between leading-none",
-            "hover:bg-muted/50 hover:text-accent-foreground border-b border-transparent cursor-pointer",
-            "focus-visible:outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+            "group flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm leading-none font-medium transition-all duration-200",
+            "cursor-pointer border-b border-transparent hover:bg-muted/50 hover:text-accent-foreground",
+            "focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
           )}
         >
           <span className="truncate text-xs font-medium text-muted-foreground">
@@ -355,7 +344,7 @@ function SidebarGroup({
         </button>
       )}
       {isExpanded && (
-        <div className="space-y-1 mt-1">
+        <div className="mt-1 space-y-1">
           {group.items.map((item) => (
             <SidebarItem
               key={item.href}
@@ -381,10 +370,7 @@ interface SidebarItemProps {
   onClick?: () => void
 }
 
-function isItemActive(
-  item: NavigationItem,
-  activeHref: string
-): boolean {
+function isItemActive(item: NavigationItem, activeHref: string): boolean {
   if (item.exact) return activeHref === item.href
   if (activeHref === item.href) return true
   if (item.href === "/") return false
@@ -417,7 +403,7 @@ function SidebarItem({
       className={cn(
         "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200",
         "hover:bg-muted/50 hover:text-accent-foreground",
-        "focus-visible:outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none",
         active ? "bg-muted/50 text-accent-foreground" : "text-foreground"
       )}
     >
@@ -431,11 +417,11 @@ function SidebarItem({
       />
       {!isCollapsed && (
         <>
-          <span className="truncate line-clamp-1">{item.name}</span>
+          <span className="line-clamp-1 truncate">{item.name}</span>
           {item.badge && (
             <Badge
               variant="secondary"
-              className="ml-auto shadow-sm bg-background/50"
+              className="ml-auto bg-background/50 shadow-sm"
             >
               {item.badge}
             </Badge>
@@ -506,7 +492,7 @@ export function SidebarFooter({
   return (
     <div
       className={cn(
-        "md:bottom-0 md:left-0 md:right-0 w-full mx-auto px-3 pb-3",
+        "mx-auto w-full px-3 pb-3 md:right-0 md:bottom-0 md:left-0",
         className
       )}
     >
@@ -520,23 +506,23 @@ export function SidebarFooter({
               <Avatar>
                 <AvatarFallback>{user.initials}</AvatarFallback>
               </Avatar>
-              <div className="flex flex-col items-start text-left flex-1 min-w-0 overflow-hidden">
-                <span className="text-sm font-medium leading-none truncate w-full">
+              <div className="flex min-w-0 flex-1 flex-col items-start overflow-hidden text-left">
+                <span className="w-full truncate text-sm leading-none font-medium">
                   {user.name}
                 </span>
                 {user.roleLabel && (
-                  <span className="text-xs text-muted-foreground leading-none mt-1 truncate w-full max-w-48">
+                  <span className="mt-1 w-full max-w-48 truncate text-xs leading-none text-muted-foreground">
                     {user.roleLabel}
                   </span>
                 )}
               </div>
-              <ChevronsUpDown className="size-3 text-muted-foreground shrink-0 flex-shrink-0 absolute right-3" />
+              <ChevronsUpDown className="absolute right-3 size-3 flex-shrink-0 shrink-0 text-muted-foreground" />
             </Button>
           ) : (
             <Button
               variant="ghost"
               size="icon"
-              className="size-10 rounded-full p-0 flex items-center justify-center"
+              className="flex size-10 items-center justify-center rounded-full p-0"
               aria-label="User menu"
             >
               <Avatar>
@@ -553,8 +539,8 @@ export function SidebarFooter({
         >
           {user.email && (
             <DropdownMenuLabel className="pb-2">
-              <div className="flex justify-between items-center">
-                <span className="text-xs text-muted-foreground flex-1 truncate">
+              <div className="flex items-center justify-between">
+                <span className="flex-1 truncate text-xs text-muted-foreground">
                   {user.email}
                 </span>
                 {extra}
@@ -588,9 +574,9 @@ export function SidebarFooter({
               <DropdownMenuSeparator />
               <DropdownMenuItem
                 onClick={onLogout}
-                className="text-destructive focus:text-destructive cursor-pointer"
+                className="cursor-pointer text-destructive focus:text-destructive"
               >
-                <LogOut className="size-4 mr-2 opacity-50" />
+                <LogOut className="mr-2 size-4 opacity-50" />
                 Sign out
               </DropdownMenuItem>
             </>

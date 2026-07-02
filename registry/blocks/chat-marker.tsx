@@ -1,15 +1,15 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react"
 
 import {
   Marker,
   MarkerContent,
   MarkerIcon,
   type MarkerProps,
-} from '../custom/marker'
+} from "../custom/marker"
 
-export type ChatMarkerVariant = 'default' | 'separator' | 'border'
+export type ChatMarkerVariant = "default" | "separator" | "border"
 
-export interface ChatMarkerProps extends Omit<MarkerProps, 'variant'> {
+export interface ChatMarkerProps extends Omit<MarkerProps, "variant"> {
   variant?: ChatMarkerVariant
   /** Optional leading icon node rendered inside MarkerIcon. */
   icon?: ReactNode
@@ -17,7 +17,7 @@ export interface ChatMarkerProps extends Omit<MarkerProps, 'variant'> {
 }
 
 export function ChatMarker({
-  variant = 'default',
+  variant = "default",
   icon,
   children,
   className,

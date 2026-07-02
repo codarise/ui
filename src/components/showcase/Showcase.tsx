@@ -9,7 +9,14 @@ import { useTheme } from "@/components/theme-provider"
 
 import { ShowcaseCard } from "./ShowcaseCard"
 
-const REGISTRY_FILTERS = ["all", "ui", "custom", "blocks", "lib", "theme"] as const
+const REGISTRY_FILTERS = [
+  "all",
+  "ui",
+  "custom",
+  "blocks",
+  "lib",
+  "theme",
+] as const
 type RegistryFilter = (typeof REGISTRY_FILTERS)[number]
 
 export function Showcase() {
@@ -34,24 +41,23 @@ export function Showcase() {
   return (
     <div className="min-h-svh">
       <Toaster />
-      <header className="bg-background/80 sticky top-0 z-40 border-b backdrop-blur">
+      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur-lg">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6">
           <div className="flex items-center justify-between gap-4">
             <div>
               <h1 className="text-lg font-semibold tracking-tight">
                 codarise<span className="text-muted-foreground">-ui</span>
               </h1>
-              <p className="text-muted-foreground text-xs">
+              <p className="text-xs text-muted-foreground">
                 {manifestCount} components · shadcn registry
               </p>
             </div>
             <Button
               variant="outline"
               size="icon"
-              onClick={() =>
-                setTheme(theme === "dark" ? "light" : "dark")
-              }
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               title="Toggle theme (or press d)"
+              className="transition-transform duration-200 hover:scale-105 active:scale-95"
             >
               <Sun className="size-4 dark:hidden" />
               <Moon className="hidden size-4 dark:block" />
@@ -72,7 +78,7 @@ export function Showcase() {
                   variant={registry === r ? "default" : "outline"}
                   size="sm"
                   onClick={() => setRegistry(r)}
-                  className="capitalize"
+                  className="capitalize transition-transform duration-150 hover:scale-105 active:scale-95"
                 >
                   {r}
                 </Button>
@@ -84,7 +90,7 @@ export function Showcase() {
 
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
         {filtered.length === 0 ? (
-          <p className="text-muted-foreground py-12 text-center text-sm">
+          <p className="py-12 text-center text-sm text-muted-foreground">
             No components match &ldquo;{query}&rdquo;.
           </p>
         ) : (
@@ -94,9 +100,9 @@ export function Showcase() {
             ))}
           </div>
         )}
-        <footer className="text-muted-foreground mt-10 pb-6 text-center text-xs">
-          Press <kbd className="font-sans">d</kbd> to toggle dark mode ·
-          Built with the Polarise design system
+        <footer className="mt-10 pb-6 text-center text-xs text-muted-foreground">
+          Press <kbd className="font-sans">d</kbd> to toggle dark mode · Built
+          with the Polarise design system
         </footer>
       </main>
     </div>

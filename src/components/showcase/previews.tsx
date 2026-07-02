@@ -21,11 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../../registry/ui/accordion"
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "../../../registry/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "../../../registry/ui/alert"
 import {
   AlertDialog,
   AlertDialogAction,
@@ -42,7 +38,11 @@ import {
   AttachmentContent,
   AttachmentMedia,
 } from "../../../registry/ui/attachment"
-import { Avatar, AvatarFallback, AvatarImage } from "../../../registry/ui/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "../../../registry/ui/avatar"
 import { Badge } from "../../../registry/ui/badge"
 import { Bubble, BubbleContent } from "../../../registry/ui/bubble"
 import { Button } from "../../../registry/ui/button"
@@ -151,7 +151,12 @@ import {
   TableHeader,
   TableRow,
 } from "../../../registry/ui/table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../registry/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../../../registry/ui/tabs"
 import { Textarea } from "../../../registry/ui/textarea"
 import {
   Tooltip,
@@ -169,14 +174,20 @@ import { SparkleSpinner } from "../../../registry/custom/sparklespinner"
 import { Stepper } from "../../../registry/custom/stepper"
 import { TextShimmer } from "../../../registry/custom/text-shimmer"
 
-import { ChatBubble, ChatBubbleContent } from "../../../registry/blocks/chat-bubble"
+import {
+  ChatBubble,
+  ChatBubbleContent,
+} from "../../../registry/blocks/chat-bubble"
 import { ChatMarker } from "../../../registry/blocks/chat-marker"
 import { ChatMessageRow } from "../../../registry/blocks/chat-message-row"
 import { BentoCard } from "../../../registry/blocks/bento-card"
 import { ErrorState } from "../../../registry/blocks/error-state"
 import { FeaturedCard } from "../../../registry/blocks/featured-card"
 import { ModelCard } from "../../../registry/blocks/model-card"
-import { ModelSelect, type ModelOption } from "../../../registry/blocks/model-select"
+import {
+  ModelSelect,
+  type ModelOption,
+} from "../../../registry/blocks/model-select"
 import {
   PageContent,
   PageHeader,
@@ -216,9 +227,7 @@ function AlertDialogDemo() {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction variant="destructive">
-            Delete
-          </AlertDialogAction>
+          <AlertDialogAction variant="destructive">Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
@@ -260,7 +269,7 @@ function DrawerDemo() {
           </DrawerDescription>
         </DrawerHeader>
         <div className="px-4 pb-4">
-          <p className="text-muted-foreground text-sm">Drawer body content.</p>
+          <p className="text-sm text-muted-foreground">Drawer body content.</p>
         </div>
         <DrawerFooter>
           <Button>Submit</Button>
@@ -302,7 +311,7 @@ function PopoverDemo() {
       <PopoverContent>
         <div className="flex flex-col gap-2">
           <p className="text-sm font-medium">Popover content</p>
-          <p className="text-muted-foreground text-xs">
+          <p className="text-xs text-muted-foreground">
             Rich content in a portal.
           </p>
         </div>
@@ -341,7 +350,7 @@ function CollapsibleDemo() {
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent className="mt-2">
-        <p className="text-muted-foreground text-sm">
+        <p className="text-sm text-muted-foreground">
           Collapsible panel content.
         </p>
       </CollapsibleContent>
@@ -394,9 +403,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
       <Alert>
         <Terminal />
         <AlertTitle>Heads up!</AlertTitle>
-        <AlertDescription>
-          You can add components to your app.
-        </AlertDescription>
+        <AlertDescription>You can add components to your app.</AlertDescription>
       </Alert>
       <Alert variant="warning">
         <TriangleAlert />
@@ -418,7 +425,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
       </AttachmentMedia>
       <AttachmentContent>
         <p className="text-sm font-medium">report.pdf</p>
-        <p className="text-muted-foreground text-xs">2.4 MB</p>
+        <p className="text-xs text-muted-foreground">2.4 MB</p>
       </AttachmentContent>
     </Attachment>
   ),
@@ -461,7 +468,11 @@ export const previewComponents: Record<string, React.ComponentType> = {
     </Row>
   ),
   calendar: () => (
-    <Calendar mode="single" selected={new Date()} className="rounded-md border" />
+    <Calendar
+      mode="single"
+      selected={new Date()}
+      className="rounded-md border"
+    />
   ),
   card: () => (
     <Card className="w-full max-w-sm">
@@ -509,9 +520,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
   empty: () => (
     <Empty className="w-full max-w-sm">
       <EmptyTitle>No results</EmptyTitle>
-      <EmptyDescription>
-        Try adjusting your search or filters.
-      </EmptyDescription>
+      <EmptyDescription>Try adjusting your search or filters.</EmptyDescription>
     </Empty>
   ),
   input: () => <Input placeholder="Email" type="email" className="max-w-xs" />,
@@ -539,7 +548,11 @@ export const previewComponents: Record<string, React.ComponentType> = {
   label: () => (
     <div className="flex flex-col gap-1.5">
       <Label htmlFor="demo-email">Email</Label>
-      <Input id="demo-email" placeholder="you@example.com" className="max-w-xs" />
+      <Input
+        id="demo-email"
+        placeholder="you@example.com"
+        className="max-w-xs"
+      />
     </div>
   ),
   message: () => (
@@ -557,7 +570,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
   popover: PopoverDemo,
   progress: () => <Progress value={62} className="max-w-xs" />,
   "scroll-area": () => (
-    <ScrollArea className="bg-card max-h-40 w-full max-w-xs rounded-md border p-4">
+    <ScrollArea className="max-h-40 w-full max-w-xs rounded-md border bg-card p-4">
       <div className="flex flex-col gap-2 text-sm">
         {Array.from({ length: 12 }).map((_, i) => (
           <p key={i}>Item #{i + 1}</p>
@@ -660,7 +673,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
     <Row>
       <Kbd>⌘</Kbd>
       <Kbd>K</Kbd>
-      <span className="text-muted-foreground text-xs">then</span>
+      <span className="text-xs text-muted-foreground">then</span>
       <Kbd>Enter</Kbd>
     </Row>
   ),
@@ -780,9 +793,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
   ),
   "chat-marker": () => (
     <Row>
-      <ChatMarker icon={<Terminal className="size-3" />}>
-        Today
-      </ChatMarker>
+      <ChatMarker icon={<Terminal className="size-3" />}>Today</ChatMarker>
     </Row>
   ),
   "chat-message-row": () => (
@@ -846,8 +857,12 @@ export const previewComponents: Record<string, React.ComponentType> = {
         description="Meta · text-generation"
         badges={
           <>
-            <Badge variant="outline" className="text-xs">MIT</Badge>
-            <Badge variant="secondary" className="text-xs">405B</Badge>
+            <Badge variant="outline" className="text-xs">
+              MIT
+            </Badge>
+            <Badge variant="secondary" className="text-xs">
+              405B
+            </Badge>
           </>
         }
         metadata={
@@ -876,9 +891,15 @@ export const previewComponents: Record<string, React.ComponentType> = {
         color="#f97316"
         badges={
           <>
-            <Badge variant="outline" className="text-xs">Apache 2.0</Badge>
-            <Badge variant="secondary" className="text-xs">56B</Badge>
-            <Badge variant="secondary" className="text-xs">Free</Badge>
+            <Badge variant="outline" className="text-xs">
+              Apache 2.0
+            </Badge>
+            <Badge variant="secondary" className="text-xs">
+              56B
+            </Badge>
+            <Badge variant="secondary" className="text-xs">
+              Free
+            </Badge>
           </>
         }
         action={
@@ -898,11 +919,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
   ),
   "upload-dropzone": () => (
     <div className="w-full space-y-4">
-      <UploadDropzone
-        variant="prominent"
-        onFiles={() => {}}
-        accept="image/*"
-      />
+      <UploadDropzone variant="prominent" onFiles={() => {}} accept="image/*" />
       <UploadDropzone
         variant="compact"
         onFiles={() => {}}
@@ -947,19 +964,29 @@ export const previewComponents: Record<string, React.ComponentType> = {
       },
     ]
     return (
-      <div className="w-full space-y-4">
+      <div className="flex w-full flex-col items-center gap-3">
         <ModelSelect
           options={options}
           value="llama-3.1-405b"
           onValueChange={() => {}}
-          showLabel
-          size="md"
+          size="sm"
+          showDetails={false}
+          className="max-w-56"
         />
         <ModelSelect
           options={options}
           value=""
           onValueChange={() => {}}
           size="sm"
+          allowClear
+          showDetails={false}
+          className="max-w-56"
+        />
+                <ModelSelect
+          options={options}
+          value=""
+          onValueChange={() => {}}
+          size="lg"
           allowClear
           showDetails={false}
         />
@@ -972,7 +999,12 @@ export const previewComponents: Record<string, React.ComponentType> = {
         title: "Project",
         items: [
           { name: "Dashboard", href: "/projects/1", icon: LayoutGrid },
-          { name: "Agents", href: "/projects/1/agents", icon: Sparkles, badge: "3" },
+          {
+            name: "Agents",
+            href: "/projects/1/agents",
+            icon: Sparkles,
+            badge: "3",
+          },
           { name: "Members", href: "/projects/1/members", icon: Users },
         ],
       },
@@ -981,22 +1013,24 @@ export const previewComponents: Record<string, React.ComponentType> = {
         defaultClosed: true,
         items: [
           { name: "API Keys", href: "/projects/1/api-keys", icon: Key },
-          { name: "Integrations", href: "/projects/1/integrations", icon: Settings },
+          {
+            name: "Integrations",
+            href: "/projects/1/integrations",
+            icon: Settings,
+          },
         ],
       },
       {
         title: "Global",
         defaultClosed: true,
-        items: [
-          { name: "Overview", href: "/", icon: Home, exact: true },
-        ],
+        items: [{ name: "Overview", href: "/", icon: Home, exact: true }],
       },
     ]
     return (
       <div className="flex w-full gap-4">
         <SidebarProvider defaultOpen>
           <div className="relative h-80 w-64 overflow-hidden rounded-lg border border-border">
-            <Sidebar className="!relative !translate-x-0 w-full">
+            <Sidebar className="!relative w-full !translate-x-0">
               <SidebarHeader
                 logo={
                   <span className="flex items-center gap-2 text-sm font-semibold">
@@ -1025,7 +1059,7 @@ export const previewComponents: Record<string, React.ComponentType> = {
         </SidebarProvider>
         <SidebarProvider defaultOpen={false}>
           <div className="relative h-80 w-16 overflow-hidden rounded-lg border border-border">
-            <Sidebar className="!relative !translate-x-0 w-full">
+            <Sidebar className="!relative w-full !translate-x-0">
               <SidebarHeader />
               <ScrollArea className="min-h-0 flex-1">
                 <SidebarNav groups={groups} activeHref="/projects/1/agents" />

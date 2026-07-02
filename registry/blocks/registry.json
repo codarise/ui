@@ -111,7 +111,16 @@
         "codarise/ui/tooltip",
         "codarise/ui/model-colors"
       ],
-      "files": [{ "path": "model-select.tsx", "type": "registry:block" }]
+      "files": [
+        { "path": "model-select.tsx", "type": "registry:block" },
+        { "path": "model-select/types.ts", "type": "registry:block" },
+        { "path": "model-select/helpers.ts", "type": "registry:block" },
+        { "path": "model-select/use-favorites.ts", "type": "registry:block" },
+        { "path": "model-select/use-model-selector.ts", "type": "registry:block" },
+        { "path": "model-select/trigger.tsx", "type": "registry:block" },
+        { "path": "model-select/model-list.tsx", "type": "registry:block" },
+        { "path": "model-select/details-panel.tsx", "type": "registry:block" }
+      ]
     },
     {
       "name": "upload-dropzone",

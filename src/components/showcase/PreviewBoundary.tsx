@@ -27,7 +27,7 @@ export class PreviewBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback ?? (
-          <div className="text-muted-foreground flex items-center justify-center py-8 text-xs">
+          <div className="flex items-center justify-center py-8 text-xs text-muted-foreground">
             Preview unavailable
           </div>
         )

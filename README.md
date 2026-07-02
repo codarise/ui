@@ -104,6 +104,7 @@ npm run lint         # eslint
 npm run build        # gen:manifest → tsc -b → vite build
 npx shadcn@latest registry validate ./registry.json   # CI gate
 npx shadcn@latest build ./registry.json --output /tmp/build   # smoke build
+npx fallow           # codebase intelligence: quality, risk, architecture, cleanup
 ```
 
 Registry layout (modular `include` files):

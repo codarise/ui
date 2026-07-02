@@ -90,7 +90,7 @@ export function ThinkingDisplay({
         <div
           role="button"
           tabIndex={0}
-          className="flex cursor-pointer select-none items-center justify-between opacity-70 group-hover:opacity-100"
+          className="flex cursor-pointer items-center justify-between opacity-70 select-none group-hover:opacity-100"
           onClick={handleToggle}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
@@ -128,7 +128,7 @@ export function ThinkingDisplay({
                 el.scrollHeight - el.scrollTop - el.clientHeight < 40
               )
             }}
-            className="max-h-80 overflow-y-auto py-3 text-sm prose prose-sm dark:prose-invert max-w-none text-muted-foreground [&::-webkit-scrollbar]:hidden"
+            className="prose prose-sm max-h-80 max-w-none overflow-y-auto py-3 text-sm text-muted-foreground dark:prose-invert [&::-webkit-scrollbar]:hidden"
             style={{
               ...(isScrolledDown
                 ? {

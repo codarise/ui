@@ -1,7 +1,39 @@
-import { cn } from '@/lib/utils';
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+const GRID_X = [6, 17, 28, 39, 50]
+const GRID_Y = [6, 17, 28, 39, 50]
+
+const DELAYS = [
+  [0, 2283, 1617, 1466, 31],
+  [2106, 296, 1206, 333, 2241],
+  [1929, 967, 1238, 1004, 2252],
+  [1955, 2517, 1139, 1076, 1362],
+  [2132, 920, 1274, 1310, 1019],
+]
 
 // Polished, custom SVG spinner pattern inspired by Sparkle effects
-function IconPattern({ className, ...props }: React.ComponentProps<'svg'>) {
+function IconPattern({ className, ...props }: React.ComponentProps<"svg">) {
+  const backgroundDots = GRID_Y.flatMap((y, row) =>
+    GRID_X.map((x, col) => (
+      <use key={`bg-${row}-${col}`} href="#b" x={x} y={y} />
+    ))
+  )
+
+  const sparkleDots = GRID_Y.flatMap((y, row) =>
+    GRID_X.map((x, col) => (
+      <use
+        key={`sparkle-${row}-${col}`}
+        className="l"
+        href="#l"
+        x={x}
+        y={y}
+        style={{ animationDelay: `${DELAYS[row][col]}ms` }}
+      />
+    ))
+  )
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,63 +49,13 @@ function IconPattern({ className, ...props }: React.ComponentProps<'svg'>) {
         <circle id="b" r="2.4" fill="#ffffff" opacity="0.07" />
         <circle id="l" r="3.1" />
       </defs>
+
       {/* Sparkle grid background */}
-      <use href="#b" x="6" y="6" />
-      <use href="#b" x="17" y="6" />
-      <use href="#b" x="28" y="6" />
-      <use href="#b" x="39" y="6" />
-      <use href="#b" x="50" y="6" />
-      <use href="#b" x="6" y="17" />
-      <use href="#b" x="17" y="17" />
-      <use href="#b" x="28" y="17" />
-      <use href="#b" x="39" y="17" />
-      <use href="#b" x="50" y="17" />
-      <use href="#b" x="6" y="28" />
-      <use href="#b" x="17" y="28" />
-      <use href="#b" x="28" y="28" />
-      <use href="#b" x="39" y="28" />
-      <use href="#b" x="50" y="28" />
-      <use href="#b" x="6" y="39" />
-      <use href="#b" x="17" y="39" />
-      <use href="#b" x="28" y="39" />
-      <use href="#b" x="39" y="39" />
-      <use href="#b" x="50" y="39" />
-      <use href="#b" x="6" y="50" />
-      <use href="#b" x="17" y="50" />
-      <use href="#b" x="28" y="50" />
-      <use href="#b" x="39" y="50" />
-      <use href="#b" x="50" y="50" />
+      {backgroundDots}
 
       {/* Sparkle animated highlights */}
-      <use className="l d00" href="#l" x="6" y="6" />
-      <use className="l d01" href="#l" x="17" y="6" />
-      <use className="l d02" href="#l" x="28" y="6" />
-      <use className="l d03" href="#l" x="39" y="6" />
-      <use className="l d04" href="#l" x="50" y="6" />
+      {sparkleDots}
 
-      <use className="l d10" href="#l" x="6" y="17" />
-      <use className="l d11" href="#l" x="17" y="17" />
-      <use className="l d12" href="#l" x="28" y="17" />
-      <use className="l d13" href="#l" x="39" y="17" />
-      <use className="l d14" href="#l" x="50" y="17" />
-
-      <use className="l d20" href="#l" x="6" y="28" />
-      <use className="l d21" href="#l" x="17" y="28" />
-      <use className="l d22" href="#l" x="28" y="28" />
-      <use className="l d23" href="#l" x="39" y="28" />
-      <use className="l d24" href="#l" x="50" y="28" />
-
-      <use className="l d30" href="#l" x="6" y="39" />
-      <use className="l d31" href="#l" x="17" y="39" />
-      <use className="l d32" href="#l" x="28" y="39" />
-      <use className="l d33" href="#l" x="39" y="39" />
-      <use className="l d34" href="#l" x="50" y="39" />
-
-      <use className="l d40" href="#l" x="6" y="50" />
-      <use className="l d41" href="#l" x="17" y="50" />
-      <use className="l d42" href="#l" x="28" y="50" />
-      <use className="l d43" href="#l" x="39" y="50" />
-      <use className="l d44" href="#l" x="50" y="50" />
       <style>
         {`
           .l {
@@ -82,55 +64,30 @@ function IconPattern({ className, ...props }: React.ComponentProps<'svg'>) {
             animation: icon-09-k 2600ms cubic-bezier(0.65, 0, 0.35, 1) infinite both;
           }
           @keyframes icon-09-k {
-            0% { opacity:0.05; }
-            40% { opacity:0.05; }
-            50% { opacity:1; }
-            60% { opacity:0.05; }
-            100% { opacity:0.05; }
+            0% { opacity: 0.05; }
+            40% { opacity: 0.05; }
+            50% { opacity: 1; }
+            60% { opacity: 0.05; }
+            100% { opacity: 0.05; }
           }
           @media (prefers-reduced-motion: reduce) {
             .l { animation: none; opacity: 0.45; }
           }
-          .d00{ animation-delay: 0ms; }
-          .d01{ animation-delay: 2283ms; }
-          .d02{ animation-delay: 1617ms; }
-          .d03{ animation-delay: 1466ms; }
-          .d04{ animation-delay: 31ms; }
-          .d10{ animation-delay: 2106ms; }
-          .d11{ animation-delay: 296ms; }
-          .d12{ animation-delay: 1206ms; }
-          .d13{ animation-delay: 333ms; }
-          .d14{ animation-delay: 2241ms; }
-          .d20{ animation-delay: 1929ms; }
-          .d21{ animation-delay: 967ms; }
-          .d22{ animation-delay: 1238ms; }
-          .d23{ animation-delay: 1004ms; }
-          .d24{ animation-delay: 2252ms; }
-          .d30{ animation-delay: 1955ms; }
-          .d31{ animation-delay: 2517ms; }
-          .d32{ animation-delay: 1139ms; }
-          .d33{ animation-delay: 1076ms; }
-          .d34{ animation-delay: 1362ms; }
-          .d40{ animation-delay: 2132ms; }
-          .d41{ animation-delay: 920ms; }
-          .d42{ animation-delay: 1274ms; }
-          .d43{ animation-delay: 1310ms; }
-          .d44{ animation-delay: 1019ms; }
         `}
       </style>
     </svg>
-  );
+  )
 }
 
-function SparkleSpinner({ className, ...props }: React.ComponentProps<'svg'>) {
+function SparkleSpinner({ className, ...props }: React.ComponentProps<"svg">) {
   return (
     <IconPattern
       role="status"
       aria-label="Loading"
-      className={cn('size-4 ', className)}
+      className={cn("size-4", className)}
       {...props}
     />
-  );
+  )
 }
 
-export { SparkleSpinner };
+export { SparkleSpinner }
