@@ -6,69 +6,127 @@
       "type": "registry:ui",
       "title": "Glow Backdrop",
       "description": "A decorative backdrop with an optional centered glow and gradient fades.",
-      "files": [{ "path": "glow-backdrop.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "glow-backdrop.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "kbd",
       "type": "registry:ui",
       "title": "Kbd",
       "description": "A keyboard key indicator component for displaying shortcuts.",
-      "files": [{ "path": "kbd.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "sparklespinner",
       "type": "registry:ui",
       "title": "Sparkle Spinner",
       "description": "A custom SVG loading spinner with twinkling dots on a deterministic loop.",
-      "files": [{ "path": "sparklespinner.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "sparklespinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "text-shimmer",
       "type": "registry:ui",
       "title": "Text Shimmer",
       "description": "An animated shimmer effect over text, with light/dark mode and color variants.",
-      "files": [{ "path": "text-shimmer.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "text-shimmer.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "copy-button",
       "type": "registry:ui",
       "title": "Copy Button",
       "description": "A button that copies text to the clipboard with a transient success state.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["codarise/ui/button"],
-      "files": [{ "path": "copy-button.tsx", "type": "registry:ui" }]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "felixhoebel/codarise-ui/button"
+      ],
+      "files": [
+        {
+          "path": "copy-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "icon-wrapper",
       "type": "registry:ui",
       "title": "Icon Wrapper",
       "description": "A decorative wrapper for icons with a gradient background variant.",
-      "dependencies": ["class-variance-authority"],
-      "files": [{ "path": "icon-wrapper.tsx", "type": "registry:ui" }]
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "icon-wrapper.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "marker",
       "type": "registry:ui",
       "title": "Marker",
       "description": "A marker component for timeline-like layouts, with separator and border variants.",
-      "dependencies": ["class-variance-authority", "radix-ui"],
-      "files": [{ "path": "marker.tsx", "type": "registry:ui" }]
+      "dependencies": [
+        "class-variance-authority",
+        "radix-ui"
+      ],
+      "files": [
+        {
+          "path": "marker.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "stepper",
       "type": "registry:ui",
       "title": "Stepper",
       "description": "A compact horizontal step progress indicator.",
-      "files": [{ "path": "stepper.tsx", "type": "registry:ui" }]
+      "files": [
+        {
+          "path": "stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
     },
     {
       "name": "search-input",
       "type": "registry:ui",
       "title": "Search Input",
       "description": "An input with a leading search icon, controlled value/onChange.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["codarise/ui/input"],
-      "files": [{ "path": "search-input.tsx", "type": "registry:ui" }]
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "felixhoebel/codarise-ui/input"
+      ],
+      "files": [
+        {
+          "path": "search-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
