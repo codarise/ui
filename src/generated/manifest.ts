@@ -1347,7 +1347,7 @@ export const manifest: ManifestItem[] = [
   {
     "name": "font-ibm-plex-mono",
     "title": "IBM Plex Mono Font",
-    "description": "The IBM Plex Mono variable font, mapped to --font-mono.",
+    "description": "The IBM Plex Mono font, mapped to --font-mono.",
     "type": "registry:font",
     "registry": "theme",
     "files": [],
