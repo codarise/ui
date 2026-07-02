@@ -21,7 +21,7 @@
       "type": "registry:lib",
       "title": "Project Themes",
       "description": "40+ gradient themes (Ocean Blue, Cyberpunk, Aurora Borealis, …) with id, gradient classes, bg hex, icon, and contrast text color. Includes getRandomTheme, getThemeById, and themeToSettings helpers. The 'drive-agent' theme uses the polarise-theme AI brand tokens (--ai-teal / --ai-green).",
-      "registryDependencies": ["codarise/theme/polarise-theme"],
+      "registryDependencies": ["polarise-theme"],
       "files": [{ "path": "project-themes.ts", "type": "registry:lib" }]
     }
   ]
