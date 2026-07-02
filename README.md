@@ -72,7 +72,7 @@ Polarise-specific UI built on top of the standard set.
 ### Fonts (2)
 
 - `font-inter` — Inter variable font → `--font-sans`
-- `font-ibm-plex-mono` — IBM Plex Mono variable font → `--font-mono`
+- `font-ibm-plex-mono` — IBM Plex Mono font → `--font-mono`
 
 ### Blocks (13)
 

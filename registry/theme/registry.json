@@ -305,9 +305,9 @@
       "name": "font-ibm-plex-mono",
       "type": "registry:font",
       "title": "IBM Plex Mono Font",
-      "description": "The IBM Plex Mono variable font, mapped to --font-mono.",
+      "description": "The IBM Plex Mono font, mapped to --font-mono.",
       "font": {
-        "family": "'IBM Plex Mono Variable', monospace",
+        "family": "'IBM Plex Mono', monospace",
         "provider": "google",
         "import": "IBM_Plex_Mono",
         "variable": "--font-mono",

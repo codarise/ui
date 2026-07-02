@@ -128,7 +128,7 @@ Composed patterns in `registry/blocks/`. Prefer these over hand-rolling when the
 | Item | Maps to | Notes |
 | --- | --- | --- |
 | `font-inter` | `--font-sans` | Inter variable — default body font. |
-| `font-ibm-plex-mono` | `--font-mono` | IBM Plex Mono variable — code blocks, `kbd`. |
+| `font-ibm-plex-mono` | `--font-mono` | IBM Plex Mono — code blocks, `kbd`. |
 
 ---
 
