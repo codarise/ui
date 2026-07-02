@@ -93,7 +93,7 @@
       "dependencies": ["lucide-react"],
       "registryDependencies": [
         "codarise/ui/card",
-        "codarise/ui/model-colors"
+        "codarise/lib/model-colors"
       ],
       "files": [{ "path": "model-card.tsx", "type": "registry:block" }]
     },
@@ -109,7 +109,7 @@
         "codarise/ui/label",
         "codarise/ui/popover",
         "codarise/ui/tooltip",
-        "codarise/ui/model-colors"
+        "codarise/lib/model-colors"
       ],
       "files": [
         { "path": "model-select.tsx", "type": "registry:block" },
