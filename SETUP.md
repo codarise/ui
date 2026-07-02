@@ -93,6 +93,14 @@ npm install -D "eslint@^9" "@eslint/js@^9" typescript-eslint globals \
 npm install -D husky lint-staged
 ```
 
+### Install Fallow (code intelligence)
+
+[Fallow](https://www.npmjs.com/package/fallow) provides code intelligence — dead-code detection, dependency auditing, and impact analysis. Every Polarise frontend uses it for code quality checks in CI and during development.
+
+```bash
+npm install -D fallow
+```
+
 > **Why pin `eslint@^9` and `@eslint/js@^9`?** As of writing, `eslint-plugin-import` only supports up to ESLint 9, while `@eslint/js@*` resolves to v10. Installing them unpinned triggers `npm error ERESOLVE`. Pin both to `^9` until `eslint-plugin-import` ships ESLint 10 support.
 
 ### Optional but recommended
